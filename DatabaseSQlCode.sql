@@ -124,3 +124,10 @@ create table DrinkExport(
 	EmployeeID varchar(20) foreign key references Employee(EmployeeID) not null,
 	EDate date not null
 )
+go
+create table DrinkExportDetails(
+	DrinkExportID varchar(20) primary key not null,
+	Quantity int not null,
+	DrinksID varchar(20) foreign key references Drinks(DrinksID) not null,
+	CategoryID varchar(20) foreign key references Category(CategoryID) not null
+)
