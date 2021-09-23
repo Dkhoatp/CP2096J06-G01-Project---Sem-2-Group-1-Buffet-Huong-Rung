@@ -95,7 +95,7 @@ go
 create table IngNeededForRecipe(
 	FoodID varchar(20) foreign key references Food(FoodID) not null,
 	IngredientsID varchar(20) foreign key references FoodIngredients(IngredientsID),
-	quantity int
+	quantity int not null
 )
 go
 create table FoodlistNextWeek(
@@ -119,15 +119,15 @@ create table Drinks(
 	DPrice varchar(20) not null
 )
 go
+create table DrinkExportDetails(
+	DrinkExportDTID varchar(20) primary key not null,
+	Quantity int not null,
+	DrinksID varchar(20) foreign key references Drinks(DrinksID) not null
+)
+go
 create table DrinkExport(
 	DrinkExportID varchar(20) primary key not null,
 	EmployeeID varchar(20) foreign key references Employee(EmployeeID) not null,
-	EDate date not null
-)
-go
-create table DrinkExportDetails(
-	DrinkExportID varchar(20) primary key not null,
-	Quantity int not null,
-	DrinksID varchar(20) foreign key references Drinks(DrinksID) not null,
-	CategoryID varchar(20) foreign key references Category(CategoryID) not null
+	EDate date not null,
+	DrinkExportDTID varchar(20) foreign key references DrinkExportDetails(DrinkExportDTID) not null
 )
