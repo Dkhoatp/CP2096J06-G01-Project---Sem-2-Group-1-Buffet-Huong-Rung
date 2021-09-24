@@ -79,7 +79,7 @@ create table Food(
 	FoodID varchar(20) primary key not null,
 	FoodName nvarchar(50) not null,
 	FoodPrice varchar(20) not null,
-	Picture nvarchar(50),
+	Picture nvarchar,
 	FDescription nvarchar(50),
 	FoodTypeID varchar(20) foreign key references FoodType(FoodTypeID) not null
 )
