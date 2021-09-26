@@ -92,10 +92,12 @@ create table FoodIngredients(
 	unit nvarchar(20) not null 
 )
 go
-create table IngNeededForRecipe(
+create table IngRequest(
 	FoodID varchar(20) foreign key references Food(FoodID) not null,
 	IngredientsID varchar(20) foreign key references FoodIngredients(IngredientsID),
-	quantity int not null
+	quantity int not null,
+	[Week] int not null,
+	[year] int not null
 )
 go
 create table FoodlistNextWeek(
