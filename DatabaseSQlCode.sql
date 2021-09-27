@@ -2,134 +2,136 @@ use master
 go
 create database HuongRungBuffet
 go
-use HuongRungBuffet
+use HuongRungBuffet 
 create table TicketType(
-	TicketTypeID varchar(20) primary key not null,
-	TTypeName nvarchar(50) not null
+	TicketTypeID varchar(20) primary key,
+	TTypeName nvarchar(50)
 )
 go
 create table Customer(
-	CustomerID varchar(20) primary key not null,
-	CsName nvarchar(50) not null,
-	CsPhone varchar(20) not null,
-	csBirthDay date not null,
-	CsIdentificationNumber varchar(20) not null,
-	Point int not null
+	CustomerID varchar(20) primary key,
+	CsName nvarchar(50),
+	CsPhone varchar(20),
+	csBirthDay date,
+	CsIdentificationNumber varchar(20),
+	Point int
 )
 go
 create table Ticket(
-	TicketID varchar(20) primary key not null ,
-	TicketTypeID varchar(20) foreign key references TicketType(TicketTypeID) not null,
+	TicketID varchar(20) primary key,
+	TicketTypeID varchar(20) foreign key references TicketType(TicketTypeID),
 	TDescription nvarchar(50),
-	TPrice varchar(20) not null,
+	TPrice varchar(20),
 	TicketDate date
 )
 go
 create table Departments(
-	PartID varchar(20) primary key not null,
-	ParkName nvarchar(50) not null
+	DepartmentID varchar(20) primary key,
+	ParkName nvarchar(50)
 )
 go
 create table Employee(
-	EmployeeID varchar(20) primary key not null,
-	FullName nvarchar(50) not null,
-	Title nvarchar(50) not null,
-	Phone varchar(20) not null,
-	BirthDay date not null,
-	EAddress nvarchar(50) not null,
-	PartID varchar(20) foreign key references Departments(PartID) not null,
-	UserName varchar(20) not null,
-	[Password] varchar(20) not null,
-	IdentificationNumber varchar(20) not null
-)
-go 
-create table Bill(
-	BillID varchar(20) primary key not null,
-	BillDate date not null,
-	EmployeeID varchar(20) foreign key references Employee(EmployeeID) not null,
-	TicketID varchar(20) foreign key references Ticket(TicketID) not null,
-	CustomerID varchar(20) foreign key references Customer(CustomerID) not null
-)
-go
-create table DeviceReport(
-	FeedBackID varchar(20) primary key not null,
-	EmployeeID varchar(20) foreign key references Employee(EmployeeID) not null,
-	Content nvarchar(100) not null
+	EmployeeID varchar(20) primary key,
+	FullName nvarchar(50),
+	Title nvarchar(50),
+	Phone varchar(20),
+	BirthDay date,
+	EAddress nvarchar(50),
+	DepartmentID varchar(20) foreign key references Departments(DepartmentID),
+	UserName varchar(20),
+	[Password] varchar(20),
+	IdentificationNumber varchar(20)
 )
 go
 create table Suppliers(
-	supplierID varchar(20) primary key not null,
-	supplierName nvarchar(50) not null,
+	supplierID varchar(20) primary key,
+	supplierName nvarchar(50),
 	phone varchar(20),
 	Sdescription nvarchar(100)
 )
 go
 create table Category(
-	CategoryID varchar(20) primary key not null,
-	CategoryName nvarchar(50) not null,
+	CategoryID varchar(20) primary key,
+	CategoryName nvarchar(50),
 	Cdescription nvarchar(100)
 )
 go
+create table Drinks(
+	DrinksID varchar(20) primary key,
+	DrinkNamee nvarchar(50),
+	supplierID varchar(20) foreign key references Suppliers(supplierID),
+	CategoryID varchar(20) foreign key references Category(CategoryID),
+	DPrice varchar(20)
+)
+go 
+create table DrinkDetails(
+	DrinkDetailsID varchar(20) primary key,
+	DrinkID varchar(20) foreign key references Drinks(DrinksID),
+	Quantity int,
+	Price int
+)
+go
+create table Bill(
+	BillID varchar(20) primary key,
+	BillDate date,
+	EmployeeID varchar(20) foreign key references Employee(EmployeeID),
+	TicketID varchar(20) foreign key references Ticket(TicketID),
+	DrinkDetailsID varchar(20) foreign key references DrinkDetails(DrinkDetailsID),
+	CustomerID varchar(20) foreign key references Customer(CustomerID),
+	Price int
+)
+go
 create table FoodType(
-	FoodTypeID varchar(20) primary key not null,
-	FTypeName nvarchar(50) not null
+	FoodTypeID varchar(20) primary key,
+	FTypeName nvarchar(50)
 )
 go
 create table Food(
-	FoodID varchar(20) primary key not null,
-	FoodName nvarchar(50) not null,
-	FoodPrice varchar(20) not null,
+	FoodID varchar(20) primary key,
+	FoodName nvarchar(50),
+	FoodPrice varchar(20),
 	Picture nvarchar,
 	FDescription nvarchar(50),
-	FoodTypeID varchar(20) foreign key references FoodType(FoodTypeID) not null
+	FoodTypeID varchar(20) foreign key references FoodType(FoodTypeID)
 )
 go
 create table FoodIngredients(
-	IngredientsID varchar(20) primary key not null,
-	FIName nvarchar(50) not null,
-	supplierID varchar(20) references Suppliers(supplierID) not null,
-	CategoryID varchar(20) references Category(CategoryID) not null,
-	unit nvarchar(20) not null 
+	IngredientsID varchar(20) primary key,
+	FIName nvarchar(50),
+	supplierID varchar(20) references Suppliers(supplierID),
+	CategoryID varchar(20) references Category(CategoryID),
+	unit nvarchar(20)
 )
 go
 create table IngRequest(
-	FoodID varchar(20) foreign key references Food(FoodID) not null,
+	FoodID varchar(20) foreign key references Food(FoodID),
 	IngredientsID varchar(20) foreign key references FoodIngredients(IngredientsID),
-	quantity int not null,
-	[Week] int not null,
-	[year] int not null
+	quantity int,
+	IRDate date,
+	[status] varchar(20)
 )
 go
-create table FoodlistNextWeek(
-	FoodlistID varchar(20) primary key not null,
-	EmployeeID varchar(20) foreign key references Employee(EmployeeID) not null,
-	[Week] int not null,
-	[year] int not null
+create table FoodlistNextDays(
+	FoodlistID varchar(20) primary key,
+	EmployeeID varchar(20) foreign key references Employee(EmployeeID),
+	FLDate date
 )
 go
 create table List(
-	FoodID varchar(20) foreign key references Food(FoodID) not null,
-	FoodlistID varchar(20) foreign key references FoodlistNextWeek(FoodlistID) not null,
+	FoodID varchar(20) foreign key references Food(FoodID),
+	FoodlistID varchar(20) foreign key references FoodlistNextDays(FoodlistID),
 	Quantity int not null
 )
+
 go
-create table Drinks(
-	DrinksID varchar(20) primary key not null,
-	DrinkNamee nvarchar(50) not null,
-	supplierID varchar(20) foreign key references Suppliers(supplierID) not null,
-	CategoryID varchar(20) foreign key references Category(CategoryID) not null,
-	DPrice varchar(20) not null
+create table DrinkExport(
+	DrinkExportID varchar(20) primary key,
+	EmployeeID varchar(20) foreign key references Employee(EmployeeID),
+	EDate date
 )
 go
 create table DrinkExportDetails(
-	DrinkExportDTID varchar(20) primary key not null,
-	Quantity int not null,
-	DrinksID varchar(20) foreign key references Drinks(DrinksID) not null
-)
-go
-create table DrinkExport(
-	DrinkExportID varchar(20) primary key not null,
-	EmployeeID varchar(20) foreign key references Employee(EmployeeID) not null,
-	EDate date not null,
-	DrinkExportDTID varchar(20) foreign key references DrinkExportDetails(DrinkExportDTID) not null
+	DrinkExportID varchar(20) foreign key references DrinkExport(DrinkExportID),
+	Quantity int,
+	DrinksID varchar(20) foreign key references Drinks(DrinksID)
 )
