@@ -100,6 +100,7 @@ create table FoodIngredients(
 	FIName nvarchar(50),
 	supplierID varchar(20) references Suppliers(supplierID),
 	CategoryID varchar(20) references Category(CategoryID),
+	IPrice varchar(20),
 	unit nvarchar(20)
 )
 go
