@@ -3,6 +3,11 @@ go
 create database HuongRungBuffet
 go
 use HuongRungBuffet 
+go
+create table SlotTime(
+	TimeID varchar(20) primary key,
+	STime time
+)
 create table TicketType(
 	TicketTypeID varchar(20) primary key,
 	TTypeName nvarchar(50)
@@ -13,16 +18,8 @@ create table Customer(
 	CsName nvarchar(50),
 	CsPhone varchar(20),
 	csBirthDay date,
-	CsIdentificationNumber varchar(20),
+	CsIdentificationNumber varchar(50),
 	Point int
-)
-go
-create table Ticket(
-	TicketID varchar(20) primary key,
-	TicketTypeID varchar(20) foreign key references TicketType(TicketTypeID),
-	TDescription nvarchar(50),
-	TPrice varchar(20),
-	TicketDate date
 )
 go
 create table Departments(
@@ -58,27 +55,36 @@ create table Category(
 go
 create table Drinks(
 	DrinksID varchar(20) primary key,
-	DrinkNamee nvarchar(50),
+	DrinkName nvarchar(50),
 	supplierID varchar(20) foreign key references Suppliers(supplierID),
 	CategoryID varchar(20) foreign key references Category(CategoryID),
 	DPrice varchar(20)
-)
-go 
-create table DrinkDetails(
-	DrinkDetailsID varchar(20) primary key,
-	DrinkID varchar(20) foreign key references Drinks(DrinksID),
-	Quantity int,
-	Price int
 )
 go
 create table Bill(
 	BillID varchar(20) primary key,
 	BillDate date,
 	EmployeeID varchar(20) foreign key references Employee(EmployeeID),
-	TicketID varchar(20) foreign key references Ticket(TicketID),
 	DrinkDetailsID varchar(20) foreign key references DrinkDetails(DrinkDetailsID),
 	CustomerID varchar(20) foreign key references Customer(CustomerID),
 	Price int
+)
+go
+create table Ticket(
+	TicketID varchar(20) primary key,
+	TicketTypeID varchar(20) foreign key references TicketType(TicketTypeID),
+	TPrice varchar(20),
+	TicketDate date,
+	timeID varchar(20) foreign key references TicketType(TicketTypeID),
+	BillID varchar(20) foreign key references Bill(BillID)
+)
+go 
+create table DrinkDetails(
+	DrinkDetailsID varchar(20) primary key,
+	DrinkID varchar(20) foreign key references Drinks(DrinksID),
+	Quantity int,
+	Price int,
+	BillID varchar(20) foreign key references Bill(BillID)
 )
 go
 create table FoodType(
@@ -113,14 +119,13 @@ create table IngRequest(
 )
 go
 create table FoodlistNextDays(
-	FoodlistID varchar(20) primary key,
-	EmployeeID varchar(20) foreign key references Employee(EmployeeID),
-	FLDate date
+	FLDate date primary key,
+	EmployeeID varchar(20) foreign key references Employee(EmployeeID)
 )
 go
 create table List(
 	FoodID varchar(20) foreign key references Food(FoodID),
-	FoodlistID varchar(20) foreign key references FoodlistNextDays(FoodlistID),
+	FLDate date foreign key references FoodlistNextDays(FLDate),
 	Quantity int not null
 )
 
