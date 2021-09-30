@@ -65,7 +65,6 @@ create table Bill(
 	BillID varchar(20) primary key,
 	BillDate date,
 	EmployeeID varchar(20) foreign key references Employee(EmployeeID),
-	DrinkDetailsID varchar(20) foreign key references DrinkDetails(DrinkDetailsID),
 	CustomerID varchar(20) foreign key references Customer(CustomerID),
 	Price int
 )
@@ -75,7 +74,7 @@ create table Ticket(
 	TicketTypeID varchar(20) foreign key references TicketType(TicketTypeID),
 	TPrice varchar(20),
 	TicketDate date,
-	timeID varchar(20) foreign key references TicketType(TicketTypeID),
+	timeID varchar(20) foreign key references SlotTime(timeID),
 	BillID varchar(20) foreign key references Bill(BillID)
 )
 go 
