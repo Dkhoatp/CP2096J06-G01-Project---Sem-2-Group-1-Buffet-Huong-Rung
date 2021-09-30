@@ -13,6 +13,7 @@ public class MainF extends javax.swing.JFrame {
 
     /**
      * Creates new form Main
+     * ạhdjahsdjahd
      */
     public MainF() {
         initComponents();
