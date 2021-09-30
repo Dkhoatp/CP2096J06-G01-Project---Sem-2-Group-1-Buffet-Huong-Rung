@@ -6,7 +6,7 @@
 package huongrungbuffet;
 
 /**
- *
+ *thanh le
  * @author Dell
  */
 public class MainF extends javax.swing.JFrame {
