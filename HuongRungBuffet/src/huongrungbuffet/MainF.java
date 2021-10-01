@@ -19,7 +19,7 @@ public class MainF extends javax.swing.JFrame {
         initComponents();
         //Giao dien dang nhap
         setLocationRelativeTo(null);
-        setSize(1360, 768);
+        setSize(1260, 720);
         setTitle("Dang Nhap");
     }
 
@@ -192,7 +192,6 @@ public class MainF extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         jDQuanLy.setLocation(new java.awt.Point(0, 0));
-        jDQuanLy.setMaximumSize(new java.awt.Dimension(1360, 768));
 
         jPanel5.setBackground(new java.awt.Color(255, 153, 51));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -574,7 +573,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel9))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF32Layout.createSequentialGroup()
-                .addContainerGap(953, Short.MAX_VALUE)
+                .addContainerGap(959, Short.MAX_VALUE)
                 .addComponent(jButton11)
                 .addGap(88, 88, 88))
         );
@@ -603,7 +602,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 1079, Short.MAX_VALUE)
                 .addComponent(jLabel5))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF33Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(965, Short.MAX_VALUE)
                 .addComponent(jButton12)
                 .addGap(82, 82, 82))
         );
@@ -632,7 +631,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 1079, Short.MAX_VALUE)
                 .addComponent(jLabel10))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF34Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(956, Short.MAX_VALUE)
                 .addComponent(jButton13)
                 .addGap(91, 91, 91))
         );
@@ -665,7 +664,7 @@ public class MainF extends javax.swing.JFrame {
                     .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton14, javax.swing.GroupLayout.Alignment.TRAILING)))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF35Layout.createSequentialGroup()
-                .addContainerGap(920, Short.MAX_VALUE)
+                .addContainerGap(926, Short.MAX_VALUE)
                 .addComponent(jButton15)
                 .addGap(121, 121, 121))
         );
@@ -696,7 +695,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton16))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF36Layout.createSequentialGroup()
-                .addContainerGap(1007, Short.MAX_VALUE)
+                .addContainerGap(1013, Short.MAX_VALUE)
                 .addComponent(jButton17)
                 .addGap(34, 34, 34))
         );
@@ -770,7 +769,6 @@ public class MainF extends javax.swing.JFrame {
         );
 
         jDkho.setLocation(new java.awt.Point(0, 0));
-        jDkho.setMaximumSize(new java.awt.Dimension(1360, 768));
 
         jPanel6.setBackground(new java.awt.Color(255, 153, 51));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1152,7 +1150,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel16))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF39Layout.createSequentialGroup()
-                .addContainerGap(953, Short.MAX_VALUE)
+                .addContainerGap(959, Short.MAX_VALUE)
                 .addComponent(jButton29)
                 .addGap(88, 88, 88))
         );
@@ -1181,7 +1179,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 1079, Short.MAX_VALUE)
                 .addComponent(jLabel17))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF12Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(965, Short.MAX_VALUE)
                 .addComponent(jButton30)
                 .addGap(82, 82, 82))
         );
@@ -1210,7 +1208,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 1079, Short.MAX_VALUE)
                 .addComponent(jLabel18))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF13Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(956, Short.MAX_VALUE)
                 .addComponent(jButton31)
                 .addGap(91, 91, 91))
         );
@@ -1243,7 +1241,7 @@ public class MainF extends javax.swing.JFrame {
                     .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton32, javax.swing.GroupLayout.Alignment.TRAILING)))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF14Layout.createSequentialGroup()
-                .addContainerGap(920, Short.MAX_VALUE)
+                .addContainerGap(926, Short.MAX_VALUE)
                 .addComponent(jButton33)
                 .addGap(121, 121, 121))
         );
@@ -1274,7 +1272,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton34))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF15Layout.createSequentialGroup()
-                .addContainerGap(1007, Short.MAX_VALUE)
+                .addContainerGap(1013, Short.MAX_VALUE)
                 .addComponent(jButton35)
                 .addGap(34, 34, 34))
         );
@@ -1441,7 +1439,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel20))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF20Layout.createSequentialGroup()
-                .addContainerGap(953, Short.MAX_VALUE)
+                .addContainerGap(959, Short.MAX_VALUE)
                 .addComponent(jButton38)
                 .addGap(88, 88, 88))
         );
@@ -1470,7 +1468,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 1079, Short.MAX_VALUE)
                 .addComponent(jLabel21))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF21Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(965, Short.MAX_VALUE)
                 .addComponent(jButton39)
                 .addGap(82, 82, 82))
         );
@@ -1499,7 +1497,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 1079, Short.MAX_VALUE)
                 .addComponent(jLabel22))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF22Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(956, Short.MAX_VALUE)
                 .addComponent(jButton40)
                 .addGap(91, 91, 91))
         );
@@ -1532,7 +1530,7 @@ public class MainF extends javax.swing.JFrame {
                     .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton41, javax.swing.GroupLayout.Alignment.TRAILING)))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF23Layout.createSequentialGroup()
-                .addContainerGap(920, Short.MAX_VALUE)
+                .addContainerGap(926, Short.MAX_VALUE)
                 .addComponent(jButton42)
                 .addGap(121, 121, 121))
         );
@@ -1563,7 +1561,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton43))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF24Layout.createSequentialGroup()
-                .addContainerGap(1007, Short.MAX_VALUE)
+                .addContainerGap(1013, Short.MAX_VALUE)
                 .addComponent(jButton44)
                 .addGap(34, 34, 34))
         );
@@ -1766,10 +1764,10 @@ public class MainF extends javax.swing.JFrame {
             jDBep.setLocationRelativeTo(this);
             jDBep.setVisible(true);
         } else if (jTextField1.getText().equals(kho)) {
-            jDKho.setTitle("WareHouse");
-            jDKho.setSize(1360, 768);
-            jDKho.setLocationRelativeTo(this);
-            jDKho.setVisible(true);
+            jDkho.setTitle("WareHouse");
+            jDkho.setSize(1360, 768);
+            jDkho.setLocationRelativeTo(this);
+            jDkho.setVisible(true);
         } else if (jTextField1.getText().equals(thuNgan)) {
             jDThuNgan.setTitle("Cashier");
             jDThuNgan.setSize(1360, 768);
@@ -2046,13 +2044,7 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JButton Btn12;
     private javax.swing.JButton Btn13;
     private javax.swing.JButton Btn14;
-    private javax.swing.JButton Btn15;
-    private javax.swing.JButton Btn16;
-    private javax.swing.JButton Btn17;
-    private javax.swing.JButton Btn18;
-    private javax.swing.JButton Btn19;
     private javax.swing.JButton Btn2;
-    private javax.swing.JButton Btn20;
     private javax.swing.JButton Btn21;
     private javax.swing.JButton Btn22;
     private javax.swing.JButton Btn23;
@@ -2064,13 +2056,7 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JButton Btn3;
     private javax.swing.JButton Btn35;
     private javax.swing.JButton Btn36;
-    private javax.swing.JButton Btn37;
-    private javax.swing.JButton Btn38;
-    private javax.swing.JButton Btn39;
     private javax.swing.JButton Btn4;
-    private javax.swing.JButton Btn40;
-    private javax.swing.JButton Btn41;
-    private javax.swing.JButton Btn42;
     private javax.swing.JButton Btn43;
     private javax.swing.JButton Btn44;
     private javax.swing.JButton Btn45;
@@ -2084,17 +2070,13 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JButton Btn9;
     private javax.swing.JLabel EID;
     private javax.swing.JLabel EID1;
-    private javax.swing.JLabel EID2;
     private javax.swing.JLabel EID3;
     private javax.swing.JLabel EID5;
-    private javax.swing.JLabel EID6;
     private javax.swing.JLabel EID7;
     private javax.swing.JLabel EName;
     private javax.swing.JLabel EName1;
-    private javax.swing.JLabel EName2;
     private javax.swing.JLabel EName3;
     private javax.swing.JLabel EName5;
-    private javax.swing.JLabel EName6;
     private javax.swing.JLabel EName7;
     private javax.swing.JPanel JF10;
     private javax.swing.JPanel JF11;
@@ -2105,7 +2087,6 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JPanel JF16;
     private javax.swing.JPanel JF17;
     private javax.swing.JPanel JF18;
-    private javax.swing.JPanel JF19;
     private javax.swing.JPanel JF2;
     private javax.swing.JPanel JF20;
     private javax.swing.JPanel JF21;
@@ -2120,7 +2101,6 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JPanel JF35;
     private javax.swing.JPanel JF36;
     private javax.swing.JPanel JF37;
-    private javax.swing.JPanel JF38;
     private javax.swing.JPanel JF39;
     private javax.swing.JPanel JF4;
     private javax.swing.JPanel JF5;
@@ -2130,10 +2110,8 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JPanel JF9;
     private javax.swing.JLabel Title;
     private javax.swing.JLabel Title1;
-    private javax.swing.JLabel Title2;
     private javax.swing.JLabel Title3;
     private javax.swing.JLabel Title5;
-    private javax.swing.JLabel Title6;
     private javax.swing.JLabel Title7;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
@@ -2183,8 +2161,6 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JDialog jDBar;
     private javax.swing.JDialog jDBep;
-    private javax.swing.JDialog jDKho;
-    private javax.swing.JDialog jDKho1;
     private javax.swing.JDialog jDQuanLy;
     private javax.swing.JDialog jDThuNgan;
     private javax.swing.JDialog jDkho;
@@ -2213,12 +2189,10 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
