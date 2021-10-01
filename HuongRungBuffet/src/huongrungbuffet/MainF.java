@@ -33,6 +33,255 @@ public class MainF extends javax.swing.JFrame {
     private void initComponents() {
 
         jDQuanLy = new javax.swing.JDialog();
+        jPanel5 = new javax.swing.JPanel();
+        Btn1 = new javax.swing.JButton();
+        Btn2 = new javax.swing.JButton();
+        Btn3 = new javax.swing.JButton();
+        Btn4 = new javax.swing.JButton();
+        Btn5 = new javax.swing.JButton();
+        Btn6 = new javax.swing.JButton();
+        Btn7 = new javax.swing.JButton();
+        Title = new javax.swing.JLabel();
+        EName = new javax.swing.JLabel();
+        EID = new javax.swing.JLabel();
+        JF17 = new javax.swing.JPanel();
+        JF2 = new javax.swing.JPanel();
+        JF3 = new javax.swing.JPanel();
+        JF4 = new javax.swing.JPanel();
+        JF5 = new javax.swing.JPanel();
+        JF6 = new javax.swing.JPanel();
+        JBtn7 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jSpinner1 = new javax.swing.JSpinner();
+        total1 = new javax.swing.JLabel();
+        total2 = new javax.swing.JLabel();
+        jSpinner2 = new javax.swing.JSpinner();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        total3 = new javax.swing.JLabel();
+        jSpinner3 = new javax.swing.JSpinner();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        total4 = new javax.swing.JLabel();
+        jSpinner4 = new javax.swing.JSpinner();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        total5 = new javax.swing.JLabel();
+        jSpinner5 = new javax.swing.JSpinner();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        total6 = new javax.swing.JLabel();
+        jButton10 = new javax.swing.JButton();
+        jSpinner6 = new javax.swing.JSpinner();
+        jDBep = new javax.swing.JDialog();
+        jPanel6 = new javax.swing.JPanel();
+        Btn8 = new javax.swing.JButton();
+        Btn9 = new javax.swing.JButton();
+        Btn10 = new javax.swing.JButton();
+        Btn11 = new javax.swing.JButton();
+        Btn12 = new javax.swing.JButton();
+        Btn13 = new javax.swing.JButton();
+        Btn14 = new javax.swing.JButton();
+        Title1 = new javax.swing.JLabel();
+        EName1 = new javax.swing.JLabel();
+        EID1 = new javax.swing.JLabel();
+        JF18 = new javax.swing.JPanel();
+        JF7 = new javax.swing.JPanel();
+        JF8 = new javax.swing.JPanel();
+        JF9 = new javax.swing.JPanel();
+        JF10 = new javax.swing.JPanel();
+        JF11 = new javax.swing.JPanel();
+        JBtn8 = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jSpinner7 = new javax.swing.JSpinner();
+        total7 = new javax.swing.JLabel();
+        total8 = new javax.swing.JLabel();
+        jSpinner8 = new javax.swing.JSpinner();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        total9 = new javax.swing.JLabel();
+        jSpinner9 = new javax.swing.JSpinner();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        total10 = new javax.swing.JLabel();
+        jSpinner10 = new javax.swing.JSpinner();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        total11 = new javax.swing.JLabel();
+        jSpinner11 = new javax.swing.JSpinner();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        total12 = new javax.swing.JLabel();
+        jButton11 = new javax.swing.JButton();
+        jSpinner12 = new javax.swing.JSpinner();
+        jDKho = new javax.swing.JDialog();
+        jPanel7 = new javax.swing.JPanel();
+        Btn15 = new javax.swing.JButton();
+        Btn16 = new javax.swing.JButton();
+        Btn17 = new javax.swing.JButton();
+        Btn18 = new javax.swing.JButton();
+        Btn19 = new javax.swing.JButton();
+        Btn20 = new javax.swing.JButton();
+        Btn21 = new javax.swing.JButton();
+        Title2 = new javax.swing.JLabel();
+        EName2 = new javax.swing.JLabel();
+        EID2 = new javax.swing.JLabel();
+        JF19 = new javax.swing.JPanel();
+        JF12 = new javax.swing.JPanel();
+        JF13 = new javax.swing.JPanel();
+        JF14 = new javax.swing.JPanel();
+        JF15 = new javax.swing.JPanel();
+        JF16 = new javax.swing.JPanel();
+        JBtn9 = new javax.swing.JPanel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jSpinner13 = new javax.swing.JSpinner();
+        total13 = new javax.swing.JLabel();
+        total14 = new javax.swing.JLabel();
+        jSpinner14 = new javax.swing.JSpinner();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        total15 = new javax.swing.JLabel();
+        jSpinner15 = new javax.swing.JSpinner();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        total16 = new javax.swing.JLabel();
+        jSpinner16 = new javax.swing.JSpinner();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        total17 = new javax.swing.JLabel();
+        jSpinner17 = new javax.swing.JSpinner();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
+        total18 = new javax.swing.JLabel();
+        jButton12 = new javax.swing.JButton();
+        jSpinner18 = new javax.swing.JSpinner();
+        jDThuNgan = new javax.swing.JDialog();
+        jPanel8 = new javax.swing.JPanel();
+        Btn22 = new javax.swing.JButton();
+        Btn23 = new javax.swing.JButton();
+        Btn24 = new javax.swing.JButton();
+        Btn25 = new javax.swing.JButton();
+        Btn26 = new javax.swing.JButton();
+        Btn27 = new javax.swing.JButton();
+        Btn28 = new javax.swing.JButton();
+        Title3 = new javax.swing.JLabel();
+        EName3 = new javax.swing.JLabel();
+        EID3 = new javax.swing.JLabel();
+        JF20 = new javax.swing.JPanel();
+        JF21 = new javax.swing.JPanel();
+        JF22 = new javax.swing.JPanel();
+        JF23 = new javax.swing.JPanel();
+        JF24 = new javax.swing.JPanel();
+        JF25 = new javax.swing.JPanel();
+        JBtn10 = new javax.swing.JPanel();
+        jLabel64 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        jLabel68 = new javax.swing.JLabel();
+        jLabel69 = new javax.swing.JLabel();
+        jLabel70 = new javax.swing.JLabel();
+        jSpinner19 = new javax.swing.JSpinner();
+        total19 = new javax.swing.JLabel();
+        total20 = new javax.swing.JLabel();
+        jSpinner20 = new javax.swing.JSpinner();
+        jLabel71 = new javax.swing.JLabel();
+        jLabel72 = new javax.swing.JLabel();
+        total21 = new javax.swing.JLabel();
+        jSpinner21 = new javax.swing.JSpinner();
+        jLabel73 = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
+        jLabel75 = new javax.swing.JLabel();
+        total22 = new javax.swing.JLabel();
+        jSpinner22 = new javax.swing.JSpinner();
+        jLabel76 = new javax.swing.JLabel();
+        jLabel77 = new javax.swing.JLabel();
+        jLabel78 = new javax.swing.JLabel();
+        jLabel79 = new javax.swing.JLabel();
+        total23 = new javax.swing.JLabel();
+        jSpinner23 = new javax.swing.JSpinner();
+        jLabel80 = new javax.swing.JLabel();
+        jLabel81 = new javax.swing.JLabel();
+        total24 = new javax.swing.JLabel();
+        jButton13 = new javax.swing.JButton();
+        jSpinner24 = new javax.swing.JSpinner();
+        jDBar = new javax.swing.JDialog();
+        jPanel9 = new javax.swing.JPanel();
+        Btn29 = new javax.swing.JButton();
+        Btn30 = new javax.swing.JButton();
+        Btn31 = new javax.swing.JButton();
+        Btn32 = new javax.swing.JButton();
+        Btn33 = new javax.swing.JButton();
+        Btn34 = new javax.swing.JButton();
+        Btn35 = new javax.swing.JButton();
+        Title4 = new javax.swing.JLabel();
+        EName4 = new javax.swing.JLabel();
+        EID4 = new javax.swing.JLabel();
+        JF26 = new javax.swing.JPanel();
+        JF27 = new javax.swing.JPanel();
+        JF28 = new javax.swing.JPanel();
+        JF29 = new javax.swing.JPanel();
+        JF30 = new javax.swing.JPanel();
+        JF31 = new javax.swing.JPanel();
+        JBtn11 = new javax.swing.JPanel();
+        jLabel82 = new javax.swing.JLabel();
+        jLabel83 = new javax.swing.JLabel();
+        jLabel84 = new javax.swing.JLabel();
+        jLabel85 = new javax.swing.JLabel();
+        jLabel86 = new javax.swing.JLabel();
+        jLabel87 = new javax.swing.JLabel();
+        jLabel88 = new javax.swing.JLabel();
+        jSpinner25 = new javax.swing.JSpinner();
+        total25 = new javax.swing.JLabel();
+        total26 = new javax.swing.JLabel();
+        jSpinner26 = new javax.swing.JSpinner();
+        jLabel89 = new javax.swing.JLabel();
+        jLabel90 = new javax.swing.JLabel();
+        total27 = new javax.swing.JLabel();
+        jSpinner27 = new javax.swing.JSpinner();
+        jLabel91 = new javax.swing.JLabel();
+        jLabel92 = new javax.swing.JLabel();
+        jLabel93 = new javax.swing.JLabel();
+        total28 = new javax.swing.JLabel();
+        jSpinner28 = new javax.swing.JSpinner();
+        jLabel94 = new javax.swing.JLabel();
+        jLabel95 = new javax.swing.JLabel();
+        jLabel96 = new javax.swing.JLabel();
+        jLabel97 = new javax.swing.JLabel();
+        total29 = new javax.swing.JLabel();
+        jSpinner29 = new javax.swing.JSpinner();
+        jLabel98 = new javax.swing.JLabel();
+        jLabel99 = new javax.swing.JLabel();
+        total30 = new javax.swing.JLabel();
+        jButton14 = new javax.swing.JButton();
+        jSpinner30 = new javax.swing.JSpinner();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -42,15 +291,2119 @@ public class MainF extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
 
+        jDQuanLy.setLocation(new java.awt.Point(0, 0));
+        jDQuanLy.setMaximumSize(new java.awt.Dimension(1360, 768));
+
+        jPanel5.setBackground(new java.awt.Color(255, 153, 51));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Btn1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn1.setText("Btn 1");
+        Btn1.setPreferredSize(new java.awt.Dimension(111, 33));
+        Btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn1ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(Btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 180, 30));
+
+        Btn2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn2.setText("Btn 2");
+        Btn2.setMaximumSize(new java.awt.Dimension(111, 33));
+        Btn2.setMinimumSize(new java.awt.Dimension(111, 33));
+        Btn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn2ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(Btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 180, -1));
+
+        Btn3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn3.setText("Btn 3");
+        Btn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn3ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(Btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 180, -1));
+
+        Btn4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn4.setText("Btn 4");
+        Btn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn4ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(Btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 180, -1));
+
+        Btn5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn5.setText("Btn 5");
+        Btn5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn5ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(Btn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 180, -1));
+
+        Btn6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn6.setText("Btn 6");
+        Btn6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn6ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(Btn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 180, -1));
+
+        Btn7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn7.setText("Btn 7");
+        Btn7.setPreferredSize(new java.awt.Dimension(111, 33));
+        Btn7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn7ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(Btn7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 180, 30));
+
+        Title.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Title.setText("Department1");
+        jPanel5.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 220, 30));
+
+        EName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EName.setText("EmployeeName");
+        jPanel5.add(EName, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 220, 30));
+
+        EID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EID.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EID.setText("EmployeeID");
+        jPanel5.add(EID, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 106, 220, 30));
+
+        JF17.setBackground(new java.awt.Color(51, 255, 255));
+        JF17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF17.setPreferredSize(new java.awt.Dimension(1685, 542));
+
+        javax.swing.GroupLayout JF17Layout = new javax.swing.GroupLayout(JF17);
+        JF17.setLayout(JF17Layout);
+        JF17Layout.setHorizontalGroup(
+            JF17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1120, Short.MAX_VALUE)
+        );
+        JF17Layout.setVerticalGroup(
+            JF17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 718, Short.MAX_VALUE)
+        );
+
+        JF2.setBackground(new java.awt.Color(0, 255, 0));
+        JF2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF2.setPreferredSize(new java.awt.Dimension(1685, 542));
+
+        javax.swing.GroupLayout JF2Layout = new javax.swing.GroupLayout(JF2);
+        JF2.setLayout(JF2Layout);
+        JF2Layout.setHorizontalGroup(
+            JF2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1672, Short.MAX_VALUE)
+        );
+        JF2Layout.setVerticalGroup(
+            JF2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF3.setBackground(new java.awt.Color(255, 204, 0));
+        JF3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF3.setPreferredSize(new java.awt.Dimension(1685, 0));
+
+        javax.swing.GroupLayout JF3Layout = new javax.swing.GroupLayout(JF3);
+        JF3.setLayout(JF3Layout);
+        JF3Layout.setHorizontalGroup(
+            JF3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF3Layout.setVerticalGroup(
+            JF3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF4.setBackground(new java.awt.Color(255, 204, 153));
+        JF4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF4.setPreferredSize(new java.awt.Dimension(1685, 0));
+
+        javax.swing.GroupLayout JF4Layout = new javax.swing.GroupLayout(JF4);
+        JF4.setLayout(JF4Layout);
+        JF4Layout.setHorizontalGroup(
+            JF4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF4Layout.setVerticalGroup(
+            JF4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF5.setBackground(new java.awt.Color(255, 153, 153));
+        JF5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF5.setPreferredSize(new java.awt.Dimension(1685, 0));
+
+        javax.swing.GroupLayout JF5Layout = new javax.swing.GroupLayout(JF5);
+        JF5.setLayout(JF5Layout);
+        JF5Layout.setHorizontalGroup(
+            JF5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF5Layout.setVerticalGroup(
+            JF5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF6.setBackground(new java.awt.Color(204, 255, 204));
+        JF6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF6.setPreferredSize(new java.awt.Dimension(1685, 2));
+
+        javax.swing.GroupLayout JF6Layout = new javax.swing.GroupLayout(JF6);
+        JF6.setLayout(JF6Layout);
+        JF6Layout.setHorizontalGroup(
+            JF6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF6Layout.setVerticalGroup(
+            JF6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JBtn7.setBackground(new java.awt.Color(140, 125, 108));
+        JBtn7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JBtn7.setPreferredSize(new java.awt.Dimension(1685, 0));
+        JBtn7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel10.setText("jLabel10");
+        JBtn7.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 200, 130));
+
+        jLabel11.setText("jLabel11");
+        JBtn7.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 190, 130));
+
+        jLabel12.setText("jLabel12");
+        JBtn7.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, 180, 130));
+
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Mixed bread ");
+        JBtn7.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
+
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Price:50.000 VND");
+        JBtn7.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 110, 20));
+
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Broken rice");
+        JBtn7.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, -1));
+
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Price:55.000 VND");
+        JBtn7.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, -1, -1));
+
+        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner1.setName(""); // NOI18N
+        jSpinner1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner1AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner1StateChanged(evt);
+            }
+        });
+        JBtn7.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 50, 30));
+
+        total1.setForeground(new java.awt.Color(255, 255, 255));
+        total1.setText("Total:0 VND");
+        JBtn7.add(total1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 100, -1));
+
+        total2.setForeground(new java.awt.Color(255, 255, 255));
+        total2.setText("Total:0 VND");
+        JBtn7.add(total2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 100, -1));
+
+        jSpinner2.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner2.setName(""); // NOI18N
+        jSpinner2.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner2AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner2.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner2StateChanged(evt);
+            }
+        });
+        JBtn7.add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 50, 30));
+
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText(" Beef noodle soup");
+        JBtn7.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, -1, -1));
+
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("Price:80.000 VND");
+        JBtn7.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, -1, -1));
+
+        total3.setForeground(new java.awt.Color(255, 255, 255));
+        total3.setText("Total:0 VND");
+        JBtn7.add(total3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 100, -1));
+
+        jSpinner3.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner3.setName(""); // NOI18N
+        jSpinner3.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner3AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner3.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner3StateChanged(evt);
+            }
+        });
+        JBtn7.add(jSpinner3, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 200, 50, 30));
+
+        jLabel19.setText("jLabel19");
+        JBtn7.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 190, 130));
+
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("Rolls");
+        JBtn7.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, -1, -1));
+
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel21.setText("Price:95.000 VND");
+        JBtn7.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, -1, -1));
+
+        total4.setForeground(new java.awt.Color(255, 255, 255));
+        total4.setText("Total:0 VND");
+        JBtn7.add(total4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 430, 100, -1));
+
+        jSpinner4.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner4.setName(""); // NOI18N
+        jSpinner4.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner4AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner4.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner4StateChanged(evt);
+            }
+        });
+        JBtn7.add(jSpinner4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 50, 30));
+
+        jLabel22.setText("jLabel22");
+        JBtn7.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 180, 130));
+
+        jLabel23.setText("jLabel23");
+        JBtn7.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 240, 180, 130));
+
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel24.setText("Flan");
+        JBtn7.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 390, -1, -1));
+
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel25.setText("Price:70.000 VND");
+        JBtn7.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, -1, -1));
+
+        total5.setForeground(new java.awt.Color(255, 255, 255));
+        total5.setText("Total:0 VND");
+        JBtn7.add(total5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, 100, -1));
+
+        jSpinner5.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner5.setName(""); // NOI18N
+        jSpinner5.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner5AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner5.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner5StateChanged(evt);
+            }
+        });
+        JBtn7.add(jSpinner5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 410, 50, 30));
+
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel27.setText("Sundae ");
+        JBtn7.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, -1, -1));
+
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel28.setText("Price:230.000 VND");
+        JBtn7.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 400, -1, -1));
+
+        total6.setForeground(new java.awt.Color(255, 255, 255));
+        total6.setText("Total:0 VND");
+        JBtn7.add(total6, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 420, 110, -1));
+
+        jButton10.setText("Buy");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        JBtn7.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, -1, -1));
+
+        jSpinner6.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner6.setName(""); // NOI18N
+        jSpinner6.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner6AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner6.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner6StateChanged(evt);
+            }
+        });
+        JBtn7.add(jSpinner6, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, 50, 30));
+
         javax.swing.GroupLayout jDQuanLyLayout = new javax.swing.GroupLayout(jDQuanLy.getContentPane());
         jDQuanLy.getContentPane().setLayout(jDQuanLyLayout);
         jDQuanLyLayout.setHorizontalGroup(
             jDQuanLyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(jDQuanLyLayout.createSequentialGroup()
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF17, javax.swing.GroupLayout.PREFERRED_SIZE, 1122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF2, javax.swing.GroupLayout.PREFERRED_SIZE, 1674, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JBtn7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
         jDQuanLyLayout.setVerticalGroup(
             jDQuanLyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(JBtn7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(JF6, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF5, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF3, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF2, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF17, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(JF4, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+        );
+
+        jDBep.setLocation(new java.awt.Point(0, 0));
+        jDBep.setMaximumSize(new java.awt.Dimension(1360, 768));
+
+        jPanel6.setBackground(new java.awt.Color(255, 153, 51));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Btn8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn8.setText("Btn 1");
+        Btn8.setPreferredSize(new java.awt.Dimension(111, 33));
+        Btn8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn8ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(Btn8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 180, 30));
+
+        Btn9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn9.setText("Btn 2");
+        Btn9.setMaximumSize(new java.awt.Dimension(111, 33));
+        Btn9.setMinimumSize(new java.awt.Dimension(111, 33));
+        Btn9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn9ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(Btn9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 180, -1));
+
+        Btn10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn10.setText("Btn 3");
+        Btn10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn10ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(Btn10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 180, -1));
+
+        Btn11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn11.setText("Btn 4");
+        Btn11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn11ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(Btn11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 180, -1));
+
+        Btn12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn12.setText("Btn 5");
+        Btn12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn12ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(Btn12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 180, -1));
+
+        Btn13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn13.setText("Btn 6");
+        Btn13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn13ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(Btn13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 180, -1));
+
+        Btn14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn14.setText("Btn 7");
+        Btn14.setPreferredSize(new java.awt.Dimension(111, 33));
+        Btn14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn14ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(Btn14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 180, 30));
+
+        Title1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Title1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Title1.setText("Department2");
+        jPanel6.add(Title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 220, 30));
+
+        EName1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EName1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EName1.setText("EmployeeName");
+        jPanel6.add(EName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 220, 30));
+
+        EID1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EID1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EID1.setText("EmployeeID");
+        jPanel6.add(EID1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 106, 220, 30));
+
+        JF18.setBackground(new java.awt.Color(51, 255, 255));
+        JF18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF18.setPreferredSize(new java.awt.Dimension(1685, 542));
+
+        javax.swing.GroupLayout JF18Layout = new javax.swing.GroupLayout(JF18);
+        JF18.setLayout(JF18Layout);
+        JF18Layout.setHorizontalGroup(
+            JF18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1120, Short.MAX_VALUE)
+        );
+        JF18Layout.setVerticalGroup(
+            JF18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 718, Short.MAX_VALUE)
+        );
+
+        JF7.setBackground(new java.awt.Color(0, 255, 0));
+        JF7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF7.setPreferredSize(new java.awt.Dimension(1685, 542));
+
+        javax.swing.GroupLayout JF7Layout = new javax.swing.GroupLayout(JF7);
+        JF7.setLayout(JF7Layout);
+        JF7Layout.setHorizontalGroup(
+            JF7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1672, Short.MAX_VALUE)
+        );
+        JF7Layout.setVerticalGroup(
+            JF7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF8.setBackground(new java.awt.Color(255, 204, 0));
+        JF8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF8.setPreferredSize(new java.awt.Dimension(1685, 0));
+
+        javax.swing.GroupLayout JF8Layout = new javax.swing.GroupLayout(JF8);
+        JF8.setLayout(JF8Layout);
+        JF8Layout.setHorizontalGroup(
+            JF8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF8Layout.setVerticalGroup(
+            JF8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF9.setBackground(new java.awt.Color(255, 204, 153));
+        JF9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF9.setPreferredSize(new java.awt.Dimension(1685, 0));
+
+        javax.swing.GroupLayout JF9Layout = new javax.swing.GroupLayout(JF9);
+        JF9.setLayout(JF9Layout);
+        JF9Layout.setHorizontalGroup(
+            JF9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF9Layout.setVerticalGroup(
+            JF9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF10.setBackground(new java.awt.Color(255, 153, 153));
+        JF10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF10.setPreferredSize(new java.awt.Dimension(1685, 0));
+
+        javax.swing.GroupLayout JF10Layout = new javax.swing.GroupLayout(JF10);
+        JF10.setLayout(JF10Layout);
+        JF10Layout.setHorizontalGroup(
+            JF10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF10Layout.setVerticalGroup(
+            JF10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF11.setBackground(new java.awt.Color(204, 255, 204));
+        JF11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF11.setPreferredSize(new java.awt.Dimension(1685, 2));
+
+        javax.swing.GroupLayout JF11Layout = new javax.swing.GroupLayout(JF11);
+        JF11.setLayout(JF11Layout);
+        JF11Layout.setHorizontalGroup(
+            JF11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF11Layout.setVerticalGroup(
+            JF11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JBtn8.setBackground(new java.awt.Color(140, 125, 108));
+        JBtn8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JBtn8.setPreferredSize(new java.awt.Dimension(1685, 0));
+        JBtn8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel26.setText("jLabel10");
+        JBtn8.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 200, 130));
+
+        jLabel29.setText("jLabel11");
+        JBtn8.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 190, 130));
+
+        jLabel30.setText("jLabel12");
+        JBtn8.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, 180, 130));
+
+        jLabel31.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel31.setText("Mixed bread ");
+        JBtn8.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
+
+        jLabel32.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel32.setText("Price:50.000 VND");
+        JBtn8.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 110, 20));
+
+        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel33.setText("Broken rice");
+        JBtn8.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, -1));
+
+        jLabel34.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel34.setText("Price:55.000 VND");
+        JBtn8.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, -1, -1));
+
+        jSpinner7.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner7.setName(""); // NOI18N
+        jSpinner7.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner7AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner7.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner7StateChanged(evt);
+            }
+        });
+        JBtn8.add(jSpinner7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 50, 30));
+
+        total7.setForeground(new java.awt.Color(255, 255, 255));
+        total7.setText("Total:0 VND");
+        JBtn8.add(total7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 100, -1));
+
+        total8.setForeground(new java.awt.Color(255, 255, 255));
+        total8.setText("Total:0 VND");
+        JBtn8.add(total8, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 100, -1));
+
+        jSpinner8.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner8.setName(""); // NOI18N
+        jSpinner8.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner8AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner8.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner8StateChanged(evt);
+            }
+        });
+        JBtn8.add(jSpinner8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 50, 30));
+
+        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel35.setText(" Beef noodle soup");
+        JBtn8.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, -1, -1));
+
+        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel36.setText("Price:80.000 VND");
+        JBtn8.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, -1, -1));
+
+        total9.setForeground(new java.awt.Color(255, 255, 255));
+        total9.setText("Total:0 VND");
+        JBtn8.add(total9, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 100, -1));
+
+        jSpinner9.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner9.setName(""); // NOI18N
+        jSpinner9.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner9AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner9.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner9StateChanged(evt);
+            }
+        });
+        JBtn8.add(jSpinner9, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 200, 50, 30));
+
+        jLabel37.setText("jLabel19");
+        JBtn8.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 190, 130));
+
+        jLabel38.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel38.setText("Rolls");
+        JBtn8.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, -1, -1));
+
+        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel39.setText("Price:95.000 VND");
+        JBtn8.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, -1, -1));
+
+        total10.setForeground(new java.awt.Color(255, 255, 255));
+        total10.setText("Total:0 VND");
+        JBtn8.add(total10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 430, 100, -1));
+
+        jSpinner10.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner10.setName(""); // NOI18N
+        jSpinner10.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner10AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner10.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner10StateChanged(evt);
+            }
+        });
+        JBtn8.add(jSpinner10, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 50, 30));
+
+        jLabel40.setText("jLabel22");
+        JBtn8.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 180, 130));
+
+        jLabel41.setText("jLabel23");
+        JBtn8.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 240, 180, 130));
+
+        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel42.setText("Flan");
+        JBtn8.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 390, -1, -1));
+
+        jLabel43.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel43.setText("Price:70.000 VND");
+        JBtn8.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, -1, -1));
+
+        total11.setForeground(new java.awt.Color(255, 255, 255));
+        total11.setText("Total:0 VND");
+        JBtn8.add(total11, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, 100, -1));
+
+        jSpinner11.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner11.setName(""); // NOI18N
+        jSpinner11.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner11AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner11.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner11StateChanged(evt);
+            }
+        });
+        JBtn8.add(jSpinner11, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 410, 50, 30));
+
+        jLabel44.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel44.setText("Sundae ");
+        JBtn8.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, -1, -1));
+
+        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel45.setText("Price:230.000 VND");
+        JBtn8.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 400, -1, -1));
+
+        total12.setForeground(new java.awt.Color(255, 255, 255));
+        total12.setText("Total:0 VND");
+        JBtn8.add(total12, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 420, 110, -1));
+
+        jButton11.setText("Buy");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        JBtn8.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, -1, -1));
+
+        jSpinner12.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner12.setName(""); // NOI18N
+        jSpinner12.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner12AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner12.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner12StateChanged(evt);
+            }
+        });
+        JBtn8.add(jSpinner12, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, 50, 30));
+
+        javax.swing.GroupLayout jDBepLayout = new javax.swing.GroupLayout(jDBep.getContentPane());
+        jDBep.getContentPane().setLayout(jDBepLayout);
+        jDBepLayout.setHorizontalGroup(
+            jDBepLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDBepLayout.createSequentialGroup()
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF18, javax.swing.GroupLayout.PREFERRED_SIZE, 1122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF7, javax.swing.GroupLayout.PREFERRED_SIZE, 1674, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JBtn8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
+        );
+        jDBepLayout.setVerticalGroup(
+            jDBepLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(JBtn8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(JF11, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF10, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF8, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF7, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF18, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(JF9, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+        );
+
+        jDKho.setLocation(new java.awt.Point(0, 0));
+        jDKho.setMaximumSize(new java.awt.Dimension(1360, 768));
+
+        jPanel7.setBackground(new java.awt.Color(255, 153, 51));
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Btn15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn15.setText("Btn 1");
+        Btn15.setPreferredSize(new java.awt.Dimension(111, 33));
+        Btn15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn15ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(Btn15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 180, 30));
+
+        Btn16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn16.setText("Btn 2");
+        Btn16.setMaximumSize(new java.awt.Dimension(111, 33));
+        Btn16.setMinimumSize(new java.awt.Dimension(111, 33));
+        Btn16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn16ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(Btn16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 180, -1));
+
+        Btn17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn17.setText("Btn 3");
+        Btn17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn17ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(Btn17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 180, -1));
+
+        Btn18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn18.setText("Btn 4");
+        Btn18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn18ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(Btn18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 180, -1));
+
+        Btn19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn19.setText("Btn 5");
+        Btn19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn19ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(Btn19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 180, -1));
+
+        Btn20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn20.setText("Btn 6");
+        Btn20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn20ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(Btn20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 180, -1));
+
+        Btn21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn21.setText("Btn 7");
+        Btn21.setPreferredSize(new java.awt.Dimension(111, 33));
+        Btn21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn21ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(Btn21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 180, 30));
+
+        Title2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Title2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Title2.setText("Department3");
+        jPanel7.add(Title2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 220, 30));
+
+        EName2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EName2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EName2.setText("EmployeeName");
+        jPanel7.add(EName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 220, 30));
+
+        EID2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EID2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EID2.setText("EmployeeID");
+        jPanel7.add(EID2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 106, 220, 30));
+
+        JF19.setBackground(new java.awt.Color(51, 255, 255));
+        JF19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF19.setPreferredSize(new java.awt.Dimension(1685, 542));
+
+        javax.swing.GroupLayout JF19Layout = new javax.swing.GroupLayout(JF19);
+        JF19.setLayout(JF19Layout);
+        JF19Layout.setHorizontalGroup(
+            JF19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1120, Short.MAX_VALUE)
+        );
+        JF19Layout.setVerticalGroup(
+            JF19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 718, Short.MAX_VALUE)
+        );
+
+        JF12.setBackground(new java.awt.Color(0, 255, 0));
+        JF12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF12.setPreferredSize(new java.awt.Dimension(1685, 542));
+
+        javax.swing.GroupLayout JF12Layout = new javax.swing.GroupLayout(JF12);
+        JF12.setLayout(JF12Layout);
+        JF12Layout.setHorizontalGroup(
+            JF12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1672, Short.MAX_VALUE)
+        );
+        JF12Layout.setVerticalGroup(
+            JF12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF13.setBackground(new java.awt.Color(255, 204, 0));
+        JF13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF13.setPreferredSize(new java.awt.Dimension(1685, 0));
+
+        javax.swing.GroupLayout JF13Layout = new javax.swing.GroupLayout(JF13);
+        JF13.setLayout(JF13Layout);
+        JF13Layout.setHorizontalGroup(
+            JF13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF13Layout.setVerticalGroup(
+            JF13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF14.setBackground(new java.awt.Color(255, 204, 153));
+        JF14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF14.setPreferredSize(new java.awt.Dimension(1685, 0));
+
+        javax.swing.GroupLayout JF14Layout = new javax.swing.GroupLayout(JF14);
+        JF14.setLayout(JF14Layout);
+        JF14Layout.setHorizontalGroup(
+            JF14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF14Layout.setVerticalGroup(
+            JF14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF15.setBackground(new java.awt.Color(255, 153, 153));
+        JF15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF15.setPreferredSize(new java.awt.Dimension(1685, 0));
+
+        javax.swing.GroupLayout JF15Layout = new javax.swing.GroupLayout(JF15);
+        JF15.setLayout(JF15Layout);
+        JF15Layout.setHorizontalGroup(
+            JF15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF15Layout.setVerticalGroup(
+            JF15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF16.setBackground(new java.awt.Color(204, 255, 204));
+        JF16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF16.setPreferredSize(new java.awt.Dimension(1685, 2));
+
+        javax.swing.GroupLayout JF16Layout = new javax.swing.GroupLayout(JF16);
+        JF16.setLayout(JF16Layout);
+        JF16Layout.setHorizontalGroup(
+            JF16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF16Layout.setVerticalGroup(
+            JF16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JBtn9.setBackground(new java.awt.Color(140, 125, 108));
+        JBtn9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JBtn9.setPreferredSize(new java.awt.Dimension(1685, 0));
+        JBtn9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel46.setText("jLabel10");
+        JBtn9.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 200, 130));
+
+        jLabel47.setText("jLabel11");
+        JBtn9.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 190, 130));
+
+        jLabel48.setText("jLabel12");
+        JBtn9.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, 180, 130));
+
+        jLabel49.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel49.setText("Mixed bread ");
+        JBtn9.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
+
+        jLabel50.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel50.setText("Price:50.000 VND");
+        JBtn9.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 110, 20));
+
+        jLabel51.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel51.setText("Broken rice");
+        JBtn9.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, -1));
+
+        jLabel52.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel52.setText("Price:55.000 VND");
+        JBtn9.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, -1, -1));
+
+        jSpinner13.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner13.setName(""); // NOI18N
+        jSpinner13.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner13AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner13.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner13StateChanged(evt);
+            }
+        });
+        JBtn9.add(jSpinner13, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 50, 30));
+
+        total13.setForeground(new java.awt.Color(255, 255, 255));
+        total13.setText("Total:0 VND");
+        JBtn9.add(total13, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 100, -1));
+
+        total14.setForeground(new java.awt.Color(255, 255, 255));
+        total14.setText("Total:0 VND");
+        JBtn9.add(total14, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 100, -1));
+
+        jSpinner14.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner14.setName(""); // NOI18N
+        jSpinner14.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner14AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner14.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner14StateChanged(evt);
+            }
+        });
+        JBtn9.add(jSpinner14, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 50, 30));
+
+        jLabel53.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel53.setText(" Beef noodle soup");
+        JBtn9.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, -1, -1));
+
+        jLabel54.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel54.setText("Price:80.000 VND");
+        JBtn9.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, -1, -1));
+
+        total15.setForeground(new java.awt.Color(255, 255, 255));
+        total15.setText("Total:0 VND");
+        JBtn9.add(total15, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 100, -1));
+
+        jSpinner15.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner15.setName(""); // NOI18N
+        jSpinner15.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner15AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner15.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner15StateChanged(evt);
+            }
+        });
+        JBtn9.add(jSpinner15, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 200, 50, 30));
+
+        jLabel55.setText("jLabel19");
+        JBtn9.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 190, 130));
+
+        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel56.setText("Rolls");
+        JBtn9.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, -1, -1));
+
+        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel57.setText("Price:95.000 VND");
+        JBtn9.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, -1, -1));
+
+        total16.setForeground(new java.awt.Color(255, 255, 255));
+        total16.setText("Total:0 VND");
+        JBtn9.add(total16, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 430, 100, -1));
+
+        jSpinner16.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner16.setName(""); // NOI18N
+        jSpinner16.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner16AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner16.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner16StateChanged(evt);
+            }
+        });
+        JBtn9.add(jSpinner16, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 50, 30));
+
+        jLabel58.setText("jLabel22");
+        JBtn9.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 180, 130));
+
+        jLabel59.setText("jLabel23");
+        JBtn9.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 240, 180, 130));
+
+        jLabel60.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel60.setText("Flan");
+        JBtn9.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 390, -1, -1));
+
+        jLabel61.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel61.setText("Price:70.000 VND");
+        JBtn9.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, -1, -1));
+
+        total17.setForeground(new java.awt.Color(255, 255, 255));
+        total17.setText("Total:0 VND");
+        JBtn9.add(total17, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, 100, -1));
+
+        jSpinner17.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner17.setName(""); // NOI18N
+        jSpinner17.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner17AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner17.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner17StateChanged(evt);
+            }
+        });
+        JBtn9.add(jSpinner17, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 410, 50, 30));
+
+        jLabel62.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel62.setText("Sundae ");
+        JBtn9.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, -1, -1));
+
+        jLabel63.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel63.setText("Price:230.000 VND");
+        JBtn9.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 400, -1, -1));
+
+        total18.setForeground(new java.awt.Color(255, 255, 255));
+        total18.setText("Total:0 VND");
+        JBtn9.add(total18, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 420, 110, -1));
+
+        jButton12.setText("Buy");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        JBtn9.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, -1, -1));
+
+        jSpinner18.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner18.setName(""); // NOI18N
+        jSpinner18.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner18AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner18.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner18StateChanged(evt);
+            }
+        });
+        JBtn9.add(jSpinner18, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, 50, 30));
+
+        javax.swing.GroupLayout jDKhoLayout = new javax.swing.GroupLayout(jDKho.getContentPane());
+        jDKho.getContentPane().setLayout(jDKhoLayout);
+        jDKhoLayout.setHorizontalGroup(
+            jDKhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDKhoLayout.createSequentialGroup()
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF19, javax.swing.GroupLayout.PREFERRED_SIZE, 1122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF12, javax.swing.GroupLayout.PREFERRED_SIZE, 1674, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JBtn9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
+        );
+        jDKhoLayout.setVerticalGroup(
+            jDKhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(JBtn9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(JF16, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF15, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF13, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF12, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF19, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(JF14, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+        );
+
+        jDThuNgan.setLocation(new java.awt.Point(0, 0));
+        jDThuNgan.setMaximumSize(new java.awt.Dimension(1360, 768));
+
+        jPanel8.setBackground(new java.awt.Color(255, 153, 51));
+        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Btn22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn22.setText("Btn 1");
+        Btn22.setPreferredSize(new java.awt.Dimension(111, 33));
+        Btn22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn22ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(Btn22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 180, 30));
+
+        Btn23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn23.setText("Btn 2");
+        Btn23.setMaximumSize(new java.awt.Dimension(111, 33));
+        Btn23.setMinimumSize(new java.awt.Dimension(111, 33));
+        Btn23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn23ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(Btn23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 180, -1));
+
+        Btn24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn24.setText("Btn 3");
+        Btn24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn24ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(Btn24, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 180, -1));
+
+        Btn25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn25.setText("Btn 4");
+        Btn25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn25ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(Btn25, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 180, -1));
+
+        Btn26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn26.setText("Btn 5");
+        Btn26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn26ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(Btn26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 180, -1));
+
+        Btn27.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn27.setText("Btn 6");
+        Btn27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn27ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(Btn27, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 180, -1));
+
+        Btn28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn28.setText("Btn 7");
+        Btn28.setPreferredSize(new java.awt.Dimension(111, 33));
+        Btn28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn28ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(Btn28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 180, 30));
+
+        Title3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Title3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Title3.setText("Department4");
+        jPanel8.add(Title3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 220, 30));
+
+        EName3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EName3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EName3.setText("EmployeeName");
+        jPanel8.add(EName3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 220, 30));
+
+        EID3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EID3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EID3.setText("EmployeeID");
+        jPanel8.add(EID3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 106, 220, 30));
+
+        JF20.setBackground(new java.awt.Color(51, 255, 255));
+        JF20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF20.setPreferredSize(new java.awt.Dimension(1685, 542));
+
+        javax.swing.GroupLayout JF20Layout = new javax.swing.GroupLayout(JF20);
+        JF20.setLayout(JF20Layout);
+        JF20Layout.setHorizontalGroup(
+            JF20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1120, Short.MAX_VALUE)
+        );
+        JF20Layout.setVerticalGroup(
+            JF20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 718, Short.MAX_VALUE)
+        );
+
+        JF21.setBackground(new java.awt.Color(0, 255, 0));
+        JF21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF21.setPreferredSize(new java.awt.Dimension(1685, 542));
+
+        javax.swing.GroupLayout JF21Layout = new javax.swing.GroupLayout(JF21);
+        JF21.setLayout(JF21Layout);
+        JF21Layout.setHorizontalGroup(
+            JF21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1672, Short.MAX_VALUE)
+        );
+        JF21Layout.setVerticalGroup(
+            JF21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF22.setBackground(new java.awt.Color(255, 204, 0));
+        JF22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF22.setPreferredSize(new java.awt.Dimension(1685, 0));
+
+        javax.swing.GroupLayout JF22Layout = new javax.swing.GroupLayout(JF22);
+        JF22.setLayout(JF22Layout);
+        JF22Layout.setHorizontalGroup(
+            JF22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF22Layout.setVerticalGroup(
+            JF22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF23.setBackground(new java.awt.Color(255, 204, 153));
+        JF23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF23.setPreferredSize(new java.awt.Dimension(1685, 0));
+
+        javax.swing.GroupLayout JF23Layout = new javax.swing.GroupLayout(JF23);
+        JF23.setLayout(JF23Layout);
+        JF23Layout.setHorizontalGroup(
+            JF23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF23Layout.setVerticalGroup(
+            JF23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF24.setBackground(new java.awt.Color(255, 153, 153));
+        JF24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF24.setPreferredSize(new java.awt.Dimension(1685, 0));
+
+        javax.swing.GroupLayout JF24Layout = new javax.swing.GroupLayout(JF24);
+        JF24.setLayout(JF24Layout);
+        JF24Layout.setHorizontalGroup(
+            JF24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF24Layout.setVerticalGroup(
+            JF24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF25.setBackground(new java.awt.Color(204, 255, 204));
+        JF25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF25.setPreferredSize(new java.awt.Dimension(1685, 2));
+
+        javax.swing.GroupLayout JF25Layout = new javax.swing.GroupLayout(JF25);
+        JF25.setLayout(JF25Layout);
+        JF25Layout.setHorizontalGroup(
+            JF25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF25Layout.setVerticalGroup(
+            JF25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JBtn10.setBackground(new java.awt.Color(140, 125, 108));
+        JBtn10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JBtn10.setPreferredSize(new java.awt.Dimension(1685, 0));
+        JBtn10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel64.setText("jLabel10");
+        JBtn10.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 200, 130));
+
+        jLabel65.setText("jLabel11");
+        JBtn10.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 190, 130));
+
+        jLabel66.setText("jLabel12");
+        JBtn10.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, 180, 130));
+
+        jLabel67.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel67.setText("Mixed bread ");
+        JBtn10.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
+
+        jLabel68.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel68.setText("Price:50.000 VND");
+        JBtn10.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 110, 20));
+
+        jLabel69.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel69.setText("Broken rice");
+        JBtn10.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, -1));
+
+        jLabel70.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel70.setText("Price:55.000 VND");
+        JBtn10.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, -1, -1));
+
+        jSpinner19.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner19.setName(""); // NOI18N
+        jSpinner19.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner19AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner19.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner19StateChanged(evt);
+            }
+        });
+        JBtn10.add(jSpinner19, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 50, 30));
+
+        total19.setForeground(new java.awt.Color(255, 255, 255));
+        total19.setText("Total:0 VND");
+        JBtn10.add(total19, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 100, -1));
+
+        total20.setForeground(new java.awt.Color(255, 255, 255));
+        total20.setText("Total:0 VND");
+        JBtn10.add(total20, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 100, -1));
+
+        jSpinner20.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner20.setName(""); // NOI18N
+        jSpinner20.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner20AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner20.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner20StateChanged(evt);
+            }
+        });
+        JBtn10.add(jSpinner20, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 50, 30));
+
+        jLabel71.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel71.setText(" Beef noodle soup");
+        JBtn10.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, -1, -1));
+
+        jLabel72.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel72.setText("Price:80.000 VND");
+        JBtn10.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, -1, -1));
+
+        total21.setForeground(new java.awt.Color(255, 255, 255));
+        total21.setText("Total:0 VND");
+        JBtn10.add(total21, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 100, -1));
+
+        jSpinner21.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner21.setName(""); // NOI18N
+        jSpinner21.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner21AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner21.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner21StateChanged(evt);
+            }
+        });
+        JBtn10.add(jSpinner21, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 200, 50, 30));
+
+        jLabel73.setText("jLabel19");
+        JBtn10.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 190, 130));
+
+        jLabel74.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel74.setText("Rolls");
+        JBtn10.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, -1, -1));
+
+        jLabel75.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel75.setText("Price:95.000 VND");
+        JBtn10.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, -1, -1));
+
+        total22.setForeground(new java.awt.Color(255, 255, 255));
+        total22.setText("Total:0 VND");
+        JBtn10.add(total22, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 430, 100, -1));
+
+        jSpinner22.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner22.setName(""); // NOI18N
+        jSpinner22.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner22AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner22.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner22StateChanged(evt);
+            }
+        });
+        JBtn10.add(jSpinner22, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 50, 30));
+
+        jLabel76.setText("jLabel22");
+        JBtn10.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 180, 130));
+
+        jLabel77.setText("jLabel23");
+        JBtn10.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 240, 180, 130));
+
+        jLabel78.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel78.setText("Flan");
+        JBtn10.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 390, -1, -1));
+
+        jLabel79.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel79.setText("Price:70.000 VND");
+        JBtn10.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, -1, -1));
+
+        total23.setForeground(new java.awt.Color(255, 255, 255));
+        total23.setText("Total:0 VND");
+        JBtn10.add(total23, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, 100, -1));
+
+        jSpinner23.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner23.setName(""); // NOI18N
+        jSpinner23.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner23AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner23.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner23StateChanged(evt);
+            }
+        });
+        JBtn10.add(jSpinner23, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 410, 50, 30));
+
+        jLabel80.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel80.setText("Sundae ");
+        JBtn10.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, -1, -1));
+
+        jLabel81.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel81.setText("Price:230.000 VND");
+        JBtn10.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 400, -1, -1));
+
+        total24.setForeground(new java.awt.Color(255, 255, 255));
+        total24.setText("Total:0 VND");
+        JBtn10.add(total24, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 420, 110, -1));
+
+        jButton13.setText("Buy");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+        JBtn10.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, -1, -1));
+
+        jSpinner24.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner24.setName(""); // NOI18N
+        jSpinner24.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner24AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner24.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner24StateChanged(evt);
+            }
+        });
+        JBtn10.add(jSpinner24, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, 50, 30));
+
+        javax.swing.GroupLayout jDThuNganLayout = new javax.swing.GroupLayout(jDThuNgan.getContentPane());
+        jDThuNgan.getContentPane().setLayout(jDThuNganLayout);
+        jDThuNganLayout.setHorizontalGroup(
+            jDThuNganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDThuNganLayout.createSequentialGroup()
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF20, javax.swing.GroupLayout.PREFERRED_SIZE, 1122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF21, javax.swing.GroupLayout.PREFERRED_SIZE, 1674, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JBtn10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
+        );
+        jDThuNganLayout.setVerticalGroup(
+            jDThuNganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(JBtn10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(JF25, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF24, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF22, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF21, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF20, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(JF23, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+        );
+
+        jDBar.setLocation(new java.awt.Point(0, 0));
+        jDBar.setMaximumSize(new java.awt.Dimension(1360, 768));
+
+        jPanel9.setBackground(new java.awt.Color(255, 153, 51));
+        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Btn29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn29.setText("Btn 1");
+        Btn29.setPreferredSize(new java.awt.Dimension(111, 33));
+        Btn29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn29ActionPerformed(evt);
+            }
+        });
+        jPanel9.add(Btn29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 180, 30));
+
+        Btn30.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn30.setText("Btn 2");
+        Btn30.setMaximumSize(new java.awt.Dimension(111, 33));
+        Btn30.setMinimumSize(new java.awt.Dimension(111, 33));
+        Btn30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn30ActionPerformed(evt);
+            }
+        });
+        jPanel9.add(Btn30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 180, -1));
+
+        Btn31.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn31.setText("Btn 3");
+        Btn31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn31ActionPerformed(evt);
+            }
+        });
+        jPanel9.add(Btn31, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 180, -1));
+
+        Btn32.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn32.setText("Btn 4");
+        Btn32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn32ActionPerformed(evt);
+            }
+        });
+        jPanel9.add(Btn32, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 180, -1));
+
+        Btn33.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn33.setText("Btn 5");
+        Btn33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn33ActionPerformed(evt);
+            }
+        });
+        jPanel9.add(Btn33, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 180, -1));
+
+        Btn34.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn34.setText("Btn 6");
+        Btn34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn34ActionPerformed(evt);
+            }
+        });
+        jPanel9.add(Btn34, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 180, -1));
+
+        Btn35.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn35.setText("Btn 7");
+        Btn35.setPreferredSize(new java.awt.Dimension(111, 33));
+        Btn35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn35ActionPerformed(evt);
+            }
+        });
+        jPanel9.add(Btn35, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 180, 30));
+
+        Title4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Title4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Title4.setText("Department5");
+        jPanel9.add(Title4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 220, 30));
+
+        EName4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EName4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EName4.setText("EmployeeName");
+        jPanel9.add(EName4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 220, 30));
+
+        EID4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EID4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EID4.setText("EmployeeID");
+        jPanel9.add(EID4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 106, 220, 30));
+
+        JF26.setBackground(new java.awt.Color(51, 255, 255));
+        JF26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF26.setPreferredSize(new java.awt.Dimension(1685, 542));
+
+        javax.swing.GroupLayout JF26Layout = new javax.swing.GroupLayout(JF26);
+        JF26.setLayout(JF26Layout);
+        JF26Layout.setHorizontalGroup(
+            JF26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1120, Short.MAX_VALUE)
+        );
+        JF26Layout.setVerticalGroup(
+            JF26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 718, Short.MAX_VALUE)
+        );
+
+        JF27.setBackground(new java.awt.Color(0, 255, 0));
+        JF27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF27.setPreferredSize(new java.awt.Dimension(1685, 542));
+
+        javax.swing.GroupLayout JF27Layout = new javax.swing.GroupLayout(JF27);
+        JF27.setLayout(JF27Layout);
+        JF27Layout.setHorizontalGroup(
+            JF27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1672, Short.MAX_VALUE)
+        );
+        JF27Layout.setVerticalGroup(
+            JF27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF28.setBackground(new java.awt.Color(255, 204, 0));
+        JF28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF28.setPreferredSize(new java.awt.Dimension(1685, 0));
+
+        javax.swing.GroupLayout JF28Layout = new javax.swing.GroupLayout(JF28);
+        JF28.setLayout(JF28Layout);
+        JF28Layout.setHorizontalGroup(
+            JF28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF28Layout.setVerticalGroup(
+            JF28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF29.setBackground(new java.awt.Color(255, 204, 153));
+        JF29.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF29.setPreferredSize(new java.awt.Dimension(1685, 0));
+
+        javax.swing.GroupLayout JF29Layout = new javax.swing.GroupLayout(JF29);
+        JF29.setLayout(JF29Layout);
+        JF29Layout.setHorizontalGroup(
+            JF29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF29Layout.setVerticalGroup(
+            JF29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF30.setBackground(new java.awt.Color(255, 153, 153));
+        JF30.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF30.setPreferredSize(new java.awt.Dimension(1685, 0));
+
+        javax.swing.GroupLayout JF30Layout = new javax.swing.GroupLayout(JF30);
+        JF30.setLayout(JF30Layout);
+        JF30Layout.setHorizontalGroup(
+            JF30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF30Layout.setVerticalGroup(
+            JF30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JF31.setBackground(new java.awt.Color(204, 255, 204));
+        JF31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JF31.setPreferredSize(new java.awt.Dimension(1685, 2));
+
+        javax.swing.GroupLayout JF31Layout = new javax.swing.GroupLayout(JF31);
+        JF31.setLayout(JF31Layout);
+        JF31Layout.setHorizontalGroup(
+            JF31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1683, Short.MAX_VALUE)
+        );
+        JF31Layout.setVerticalGroup(
+            JF31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        JBtn11.setBackground(new java.awt.Color(140, 125, 108));
+        JBtn11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        JBtn11.setPreferredSize(new java.awt.Dimension(1685, 0));
+        JBtn11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel82.setText("jLabel10");
+        JBtn11.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 200, 130));
+
+        jLabel83.setText("jLabel11");
+        JBtn11.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 190, 130));
+
+        jLabel84.setText("jLabel12");
+        JBtn11.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, 180, 130));
+
+        jLabel85.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel85.setText("Mixed bread ");
+        JBtn11.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
+
+        jLabel86.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel86.setText("Price:50.000 VND");
+        JBtn11.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 110, 20));
+
+        jLabel87.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel87.setText("Broken rice");
+        JBtn11.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, -1));
+
+        jLabel88.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel88.setText("Price:55.000 VND");
+        JBtn11.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, -1, -1));
+
+        jSpinner25.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner25.setName(""); // NOI18N
+        jSpinner25.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner25AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner25.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner25StateChanged(evt);
+            }
+        });
+        JBtn11.add(jSpinner25, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 50, 30));
+
+        total25.setForeground(new java.awt.Color(255, 255, 255));
+        total25.setText("Total:0 VND");
+        JBtn11.add(total25, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 100, -1));
+
+        total26.setForeground(new java.awt.Color(255, 255, 255));
+        total26.setText("Total:0 VND");
+        JBtn11.add(total26, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 100, -1));
+
+        jSpinner26.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner26.setName(""); // NOI18N
+        jSpinner26.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner26AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner26.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner26StateChanged(evt);
+            }
+        });
+        JBtn11.add(jSpinner26, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 50, 30));
+
+        jLabel89.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel89.setText(" Beef noodle soup");
+        JBtn11.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, -1, -1));
+
+        jLabel90.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel90.setText("Price:80.000 VND");
+        JBtn11.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, -1, -1));
+
+        total27.setForeground(new java.awt.Color(255, 255, 255));
+        total27.setText("Total:0 VND");
+        JBtn11.add(total27, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 100, -1));
+
+        jSpinner27.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner27.setName(""); // NOI18N
+        jSpinner27.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner27AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner27.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner27StateChanged(evt);
+            }
+        });
+        JBtn11.add(jSpinner27, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 200, 50, 30));
+
+        jLabel91.setText("jLabel19");
+        JBtn11.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 190, 130));
+
+        jLabel92.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel92.setText("Rolls");
+        JBtn11.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, -1, -1));
+
+        jLabel93.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel93.setText("Price:95.000 VND");
+        JBtn11.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, -1, -1));
+
+        total28.setForeground(new java.awt.Color(255, 255, 255));
+        total28.setText("Total:0 VND");
+        JBtn11.add(total28, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 430, 100, -1));
+
+        jSpinner28.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner28.setName(""); // NOI18N
+        jSpinner28.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner28AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner28.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner28StateChanged(evt);
+            }
+        });
+        JBtn11.add(jSpinner28, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 50, 30));
+
+        jLabel94.setText("jLabel22");
+        JBtn11.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 180, 130));
+
+        jLabel95.setText("jLabel23");
+        JBtn11.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 240, 180, 130));
+
+        jLabel96.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel96.setText("Flan");
+        JBtn11.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 390, -1, -1));
+
+        jLabel97.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel97.setText("Price:70.000 VND");
+        JBtn11.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, -1, -1));
+
+        total29.setForeground(new java.awt.Color(255, 255, 255));
+        total29.setText("Total:0 VND");
+        JBtn11.add(total29, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, 100, -1));
+
+        jSpinner29.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner29.setName(""); // NOI18N
+        jSpinner29.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner29AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner29.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner29StateChanged(evt);
+            }
+        });
+        JBtn11.add(jSpinner29, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 410, 50, 30));
+
+        jLabel98.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel98.setText("Sundae ");
+        JBtn11.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, -1, -1));
+
+        jLabel99.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel99.setText("Price:230.000 VND");
+        JBtn11.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 400, -1, -1));
+
+        total30.setForeground(new java.awt.Color(255, 255, 255));
+        total30.setText("Total:0 VND");
+        JBtn11.add(total30, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 420, 110, -1));
+
+        jButton14.setText("Buy");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+        JBtn11.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, -1, -1));
+
+        jSpinner30.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner30.setName(""); // NOI18N
+        jSpinner30.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner30AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSpinner30.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner30StateChanged(evt);
+            }
+        });
+        JBtn11.add(jSpinner30, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, 50, 30));
+
+        javax.swing.GroupLayout jDBarLayout = new javax.swing.GroupLayout(jDBar.getContentPane());
+        jDBar.getContentPane().setLayout(jDBarLayout);
+        jDBarLayout.setHorizontalGroup(
+            jDBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDBarLayout.createSequentialGroup()
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF26, javax.swing.GroupLayout.PREFERRED_SIZE, 1122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF27, javax.swing.GroupLayout.PREFERRED_SIZE, 1674, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JF31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(JBtn11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
+        );
+        jDBarLayout.setVerticalGroup(
+            jDBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(JBtn11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(JF31, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF30, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF28, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF27, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF26, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(JF29, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -167,12 +2520,495 @@ public class MainF extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jDQuanLy.setTitle("Quan Ly");
-        jDQuanLy.setSize(1360, 768);
-        jDQuanLy.setLocationRelativeTo(this);
-        jDQuanLy.setVisible(true);
-        
+        String ql = "quanly";
+        String bep = "bep";
+        String kho = "kho";
+        String thuNgan = "thungan";
+        String bar = "bar";
+        if (jTextField1.getText().equals(ql)) {
+            jDQuanLy.setTitle("Manager");
+            jDQuanLy.setSize(1360, 768);
+            jDQuanLy.setLocationRelativeTo(this);
+            jDQuanLy.setVisible(true);
+        } else if (jTextField1.getText().equals(bep)) {
+            jDBep.setTitle("Kitchen");
+            jDBep.setSize(1360, 768);
+            jDBep.setLocationRelativeTo(this);
+            jDBep.setVisible(true);
+        } else if (jTextField1.getText().equals(kho)) {
+            jDKho.setTitle("WareHouse");
+            jDKho.setSize(1360, 768);
+            jDKho.setLocationRelativeTo(this);
+            jDKho.setVisible(true);
+        } else if (jTextField1.getText().equals(thuNgan)) {
+            jDThuNgan.setTitle("Cashier");
+            jDThuNgan.setSize(1360, 768);
+            jDThuNgan.setLocationRelativeTo(this);
+            jDThuNgan.setVisible(true);
+        } else if (jTextField1.getText().equals(bar)) {
+            jDBar.setTitle("Bar");
+            jDBar.setSize(1360, 768);
+            jDBar.setLocationRelativeTo(this);
+            jDBar.setVisible(true);
+        }
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void Btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn1ActionPerformed
+        JF17.setVisible(true);
+        JF2.setVisible(false);
+        JF3.setVisible(false);
+        JF4.setVisible(false);
+        JF5.setVisible(false);
+        JF6.setVisible(false);
+        JBtn7.setVisible(false);
+
+    }//GEN-LAST:event_Btn1ActionPerformed
+
+    private void Btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn2ActionPerformed
+        JF17.setVisible(false);
+        JF2.setVisible(true);
+        JF3.setVisible(false);
+        JF4.setVisible(false);
+        JF5.setVisible(false);
+        JF6.setVisible(false);
+        JBtn7.setVisible(false);
+
+    }//GEN-LAST:event_Btn2ActionPerformed
+
+    private void Btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn3ActionPerformed
+        JF17.setVisible(false);
+        JF2.setVisible(false);
+        JF3.setVisible(true);
+        JF4.setVisible(false);
+        JF5.setVisible(false);
+        JF6.setVisible(false);
+        JBtn7.setVisible(false);
+
+    }//GEN-LAST:event_Btn3ActionPerformed
+
+    private void Btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn4ActionPerformed
+        JF17.setVisible(false);
+        JF2.setVisible(false);
+        JF3.setVisible(false);
+        JF4.setVisible(true);
+        JF5.setVisible(false);
+        JF6.setVisible(false);
+        JBtn7.setVisible(false);
+
+    }//GEN-LAST:event_Btn4ActionPerformed
+
+    private void Btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn5ActionPerformed
+        JF17.setVisible(false);
+        JF2.setVisible(false);
+        JF3.setVisible(false);
+        JF4.setVisible(false);
+        JF5.setVisible(true);
+        JF6.setVisible(false);
+        JBtn7.setVisible(false);
+
+    }//GEN-LAST:event_Btn5ActionPerformed
+
+    private void Btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn6ActionPerformed
+        JF17.setVisible(false);
+        JF2.setVisible(false);
+        JF3.setVisible(false);
+        JF4.setVisible(false);
+        JF5.setVisible(false);
+        JF6.setVisible(true);
+        JBtn7.setVisible(false);
+
+    }//GEN-LAST:event_Btn6ActionPerformed
+
+    private void Btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn7ActionPerformed
+        JF17.setVisible(false);
+        JF2.setVisible(false);
+        JF3.setVisible(false);
+        JF4.setVisible(false);
+        JF5.setVisible(false);
+        JF6.setVisible(false);
+        JBtn7.setVisible(true);
+
+    }//GEN-LAST:event_Btn7ActionPerformed
+
+    private void jSpinner1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner1AncestorAdded
+
+    }//GEN-LAST:event_jSpinner1AncestorAdded
+
+    private void jSpinner1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner1StateChanged
+        long ttal = (int) jSpinner1.getValue() * 50000;
+        total1.setText("Total:" + String.valueOf(ttal) + " VND");
+    }//GEN-LAST:event_jSpinner1StateChanged
+
+    private void jSpinner2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner2AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner2AncestorAdded
+
+    private void jSpinner2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner2StateChanged
+        long ttall = (int) jSpinner2.getValue() * 55000;
+        total2.setText("Total:" + String.valueOf(ttall) + " VND");
+    }//GEN-LAST:event_jSpinner2StateChanged
+
+    private void jSpinner3AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner3AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner3AncestorAdded
+
+    private void jSpinner3StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner3StateChanged
+        long ttall = (int) jSpinner3.getValue() * 80000;
+        total3.setText("Total:" + String.valueOf(ttall) + " VND");
+    }//GEN-LAST:event_jSpinner3StateChanged
+
+    private void jSpinner4AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner4AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner4AncestorAdded
+
+    private void jSpinner4StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner4StateChanged
+        long ttal = (int) jSpinner4.getValue() * 95000;
+        total4.setText("Total:" + String.valueOf(ttal) + " VND");
+    }//GEN-LAST:event_jSpinner4StateChanged
+
+    private void jSpinner5AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner5AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner5AncestorAdded
+
+    private void jSpinner5StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner5StateChanged
+        long ttal = (int) jSpinner5.getValue() * 70000;
+        total5.setText("Total:" + String.valueOf(ttal) + " VND");
+    }//GEN-LAST:event_jSpinner5StateChanged
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jSpinner6AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner6AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner6AncestorAdded
+
+    private void jSpinner6StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner6StateChanged
+        long ttal = (int) jSpinner6.getValue() * 230000;
+        total6.setText("Total:" + String.valueOf(ttal) + " VND");
+    }//GEN-LAST:event_jSpinner6StateChanged
+
+    private void Btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn8ActionPerformed
+
+    private void Btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn9ActionPerformed
+
+    private void Btn10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn10ActionPerformed
+
+    private void Btn11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn11ActionPerformed
+
+    private void Btn12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn12ActionPerformed
+
+    private void Btn13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn13ActionPerformed
+
+    private void Btn14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn14ActionPerformed
+
+    private void jSpinner7AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner7AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner7AncestorAdded
+
+    private void jSpinner7StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner7StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner7StateChanged
+
+    private void jSpinner8AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner8AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner8AncestorAdded
+
+    private void jSpinner8StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner8StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner8StateChanged
+
+    private void jSpinner9AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner9AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner9AncestorAdded
+
+    private void jSpinner9StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner9StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner9StateChanged
+
+    private void jSpinner10AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner10AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner10AncestorAdded
+
+    private void jSpinner10StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner10StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner10StateChanged
+
+    private void jSpinner11AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner11AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner11AncestorAdded
+
+    private void jSpinner11StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner11StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner11StateChanged
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jSpinner12AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner12AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner12AncestorAdded
+
+    private void jSpinner12StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner12StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner12StateChanged
+
+    private void Btn15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn15ActionPerformed
+
+    private void Btn16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn16ActionPerformed
+
+    private void Btn17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn17ActionPerformed
+
+    private void Btn18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn18ActionPerformed
+
+    private void Btn19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn19ActionPerformed
+
+    private void Btn20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn20ActionPerformed
+
+    private void Btn21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn21ActionPerformed
+
+    private void jSpinner13AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner13AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner13AncestorAdded
+
+    private void jSpinner13StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner13StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner13StateChanged
+
+    private void jSpinner14AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner14AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner14AncestorAdded
+
+    private void jSpinner14StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner14StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner14StateChanged
+
+    private void jSpinner15AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner15AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner15AncestorAdded
+
+    private void jSpinner15StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner15StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner15StateChanged
+
+    private void jSpinner16AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner16AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner16AncestorAdded
+
+    private void jSpinner16StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner16StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner16StateChanged
+
+    private void jSpinner17AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner17AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner17AncestorAdded
+
+    private void jSpinner17StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner17StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner17StateChanged
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jSpinner18AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner18AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner18AncestorAdded
+
+    private void jSpinner18StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner18StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner18StateChanged
+
+    private void Btn22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn22ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn22ActionPerformed
+
+    private void Btn23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn23ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn23ActionPerformed
+
+    private void Btn24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn24ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn24ActionPerformed
+
+    private void Btn25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn25ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn25ActionPerformed
+
+    private void Btn26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn26ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn26ActionPerformed
+
+    private void Btn27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn27ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn27ActionPerformed
+
+    private void Btn28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn28ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn28ActionPerformed
+
+    private void jSpinner19AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner19AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner19AncestorAdded
+
+    private void jSpinner19StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner19StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner19StateChanged
+
+    private void jSpinner20AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner20AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner20AncestorAdded
+
+    private void jSpinner20StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner20StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner20StateChanged
+
+    private void jSpinner21AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner21AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner21AncestorAdded
+
+    private void jSpinner21StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner21StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner21StateChanged
+
+    private void jSpinner22AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner22AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner22AncestorAdded
+
+    private void jSpinner22StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner22StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner22StateChanged
+
+    private void jSpinner23AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner23AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner23AncestorAdded
+
+    private void jSpinner23StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner23StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner23StateChanged
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jSpinner24AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner24AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner24AncestorAdded
+
+    private void jSpinner24StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner24StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner24StateChanged
+
+    private void Btn29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn29ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn29ActionPerformed
+
+    private void Btn30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn30ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn30ActionPerformed
+
+    private void Btn31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn31ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn31ActionPerformed
+
+    private void Btn32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn32ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn32ActionPerformed
+
+    private void Btn33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn33ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn33ActionPerformed
+
+    private void Btn34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn34ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn34ActionPerformed
+
+    private void Btn35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn35ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn35ActionPerformed
+
+    private void jSpinner25AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner25AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner25AncestorAdded
+
+    private void jSpinner25StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner25StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner25StateChanged
+
+    private void jSpinner26AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner26AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner26AncestorAdded
+
+    private void jSpinner26StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner26StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner26StateChanged
+
+    private void jSpinner27AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner27AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner27AncestorAdded
+
+    private void jSpinner27StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner27StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner27StateChanged
+
+    private void jSpinner28AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner28AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner28AncestorAdded
+
+    private void jSpinner28StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner28StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner28StateChanged
+
+    private void jSpinner29AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner29AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner29AncestorAdded
+
+    private void jSpinner29StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner29StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner29StateChanged
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jSpinner30AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner30AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner30AncestorAdded
+
+    private void jSpinner30StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner30StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner30StateChanged
 
     /**
      * @param args the command line arguments
@@ -210,18 +3046,263 @@ public class MainF extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Btn1;
+    private javax.swing.JButton Btn10;
+    private javax.swing.JButton Btn11;
+    private javax.swing.JButton Btn12;
+    private javax.swing.JButton Btn13;
+    private javax.swing.JButton Btn14;
+    private javax.swing.JButton Btn15;
+    private javax.swing.JButton Btn16;
+    private javax.swing.JButton Btn17;
+    private javax.swing.JButton Btn18;
+    private javax.swing.JButton Btn19;
+    private javax.swing.JButton Btn2;
+    private javax.swing.JButton Btn20;
+    private javax.swing.JButton Btn21;
+    private javax.swing.JButton Btn22;
+    private javax.swing.JButton Btn23;
+    private javax.swing.JButton Btn24;
+    private javax.swing.JButton Btn25;
+    private javax.swing.JButton Btn26;
+    private javax.swing.JButton Btn27;
+    private javax.swing.JButton Btn28;
+    private javax.swing.JButton Btn29;
+    private javax.swing.JButton Btn3;
+    private javax.swing.JButton Btn30;
+    private javax.swing.JButton Btn31;
+    private javax.swing.JButton Btn32;
+    private javax.swing.JButton Btn33;
+    private javax.swing.JButton Btn34;
+    private javax.swing.JButton Btn35;
+    private javax.swing.JButton Btn4;
+    private javax.swing.JButton Btn5;
+    private javax.swing.JButton Btn6;
+    private javax.swing.JButton Btn7;
+    private javax.swing.JButton Btn8;
+    private javax.swing.JButton Btn9;
+    private javax.swing.JLabel EID;
+    private javax.swing.JLabel EID1;
+    private javax.swing.JLabel EID2;
+    private javax.swing.JLabel EID3;
+    private javax.swing.JLabel EID4;
+    private javax.swing.JLabel EName;
+    private javax.swing.JLabel EName1;
+    private javax.swing.JLabel EName2;
+    private javax.swing.JLabel EName3;
+    private javax.swing.JLabel EName4;
+    private javax.swing.JPanel JBtn10;
+    private javax.swing.JPanel JBtn11;
+    private javax.swing.JPanel JBtn7;
+    private javax.swing.JPanel JBtn8;
+    private javax.swing.JPanel JBtn9;
+    private javax.swing.JPanel JF10;
+    private javax.swing.JPanel JF11;
+    private javax.swing.JPanel JF12;
+    private javax.swing.JPanel JF13;
+    private javax.swing.JPanel JF14;
+    private javax.swing.JPanel JF15;
+    private javax.swing.JPanel JF16;
+    private javax.swing.JPanel JF17;
+    private javax.swing.JPanel JF18;
+    private javax.swing.JPanel JF19;
+    private javax.swing.JPanel JF2;
+    private javax.swing.JPanel JF20;
+    private javax.swing.JPanel JF21;
+    private javax.swing.JPanel JF22;
+    private javax.swing.JPanel JF23;
+    private javax.swing.JPanel JF24;
+    private javax.swing.JPanel JF25;
+    private javax.swing.JPanel JF26;
+    private javax.swing.JPanel JF27;
+    private javax.swing.JPanel JF28;
+    private javax.swing.JPanel JF29;
+    private javax.swing.JPanel JF3;
+    private javax.swing.JPanel JF30;
+    private javax.swing.JPanel JF31;
+    private javax.swing.JPanel JF4;
+    private javax.swing.JPanel JF5;
+    private javax.swing.JPanel JF6;
+    private javax.swing.JPanel JF7;
+    private javax.swing.JPanel JF8;
+    private javax.swing.JPanel JF9;
+    private javax.swing.JLabel Title;
+    private javax.swing.JLabel Title1;
+    private javax.swing.JLabel Title2;
+    private javax.swing.JLabel Title3;
+    private javax.swing.JLabel Title4;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JDialog jDBar;
+    private javax.swing.JDialog jDBep;
+    private javax.swing.JDialog jDKho;
     private javax.swing.JDialog jDQuanLy;
+    private javax.swing.JDialog jDThuNgan;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
+    private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
+    private javax.swing.JLabel jLabel82;
+    private javax.swing.JLabel jLabel83;
+    private javax.swing.JLabel jLabel84;
+    private javax.swing.JLabel jLabel85;
+    private javax.swing.JLabel jLabel86;
+    private javax.swing.JLabel jLabel87;
+    private javax.swing.JLabel jLabel88;
+    private javax.swing.JLabel jLabel89;
+    private javax.swing.JLabel jLabel90;
+    private javax.swing.JLabel jLabel91;
+    private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
+    private javax.swing.JLabel jLabel95;
+    private javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel jLabel97;
+    private javax.swing.JLabel jLabel98;
+    private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JSpinner jSpinner10;
+    private javax.swing.JSpinner jSpinner11;
+    private javax.swing.JSpinner jSpinner12;
+    private javax.swing.JSpinner jSpinner13;
+    private javax.swing.JSpinner jSpinner14;
+    private javax.swing.JSpinner jSpinner15;
+    private javax.swing.JSpinner jSpinner16;
+    private javax.swing.JSpinner jSpinner17;
+    private javax.swing.JSpinner jSpinner18;
+    private javax.swing.JSpinner jSpinner19;
+    private javax.swing.JSpinner jSpinner2;
+    private javax.swing.JSpinner jSpinner20;
+    private javax.swing.JSpinner jSpinner21;
+    private javax.swing.JSpinner jSpinner22;
+    private javax.swing.JSpinner jSpinner23;
+    private javax.swing.JSpinner jSpinner24;
+    private javax.swing.JSpinner jSpinner25;
+    private javax.swing.JSpinner jSpinner26;
+    private javax.swing.JSpinner jSpinner27;
+    private javax.swing.JSpinner jSpinner28;
+    private javax.swing.JSpinner jSpinner29;
+    private javax.swing.JSpinner jSpinner3;
+    private javax.swing.JSpinner jSpinner30;
+    private javax.swing.JSpinner jSpinner4;
+    private javax.swing.JSpinner jSpinner5;
+    private javax.swing.JSpinner jSpinner6;
+    private javax.swing.JSpinner jSpinner7;
+    private javax.swing.JSpinner jSpinner8;
+    private javax.swing.JSpinner jSpinner9;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel total1;
+    private javax.swing.JLabel total10;
+    private javax.swing.JLabel total11;
+    private javax.swing.JLabel total12;
+    private javax.swing.JLabel total13;
+    private javax.swing.JLabel total14;
+    private javax.swing.JLabel total15;
+    private javax.swing.JLabel total16;
+    private javax.swing.JLabel total17;
+    private javax.swing.JLabel total18;
+    private javax.swing.JLabel total19;
+    private javax.swing.JLabel total2;
+    private javax.swing.JLabel total20;
+    private javax.swing.JLabel total21;
+    private javax.swing.JLabel total22;
+    private javax.swing.JLabel total23;
+    private javax.swing.JLabel total24;
+    private javax.swing.JLabel total25;
+    private javax.swing.JLabel total26;
+    private javax.swing.JLabel total27;
+    private javax.swing.JLabel total28;
+    private javax.swing.JLabel total29;
+    private javax.swing.JLabel total3;
+    private javax.swing.JLabel total30;
+    private javax.swing.JLabel total4;
+    private javax.swing.JLabel total5;
+    private javax.swing.JLabel total6;
+    private javax.swing.JLabel total7;
+    private javax.swing.JLabel total8;
+    private javax.swing.JLabel total9;
     // End of variables declaration//GEN-END:variables
 }
