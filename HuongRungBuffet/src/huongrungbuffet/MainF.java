@@ -13,7 +13,7 @@ public class MainF extends javax.swing.JFrame {
 
     /**
      * Creates new form Main
-     *dấdkjkajsdljalsjd
+     *
      */
     public MainF() {
         initComponents();
@@ -44,8 +44,6 @@ public class MainF extends javax.swing.JFrame {
         EName = new javax.swing.JLabel();
         EID = new javax.swing.JLabel();
         JF17 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
         JF2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
@@ -198,7 +196,7 @@ public class MainF extends javax.swing.JFrame {
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Btn1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Btn1.setText("Btn 1");
+        Btn1.setText("Employee info");
         Btn1.setPreferredSize(new java.awt.Dimension(111, 33));
         Btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -273,34 +271,15 @@ public class MainF extends javax.swing.JFrame {
         JF17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         JF17.setPreferredSize(new java.awt.Dimension(1685, 542));
 
-        jLabel8.setText("jLabel8");
-
-        jButton2.setText("jButton2");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout JF17Layout = new javax.swing.GroupLayout(JF17);
         JF17.setLayout(JF17Layout);
         JF17Layout.setHorizontalGroup(
             JF17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF17Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel8))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF17Layout.createSequentialGroup()
-                .addContainerGap(959, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(88, 88, 88))
+            .addGap(0, 1120, Short.MAX_VALUE)
         );
         JF17Layout.setVerticalGroup(
             JF17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(JF17Layout.createSequentialGroup()
-                .addGap(212, 212, 212)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2))
+            .addGap(0, 718, Short.MAX_VALUE)
         );
 
         JF2.setBackground(new java.awt.Color(0, 255, 0));
@@ -381,7 +360,7 @@ public class MainF extends javax.swing.JFrame {
                     .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING)))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF4Layout.createSequentialGroup()
-                .addContainerGap(926, Short.MAX_VALUE)
+                .addContainerGap(920, Short.MAX_VALUE)
                 .addComponent(jButton6)
                 .addGap(121, 121, 121))
         );
@@ -412,7 +391,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton7))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF5Layout.createSequentialGroup()
-                .addContainerGap(1013, Short.MAX_VALUE)
+                .addContainerGap(1007, Short.MAX_VALUE)
                 .addComponent(jButton8)
                 .addGap(34, 34, 34))
         );
@@ -604,7 +583,7 @@ public class MainF extends javax.swing.JFrame {
         JF33Layout.setHorizontalGroup(
             JF33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF33Layout.createSequentialGroup()
-                .addGap(0, 1079, Short.MAX_VALUE)
+                .addGap(0, 1086, Short.MAX_VALUE)
                 .addComponent(jLabel5))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF33Layout.createSequentialGroup()
                 .addContainerGap(965, Short.MAX_VALUE)
@@ -633,7 +612,7 @@ public class MainF extends javax.swing.JFrame {
         JF34Layout.setHorizontalGroup(
             JF34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF34Layout.createSequentialGroup()
-                .addGap(0, 1079, Short.MAX_VALUE)
+                .addGap(0, 1086, Short.MAX_VALUE)
                 .addComponent(jLabel10))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF34Layout.createSequentialGroup()
                 .addContainerGap(956, Short.MAX_VALUE)
@@ -729,7 +708,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton18))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF37Layout.createSequentialGroup()
-                .addContainerGap(848, Short.MAX_VALUE)
+                .addContainerGap(856, Short.MAX_VALUE)
                 .addComponent(jButton19)
                 .addGap(185, 185, 185))
         );
@@ -866,7 +845,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel12))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF18Layout.createSequentialGroup()
-                .addContainerGap(959, Short.MAX_VALUE)
+                .addContainerGap(953, Short.MAX_VALUE)
                 .addComponent(jButton20)
                 .addGap(88, 88, 88))
         );
@@ -957,7 +936,7 @@ public class MainF extends javax.swing.JFrame {
                     .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton23, javax.swing.GroupLayout.Alignment.TRAILING)))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF9Layout.createSequentialGroup()
-                .addContainerGap(926, Short.MAX_VALUE)
+                .addContainerGap(920, Short.MAX_VALUE)
                 .addComponent(jButton24)
                 .addGap(121, 121, 121))
         );
@@ -988,7 +967,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton25))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF10Layout.createSequentialGroup()
-                .addContainerGap(1013, Short.MAX_VALUE)
+                .addContainerGap(1007, Short.MAX_VALUE)
                 .addComponent(jButton26)
                 .addGap(34, 34, 34))
         );
@@ -1017,7 +996,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton27))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF11Layout.createSequentialGroup()
-                .addContainerGap(848, Short.MAX_VALUE)
+                .addContainerGap(1419, Short.MAX_VALUE)
                 .addComponent(jButton28)
                 .addGap(185, 185, 185))
         );
@@ -1442,7 +1421,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel20))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF20Layout.createSequentialGroup()
-                .addContainerGap(959, Short.MAX_VALUE)
+                .addContainerGap(953, Short.MAX_VALUE)
                 .addComponent(jButton38)
                 .addGap(88, 88, 88))
         );
@@ -1533,7 +1512,7 @@ public class MainF extends javax.swing.JFrame {
                     .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton41, javax.swing.GroupLayout.Alignment.TRAILING)))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF23Layout.createSequentialGroup()
-                .addContainerGap(926, Short.MAX_VALUE)
+                .addContainerGap(920, Short.MAX_VALUE)
                 .addComponent(jButton42)
                 .addGap(121, 121, 121))
         );
@@ -1564,7 +1543,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton43))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF24Layout.createSequentialGroup()
-                .addContainerGap(1013, Short.MAX_VALUE)
+                .addContainerGap(1007, Short.MAX_VALUE)
                 .addComponent(jButton44)
                 .addGap(34, 34, 34))
         );
@@ -2150,10 +2129,6 @@ public class MainF extends javax.swing.JFrame {
         JF25.setVisible(true);
     }//GEN-LAST:event_Btn27ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -2276,7 +2251,6 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
@@ -2338,7 +2312,6 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
