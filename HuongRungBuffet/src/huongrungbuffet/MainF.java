@@ -276,6 +276,11 @@ public class MainF extends javax.swing.JFrame {
         jLabel8.setText("jLabel8");
 
         jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout JF17Layout = new javax.swing.GroupLayout(JF17);
         JF17.setLayout(JF17Layout);
@@ -285,7 +290,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel8))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF17Layout.createSequentialGroup()
-                .addContainerGap(953, Short.MAX_VALUE)
+                .addContainerGap(959, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(88, 88, 88))
         );
@@ -314,7 +319,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 1079, Short.MAX_VALUE)
                 .addComponent(jLabel2))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(965, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addGap(82, 82, 82))
         );
@@ -343,7 +348,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 1079, Short.MAX_VALUE)
                 .addComponent(jLabel6))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(956, Short.MAX_VALUE)
                 .addComponent(jButton4)
                 .addGap(91, 91, 91))
         );
@@ -376,7 +381,7 @@ public class MainF extends javax.swing.JFrame {
                     .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING)))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF4Layout.createSequentialGroup()
-                .addContainerGap(920, Short.MAX_VALUE)
+                .addContainerGap(926, Short.MAX_VALUE)
                 .addComponent(jButton6)
                 .addGap(121, 121, 121))
         );
@@ -407,7 +412,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton7))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF5Layout.createSequentialGroup()
-                .addContainerGap(1007, Short.MAX_VALUE)
+                .addContainerGap(1013, Short.MAX_VALUE)
                 .addComponent(jButton8)
                 .addGap(34, 34, 34))
         );
@@ -861,7 +866,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel12))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF18Layout.createSequentialGroup()
-                .addContainerGap(953, Short.MAX_VALUE)
+                .addContainerGap(959, Short.MAX_VALUE)
                 .addComponent(jButton20)
                 .addGap(88, 88, 88))
         );
@@ -890,7 +895,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 1079, Short.MAX_VALUE)
                 .addComponent(jLabel13))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF7Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(965, Short.MAX_VALUE)
                 .addComponent(jButton21)
                 .addGap(82, 82, 82))
         );
@@ -919,7 +924,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 1079, Short.MAX_VALUE)
                 .addComponent(jLabel14))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF8Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(956, Short.MAX_VALUE)
                 .addComponent(jButton22)
                 .addGap(91, 91, 91))
         );
@@ -952,7 +957,7 @@ public class MainF extends javax.swing.JFrame {
                     .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton23, javax.swing.GroupLayout.Alignment.TRAILING)))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF9Layout.createSequentialGroup()
-                .addContainerGap(920, Short.MAX_VALUE)
+                .addContainerGap(926, Short.MAX_VALUE)
                 .addComponent(jButton24)
                 .addGap(121, 121, 121))
         );
@@ -983,7 +988,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton25))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF10Layout.createSequentialGroup()
-                .addContainerGap(1007, Short.MAX_VALUE)
+                .addContainerGap(1013, Short.MAX_VALUE)
                 .addComponent(jButton26)
                 .addGap(34, 34, 34))
         );
@@ -1855,12 +1860,12 @@ public class MainF extends javax.swing.JFrame {
     }//GEN-LAST:event_Btn6ActionPerformed
 
     private void Btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn7ActionPerformed
-        JF17.setVisible(false);
-        JF2.setVisible(false);
-        JF3.setVisible(false);
-        JF4.setVisible(false);
-        JF5.setVisible(false);
-        JF6.setVisible(false);
+        JF32.setVisible(true);
+        JF33.setVisible(false);
+        JF34.setVisible(false);
+        JF35.setVisible(false);
+        JF36.setVisible(false);
+        JF37.setVisible(false);
 
     }//GEN-LAST:event_Btn7ActionPerformed
 
@@ -1917,101 +1922,237 @@ public class MainF extends javax.swing.JFrame {
     }//GEN-LAST:event_jSpinner6StateChanged
 
     private void Btn14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn14ActionPerformed
-        JF17.setVisible(false);
-        JF2.setVisible(true);
-        JF3.setVisible(false);
-        JF4.setVisible(false);
-        JF5.setVisible(false);
-        JF6.setVisible(false);
+       JF32.setVisible(false);
+        JF33.setVisible(true);
+        JF34.setVisible(false);
+        JF35.setVisible(false);
+        JF36.setVisible(false);
+        JF37.setVisible(false);
     }//GEN-LAST:event_Btn14ActionPerformed
 
     private void Btn21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn21ActionPerformed
         // TODO add your handling code here:
+        JF32.setVisible(false);
+        JF33.setVisible(false);
+        JF34.setVisible(true);
+        JF35.setVisible(false);
+        JF36.setVisible(false);
+        JF37.setVisible(false);
     }//GEN-LAST:event_Btn21ActionPerformed
 
     private void Btn28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn28ActionPerformed
         // TODO add your handling code here:
+        JF32.setVisible(false);
+        JF33.setVisible(false);
+        JF34.setVisible(false);
+        JF35.setVisible(true);
+        JF36.setVisible(false);
+        JF37.setVisible(false);
     }//GEN-LAST:event_Btn28ActionPerformed
 
     private void Btn35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn35ActionPerformed
         // TODO add your handling code here:
+        JF32.setVisible(false);
+        JF33.setVisible(false);
+        JF34.setVisible(false);
+        JF35.setVisible(false);
+        JF36.setVisible(true);
+        JF37.setVisible(false);
     }//GEN-LAST:event_Btn35ActionPerformed
 
     private void Btn36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn36ActionPerformed
         // TODO add your handling code here:
+       JF32.setVisible(false);
+        JF33.setVisible(false);
+        JF34.setVisible(false);
+        JF35.setVisible(false);
+        JF36.setVisible(false);
+        JF37.setVisible(true);
     }//GEN-LAST:event_Btn36ActionPerformed
 
     private void Btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn8ActionPerformed
         // TODO add your handling code here:
+        JF18.setVisible(true);
+        JF7.setVisible(false);
+        JF8.setVisible(false);
+        JF9.setVisible(false);
+        JF10.setVisible(false);
+        JF11.setVisible(false);
     }//GEN-LAST:event_Btn8ActionPerformed
 
     private void Btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn9ActionPerformed
         // TODO add your handling code here:
+        JF18.setVisible(false);
+        JF7.setVisible(true);
+        JF8.setVisible(false);
+        JF9.setVisible(false);
+        JF10.setVisible(false);
+        JF11.setVisible(false);
     }//GEN-LAST:event_Btn9ActionPerformed
 
     private void Btn10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn10ActionPerformed
         // TODO add your handling code here:
+        JF18.setVisible(false);
+        JF7.setVisible(false);
+        JF8.setVisible(true);
+        JF9.setVisible(false);
+        JF10.setVisible(false);
+        JF11.setVisible(false);
     }//GEN-LAST:event_Btn10ActionPerformed
 
     private void Btn11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn11ActionPerformed
         // TODO add your handling code here:
+        JF18.setVisible(false);
+        JF7.setVisible(false);
+        JF8.setVisible(false);
+        JF9.setVisible(true);
+        JF10.setVisible(false);
+        JF11.setVisible(false);
     }//GEN-LAST:event_Btn11ActionPerformed
 
     private void Btn12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn12ActionPerformed
         // TODO add your handling code here:
+        JF18.setVisible(false);
+        JF7.setVisible(false);
+        JF8.setVisible(false);
+        JF9.setVisible(false);
+        JF10.setVisible(true);
+        JF11.setVisible(false);
     }//GEN-LAST:event_Btn12ActionPerformed
 
     private void Btn13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn13ActionPerformed
         // TODO add your handling code here:
+        JF18.setVisible(false);
+        JF7.setVisible(false);
+        JF8.setVisible(false);
+        JF9.setVisible(false);
+        JF10.setVisible(false);
+        JF11.setVisible(true);
     }//GEN-LAST:event_Btn13ActionPerformed
 
     private void Btn43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn43ActionPerformed
         // TODO add your handling code here:
+        JF12.setVisible(false);
+        JF13.setVisible(false);
+        JF14.setVisible(false);
+        JF15.setVisible(false);
+        JF16.setVisible(false);
+        JF39.setVisible(true);
     }//GEN-LAST:event_Btn43ActionPerformed
 
     private void Btn44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn44ActionPerformed
         // TODO add your handling code here:
+        JF12.setVisible(true);
+        JF13.setVisible(false);
+        JF14.setVisible(false);
+        JF15.setVisible(false);
+        JF16.setVisible(false);
+        JF39.setVisible(false);
     }//GEN-LAST:event_Btn44ActionPerformed
 
     private void Btn45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn45ActionPerformed
         // TODO add your handling code here:
+        JF12.setVisible(false);
+        JF13.setVisible(true);
+        JF14.setVisible(false);
+        JF15.setVisible(false);
+        JF16.setVisible(false);
+        JF39.setVisible(false);
     }//GEN-LAST:event_Btn45ActionPerformed
 
     private void Btn46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn46ActionPerformed
         // TODO add your handling code here:
+        JF12.setVisible(false);
+        JF13.setVisible(false);
+        JF14.setVisible(true);
+        JF15.setVisible(false);
+        JF16.setVisible(false);
+        JF39.setVisible(false);
     }//GEN-LAST:event_Btn46ActionPerformed
 
     private void Btn47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn47ActionPerformed
         // TODO add your handling code here:
+        JF12.setVisible(false);
+        JF13.setVisible(false);
+        JF14.setVisible(false);
+        JF15.setVisible(true);
+        JF16.setVisible(false);
+        JF39.setVisible(false);
     }//GEN-LAST:event_Btn47ActionPerformed
 
     private void Btn48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn48ActionPerformed
         // TODO add your handling code here:
+        JF12.setVisible(false);
+        JF13.setVisible(false);
+        JF14.setVisible(false);
+        JF15.setVisible(false);
+        JF16.setVisible(true);
+        JF39.setVisible(false);
     }//GEN-LAST:event_Btn48ActionPerformed
 
     private void Btn22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn22ActionPerformed
         // TODO add your handling code here:
+        JF20.setVisible(true);
+        JF21.setVisible(false);
+        JF22.setVisible(false);
+        JF23.setVisible(false);
+        JF24.setVisible(false);
+        JF25.setVisible(false);
     }//GEN-LAST:event_Btn22ActionPerformed
 
     private void Btn23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn23ActionPerformed
         // TODO add your handling code here:
+        JF20.setVisible(false);
+        JF21.setVisible(true);
+        JF22.setVisible(false);
+        JF23.setVisible(false);
+        JF24.setVisible(false);
+        JF25.setVisible(false);
     }//GEN-LAST:event_Btn23ActionPerformed
 
     private void Btn24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn24ActionPerformed
         // TODO add your handling code here:
+        JF20.setVisible(false);
+        JF21.setVisible(false);
+        JF22.setVisible(true);
+        JF23.setVisible(false);
+        JF24.setVisible(false);
+        JF25.setVisible(false);
     }//GEN-LAST:event_Btn24ActionPerformed
 
     private void Btn25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn25ActionPerformed
         // TODO add your handling code here:
+        JF20.setVisible(false);
+        JF21.setVisible(false);
+        JF22.setVisible(false);
+        JF23.setVisible(true);
+        JF24.setVisible(false);
+        JF25.setVisible(false);
     }//GEN-LAST:event_Btn25ActionPerformed
 
     private void Btn26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn26ActionPerformed
         // TODO add your handling code here:
+        JF20.setVisible(false);
+        JF21.setVisible(false);
+        JF22.setVisible(false);
+        JF23.setVisible(false);
+        JF24.setVisible(true);
+        JF25.setVisible(false);
     }//GEN-LAST:event_Btn26ActionPerformed
 
     private void Btn27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn27ActionPerformed
         // TODO add your handling code here:
+        JF20.setVisible(false);
+        JF21.setVisible(false);
+        JF22.setVisible(false);
+        JF23.setVisible(false);
+        JF24.setVisible(false);
+        JF25.setVisible(true);
     }//GEN-LAST:event_Btn27ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
