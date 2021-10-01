@@ -19,7 +19,7 @@ public class MainF extends javax.swing.JFrame {
         initComponents();
         //Giao dien dang nhap
         setLocationRelativeTo(null);
-        setSize(1260, 720);
+        setSize(1360, 740);
         setTitle("Dang Nhap");
     }
 
@@ -190,6 +190,7 @@ public class MainF extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jPasswordField1 = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
+        jButton47 = new javax.swing.JButton();
 
         jDQuanLy.setLocation(new java.awt.Point(0, 0));
 
@@ -480,7 +481,6 @@ public class MainF extends javax.swing.JFrame {
         );
 
         jDBep.setLocation(new java.awt.Point(0, 0));
-        jDBep.setMaximumSize(new java.awt.Dimension(1360, 768));
 
         jPanel10.setBackground(new java.awt.Color(255, 153, 51));
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1057,7 +1057,6 @@ public class MainF extends javax.swing.JFrame {
         );
 
         jDThuNgan.setLocation(new java.awt.Point(0, 0));
-        jDThuNgan.setMaximumSize(new java.awt.Dimension(1360, 768));
 
         jPanel12.setBackground(new java.awt.Color(255, 153, 51));
         jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1346,7 +1345,6 @@ public class MainF extends javax.swing.JFrame {
         );
 
         jDBar.setLocation(new java.awt.Point(0, 0));
-        jDBar.setMaximumSize(new java.awt.Dimension(1360, 768));
 
         jPanel8.setBackground(new java.awt.Color(255, 153, 51));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1708,6 +1706,8 @@ public class MainF extends javax.swing.JFrame {
                 .addContainerGap(73, Short.MAX_VALUE))
         );
 
+        jButton47.setText("jButton47");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -1716,13 +1716,18 @@ public class MainF extends javax.swing.JFrame {
                 .addContainerGap(418, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(418, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(630, 630, 630)
+                .addComponent(jButton47)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(53, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addComponent(jButton47))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1755,27 +1760,33 @@ public class MainF extends javax.swing.JFrame {
         String bar = "bar";
         if (jTextField1.getText().equals(ql)) {
             jDQuanLy.setTitle("Manager");
-            jDQuanLy.setSize(1360, 768);
+            jDQuanLy.setSize(1360, 740);
             jDQuanLy.setLocationRelativeTo(this);
             jDQuanLy.setVisible(true);
+            JF17.setVisible(true);
+            JF2.setVisible(false);
+            JF3.setVisible(false);
+            JF4.setVisible(false);
+            JF5.setVisible(false);
+            JF6.setVisible(false);
         } else if (jTextField1.getText().equals(bep)) {
             jDBep.setTitle("Kitchen");
-            jDBep.setSize(1360, 768);
+            jDBep.setSize(1360, 740);
             jDBep.setLocationRelativeTo(this);
             jDBep.setVisible(true);
         } else if (jTextField1.getText().equals(kho)) {
             jDkho.setTitle("WareHouse");
-            jDkho.setSize(1360, 768);
+            jDkho.setSize(1360, 740);
             jDkho.setLocationRelativeTo(this);
             jDkho.setVisible(true);
         } else if (jTextField1.getText().equals(thuNgan)) {
             jDThuNgan.setTitle("Cashier");
-            jDThuNgan.setSize(1360, 768);
+            jDThuNgan.setSize(1360, 740);
             jDThuNgan.setLocationRelativeTo(this);
             jDThuNgan.setVisible(true);
         } else if (jTextField1.getText().equals(bar)) {
             jDBar.setTitle("Bar");
-            jDBar.setSize(1360, 768);
+            jDBar.setSize(1360, 740);
             jDBar.setLocationRelativeTo(this);
             jDBar.setVisible(true);
         }
@@ -1858,7 +1869,7 @@ public class MainF extends javax.swing.JFrame {
     }//GEN-LAST:event_jSpinner1AncestorAdded
 
     private void jSpinner1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner1StateChanged
-      
+
     }//GEN-LAST:event_jSpinner1StateChanged
 
     private void jSpinner2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner2AncestorAdded
@@ -1866,7 +1877,7 @@ public class MainF extends javax.swing.JFrame {
     }//GEN-LAST:event_jSpinner2AncestorAdded
 
     private void jSpinner2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner2StateChanged
-        
+
     }//GEN-LAST:event_jSpinner2StateChanged
 
     private void jSpinner3AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner3AncestorAdded
@@ -1874,7 +1885,7 @@ public class MainF extends javax.swing.JFrame {
     }//GEN-LAST:event_jSpinner3AncestorAdded
 
     private void jSpinner3StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner3StateChanged
-      
+
     }//GEN-LAST:event_jSpinner3StateChanged
 
     private void jSpinner4AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner4AncestorAdded
@@ -1882,7 +1893,7 @@ public class MainF extends javax.swing.JFrame {
     }//GEN-LAST:event_jSpinner4AncestorAdded
 
     private void jSpinner4StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner4StateChanged
-    
+
     }//GEN-LAST:event_jSpinner4StateChanged
 
     private void jSpinner5AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSpinner5AncestorAdded
@@ -1890,7 +1901,7 @@ public class MainF extends javax.swing.JFrame {
     }//GEN-LAST:event_jSpinner5AncestorAdded
 
     private void jSpinner5StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner5StateChanged
-        
+
     }//GEN-LAST:event_jSpinner5StateChanged
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -1902,7 +1913,7 @@ public class MainF extends javax.swing.JFrame {
     }//GEN-LAST:event_jSpinner6AncestorAdded
 
     private void jSpinner6StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner6StateChanged
-       
+
     }//GEN-LAST:event_jSpinner6StateChanged
 
     private void Btn14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn14ActionPerformed
@@ -2154,6 +2165,7 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JButton jButton44;
     private javax.swing.JButton jButton45;
     private javax.swing.JButton jButton46;
+    private javax.swing.JButton jButton47;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;

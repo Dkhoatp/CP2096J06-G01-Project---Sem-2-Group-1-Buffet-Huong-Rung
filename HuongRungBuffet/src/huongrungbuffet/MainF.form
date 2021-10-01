@@ -538,9 +538,6 @@
         <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
           <Point value="[0, 0]"/>
         </Property>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[1360, 768]"/>
-        </Property>
       </Properties>
 
       <Layout>
@@ -1603,9 +1600,6 @@
         <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
           <Point value="[0, 0]"/>
         </Property>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[1360, 768]"/>
-        </Property>
       </Properties>
 
       <Layout>
@@ -2136,9 +2130,6 @@
       <Properties>
         <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
           <Point value="[0, 0]"/>
-        </Property>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[1360, 768]"/>
         </Property>
       </Properties>
 
@@ -2714,6 +2705,11 @@
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="418" max="32767" attributes="0"/>
               </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="630" max="-2" attributes="0"/>
+                  <Component id="jButton47" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -2721,7 +2717,8 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace pref="53" max="32767" attributes="0"/>
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="114" max="32767" attributes="0"/>
+                  <EmptySpace pref="89" max="32767" attributes="0"/>
+                  <Component id="jButton47" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2834,6 +2831,11 @@
             </Component>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JButton" name="jButton47">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jButton47"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
