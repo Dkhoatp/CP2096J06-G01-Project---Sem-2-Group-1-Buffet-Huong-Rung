@@ -1,4 +1,4 @@
-use master
+﻿use master
 go
 create database HuongRungBuffet
 go
@@ -140,3 +140,12 @@ create table DrinkExportDetails(
 	Quantity int,
 	DrinksID varchar(20) foreign key references Drinks(DrinksID)
 )
+
+/*insert du lieu*/
+
+/*Bảng Departments*/
+insert into [dbo].[Departments] values ('DP01', 'Manager'),
+										('DP02', 'Kitchen'),
+										('DP03', 'WareHouse'),
+										('DP04', 'Cahiers'),
+										('DP05', 'Bar')
