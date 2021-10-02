@@ -17,7 +17,7 @@ public class MyConnection {
     public static java.sql.Connection getConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         
-            java.sql.Connection con = DriverManager.getConnection("jdbc:sqlserver://localhost;databaseName=HuongRungBuffet", "", "");
+            java.sql.Connection con = DriverManager.getConnection("jdbc:sqlserver://localhost\\SQLEXPRESS:1433;databaseName=HuongRungBuffet", "sa", "khoahihi");
         return con;
     }
 }
