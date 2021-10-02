@@ -302,7 +302,7 @@ public class MainF extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(jShowNhanVien);
 
-        jButton48.setText("jButton48");
+        jButton48.setText("Refresh");
         jButton48.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton48ActionPerformed(evt);
