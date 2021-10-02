@@ -5,6 +5,12 @@
  */
 package huongrungbuffet;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Dell
@@ -22,7 +28,41 @@ public class MainF extends javax.swing.JFrame {
         setSize(1360, 740);
         setTitle("Dang Nhap");
     }
-
+    public ArrayList<Employee> employeeList(){
+        ArrayList<Employee> employeesList = new ArrayList<>();
+        try {
+            Connection con = MyConnection.getConnection();
+            String sql = "select * from Employee";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            Employee employee;
+            while(rs.next()){
+                employee = new Employee(rs.getString("EmployeeID"), rs.getString("FullName"), rs.getString("Title"), rs.getString("Phone"), rs.getString("Eaddress"), rs.getString("DepartmentID"), rs.getString("username"), rs.getString("Password"), rs.getString("IdentificationNumber"), rs.getDate("birthday"));
+                employeeList().add(employee);
+            }
+        } catch (Exception e) {
+            System.out.println("Get Employee list error");
+        }
+        return employeesList;
+    }
+    public void showEmployee(){
+        ArrayList<Employee> list = employeeList();
+        DefaultTableModel model = (DefaultTableModel)jShowNhanVien.getModel();
+        Object[] row  = new Object[10];
+        for(int i = 0; i < list.size(); i++){
+            row[0] = list.get(i).getEmployeeID();
+            row[1] = list.get(i).getFullName();
+            row[2] = list.get(i).getTitle();
+            row[3] = list.get(i).getPhone();
+            row[4] = list.get(i).getBirthday();
+            row[5] = list.get(i).getEaddress();
+            row[6] = list.get(i).getDepartmentID();
+            row[7] = list.get(i).getUsername();
+            row[8] = list.get(i).getPassword();
+            row[9] = list.get(i).getIdentificationNumber();
+            model.addRow(row);
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -44,6 +84,9 @@ public class MainF extends javax.swing.JFrame {
         EName = new javax.swing.JLabel();
         EID = new javax.swing.JLabel();
         JF17 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jShowNhanVien = new javax.swing.JTable();
+        jButton48 = new javax.swing.JButton();
         JF2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
@@ -278,15 +321,40 @@ public class MainF extends javax.swing.JFrame {
         JF17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         JF17.setPreferredSize(new java.awt.Dimension(1685, 542));
 
+        jShowNhanVien.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "EmployeeID", "FullName", "Title", "Phone", "BirthDay", "Address", "DepartmentID", "UserName", "Password", "IdentificationNumber"
+            }
+        ));
+        jScrollPane3.setViewportView(jShowNhanVien);
+
+        jButton48.setText("jButton48");
+        jButton48.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton48ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout JF17Layout = new javax.swing.GroupLayout(JF17);
         JF17.setLayout(JF17Layout);
         JF17Layout.setHorizontalGroup(
             JF17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1120, Short.MAX_VALUE)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1120, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF17Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton48, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77))
         );
         JF17Layout.setVerticalGroup(
             JF17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 718, Short.MAX_VALUE)
+            .addGroup(JF17Layout.createSequentialGroup()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton48, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         JF2.setBackground(new java.awt.Color(0, 255, 0));
@@ -2191,6 +2259,10 @@ public class MainF extends javax.swing.JFrame {
         JF25.setVisible(true);
     }//GEN-LAST:event_Btn27ActionPerformed
 
+    private void jButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton48ActionPerformed
+        showEmployee();
+    }//GEN-LAST:event_jButton48ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2344,6 +2416,7 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JButton jButton45;
     private javax.swing.JButton jButton46;
     private javax.swing.JButton jButton47;
+    private javax.swing.JButton jButton48;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
@@ -2387,6 +2460,8 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTable jShowNhanVien;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;

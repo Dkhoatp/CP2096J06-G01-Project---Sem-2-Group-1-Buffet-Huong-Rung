@@ -149,3 +149,6 @@ insert into [dbo].[Departments] values ('DP01', 'Manager'),
 										('DP03', 'WareHouse'),
 										('DP04', 'Cahiers'),
 										('DP05', 'Bar')
+
+/*bảng employee*/
+insert into [dbo].[Employee] values ('E01','Nguoi Thu Nhat','Bep Truong', '012345784','1992/08/12','01 Queen Liberty city','DP01','daubep1','123456','031214542154')
