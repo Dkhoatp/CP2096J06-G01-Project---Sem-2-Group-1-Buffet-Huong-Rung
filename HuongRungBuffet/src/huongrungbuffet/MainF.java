@@ -203,7 +203,7 @@ public class MainF extends javax.swing.JFrame {
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Btn1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Btn1.setText("Employee info");
+        Btn1.setText("Manage Employee");
         Btn1.setPreferredSize(new java.awt.Dimension(111, 33));
         Btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -648,7 +648,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 1086, Short.MAX_VALUE)
                 .addComponent(jLabel5))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF33Layout.createSequentialGroup()
-                .addContainerGap(965, Short.MAX_VALUE)
+                .addContainerGap(959, Short.MAX_VALUE)
                 .addComponent(jButton12)
                 .addGap(82, 82, 82))
         );
@@ -677,7 +677,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 1086, Short.MAX_VALUE)
                 .addComponent(jLabel10))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF34Layout.createSequentialGroup()
-                .addContainerGap(956, Short.MAX_VALUE)
+                .addContainerGap(950, Short.MAX_VALUE)
                 .addComponent(jButton13)
                 .addGap(91, 91, 91))
         );
@@ -710,7 +710,7 @@ public class MainF extends javax.swing.JFrame {
                     .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton14, javax.swing.GroupLayout.Alignment.TRAILING)))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF35Layout.createSequentialGroup()
-                .addContainerGap(926, Short.MAX_VALUE)
+                .addContainerGap(920, Short.MAX_VALUE)
                 .addComponent(jButton15)
                 .addGap(121, 121, 121))
         );
@@ -741,7 +741,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton16))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF36Layout.createSequentialGroup()
-                .addContainerGap(1013, Short.MAX_VALUE)
+                .addContainerGap(1007, Short.MAX_VALUE)
                 .addComponent(jButton17)
                 .addGap(34, 34, 34))
         );
@@ -1195,7 +1195,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel16))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF39Layout.createSequentialGroup()
-                .addContainerGap(959, Short.MAX_VALUE)
+                .addContainerGap(953, Short.MAX_VALUE)
                 .addComponent(jButton29)
                 .addGap(88, 88, 88))
         );
@@ -1286,7 +1286,7 @@ public class MainF extends javax.swing.JFrame {
                     .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton32, javax.swing.GroupLayout.Alignment.TRAILING)))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF14Layout.createSequentialGroup()
-                .addContainerGap(926, Short.MAX_VALUE)
+                .addContainerGap(920, Short.MAX_VALUE)
                 .addComponent(jButton33)
                 .addGap(121, 121, 121))
         );
@@ -1317,7 +1317,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton34))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF15Layout.createSequentialGroup()
-                .addContainerGap(1013, Short.MAX_VALUE)
+                .addContainerGap(1007, Short.MAX_VALUE)
                 .addComponent(jButton35)
                 .addGap(34, 34, 34))
         );
