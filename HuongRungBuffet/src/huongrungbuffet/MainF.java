@@ -6,9 +6,12 @@
 package huongrungbuffet;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -28,41 +31,9 @@ public class MainF extends javax.swing.JFrame {
         setSize(1360, 740);
         setTitle("Dang Nhap");
     }
-    public ArrayList<Employee> employeeList(){
-        ArrayList<Employee> employeesList = new ArrayList<>();
-        try {
-            Connection con = MyConnection.getConnection();
-            String sql = "select * from Employee";
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery(sql);
-            Employee employee;
-            while(rs.next()){
-                employee = new Employee(rs.getString("EmployeeID"), rs.getString("FullName"), rs.getString("Title"), rs.getString("Phone"), rs.getString("Eaddress"), rs.getString("DepartmentID"), rs.getString("username"), rs.getString("Password"), rs.getString("IdentificationNumber"), rs.getDate("birthday"));
-                employeeList().add(employee);
-            }
-        } catch (Exception e) {
-            System.out.println("Get Employee list error");
-        }
-        return employeesList;
-    }
-    public void showEmployee(){
-        ArrayList<Employee> list = employeeList();
-        DefaultTableModel model = (DefaultTableModel)jShowNhanVien.getModel();
-        Object[] row  = new Object[10];
-        for(int i = 0; i < list.size(); i++){
-            row[0] = list.get(i).getEmployeeID();
-            row[1] = list.get(i).getFullName();
-            row[2] = list.get(i).getTitle();
-            row[3] = list.get(i).getPhone();
-            row[4] = list.get(i).getBirthday();
-            row[5] = list.get(i).getEaddress();
-            row[6] = list.get(i).getDepartmentID();
-            row[7] = list.get(i).getUsername();
-            row[8] = list.get(i).getPassword();
-            row[9] = list.get(i).getIdentificationNumber();
-            model.addRow(row);
-        }
-    }
+
+
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -2031,7 +2002,7 @@ public class MainF extends javax.swing.JFrame {
     }//GEN-LAST:event_jSpinner6StateChanged
 
     private void Btn14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn14ActionPerformed
-       JF32.setVisible(false);
+        JF32.setVisible(false);
         JF33.setVisible(true);
         JF34.setVisible(false);
         JF35.setVisible(false);
@@ -2071,7 +2042,7 @@ public class MainF extends javax.swing.JFrame {
 
     private void Btn36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn36ActionPerformed
         // TODO add your handling code here:
-       JF32.setVisible(false);
+        JF32.setVisible(false);
         JF33.setVisible(false);
         JF34.setVisible(false);
         JF35.setVisible(false);
@@ -2260,7 +2231,45 @@ public class MainF extends javax.swing.JFrame {
     }//GEN-LAST:event_Btn27ActionPerformed
 
     private void jButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton48ActionPerformed
-        showEmployee();
+        try {
+            SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+            Vector vctdata = new Vector();
+            Vector vcthead = new Vector();
+            vcthead.add("EmployeeID");
+            vcthead.add("FullName ");
+            vcthead.add("Title");
+            vcthead.add("Phone");
+            vcthead.add("birthday");
+            vcthead.add("Eaddress");
+            vcthead.add("DepartmentID");
+            vcthead.add("Username");
+            vcthead.add("Password");
+            vcthead.add("IdentificationNumber");
+             java.sql.Connection con = MyConnection.getConnection();
+            String sql = "select * from Employee";
+            PreparedStatement pm = con.prepareCall(sql);
+            ResultSet rs = pm.executeQuery();
+            while (rs.next()) {
+                Vector vt = new Vector();
+                vt.add(rs.getString(1));
+                vt.add(rs.getString(2));
+                vt.add(rs.getString(3));
+                String bd = format.format(rs.getDate(5));  
+                vt.add(bd);
+                vt.add(rs.getString(4));
+                vt.add(rs.getString(6));
+                vt.add(rs.getString(7));
+                vt.add(rs.getString(8));
+                vt.add(rs.getString(9));
+                vt.add(rs.getString(10));
+                
+                vctdata.add(vt);
+            }
+            jShowNhanVien.setModel(new DefaultTableModel(vctdata, vcthead));
+            con.close();
+        } catch(Exception e){
+            System.out.println(e);
+        }
     }//GEN-LAST:event_jButton48ActionPerformed
 
     /**
