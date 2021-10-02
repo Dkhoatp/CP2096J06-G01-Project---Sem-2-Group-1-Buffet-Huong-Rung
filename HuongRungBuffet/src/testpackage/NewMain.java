@@ -5,6 +5,11 @@
  */
 package testpackage;
 
+import huongrungbuffet.MyConnection;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Dell
@@ -15,7 +20,14 @@ public class NewMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        try {
+            java.sql.Connection con = MyConnection.getConnection();
+            if(con != null){
+                System.out.println("success");
+            }
+        } catch (ClassNotFoundException | SQLException ex) {
+            System.out.println("eror");
+        }
     }
     
 }
