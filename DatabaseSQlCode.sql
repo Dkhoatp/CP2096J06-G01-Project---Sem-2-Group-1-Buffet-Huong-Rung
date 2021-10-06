@@ -151,4 +151,10 @@ insert into [dbo].[Departments] values ('DP01', 'Manager'),
 										('DP05', 'Bar')
 
 /*bảng employee*/
-insert into [dbo].[Employee] values ('E01','Nguoi Thu Nhat','Bep Truong', '012345784','1992/08/12','01 Queen Liberty city','DP01','daubep1','123456','031214542154')
+insert into [dbo].[Employee] values ('E01', N'Người thứ nhất', N'Bếp trưởng', '012345784','1992/08/12','01 Queen Liberty city','DP01','daubep1','123456','031214542154')
+
+/*bảng foodType*/
+insert into [dbo].[FoodType] values ('FT01','Appetizer'),('FT02','MainCourse'),('FT03','dessert')
+
+/*customer*/
+insert into [dbo].[Customer] values ('C02','Alo Alo member','1234567895','2002/06/12','12321312312','200')
