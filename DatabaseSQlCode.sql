@@ -94,7 +94,6 @@ go
 create table Food(
 	FoodID varchar(20) primary key,
 	FoodName nvarchar(50),
-	FoodPrice varchar(20),
 	Picture nvarchar,
 	FDescription nvarchar(50),
 	FoodTypeID varchar(20) foreign key references FoodType(FoodTypeID)
@@ -141,8 +140,10 @@ create table DrinkExportDetails(
 	DrinksID varchar(20) foreign key references Drinks(DrinksID)
 )
 
-/*insert du lieu*/
 
+
+
+/*
 /*Bảng Departments*/
 insert into [dbo].[Departments] values ('DP01', 'Manager'),
 										('DP02', 'Kitchen'),
@@ -158,3 +159,5 @@ insert into [dbo].[FoodType] values ('FT01','Appetizer'),('FT02','MainCourse'),(
 
 /*customer*/
 insert into [dbo].[Customer] values ('C02','Alo Alo member','1234567895','2002/06/12','12321312312','200')
+
+*/
