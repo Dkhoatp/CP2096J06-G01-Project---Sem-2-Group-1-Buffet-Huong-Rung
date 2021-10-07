@@ -176,9 +176,9 @@ public class MainF extends javax.swing.JFrame {
 
         jDQuanLy = new javax.swing.JDialog();
         jPManagerControl = new javax.swing.JPanel();
-        Btn1 = new javax.swing.JButton();
-        Btn2 = new javax.swing.JButton();
-        Btn3 = new javax.swing.JButton();
+        jbManageEmp = new javax.swing.JButton();
+        jbVieCustomer = new javax.swing.JButton();
+        jbManageFood = new javax.swing.JButton();
         Btn4 = new javax.swing.JButton();
         Btn5 = new javax.swing.JButton();
         Btn6 = new javax.swing.JButton();
@@ -267,8 +267,8 @@ public class MainF extends javax.swing.JFrame {
         jLSeachingFood1 = new javax.swing.JLabel();
         jBSortFoodID = new javax.swing.JButton();
         jbSortByName = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jbSortByType = new javax.swing.JButton();
+        jbShowDefaultFood = new javax.swing.JButton();
         JF4 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
@@ -463,7 +463,6 @@ public class MainF extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jTextField9 = new javax.swing.JTextField();
-        jButton47 = new javax.swing.JButton();
 
         jDQuanLy.setLocation(new java.awt.Point(0, 0));
         jDQuanLy.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -475,35 +474,35 @@ public class MainF extends javax.swing.JFrame {
         jPManagerControl.setBackground(new java.awt.Color(255, 153, 51));
         jPManagerControl.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Btn1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        Btn1.setText("Manage Employee");
-        Btn1.setPreferredSize(new java.awt.Dimension(111, 33));
-        Btn1.addActionListener(new java.awt.event.ActionListener() {
+        jbManageEmp.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jbManageEmp.setText("Manage Employee");
+        jbManageEmp.setPreferredSize(new java.awt.Dimension(111, 33));
+        jbManageEmp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn1ActionPerformed(evt);
+                jbManageEmpActionPerformed(evt);
             }
         });
-        jPManagerControl.add(Btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 140, 30));
+        jPManagerControl.add(jbManageEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 140, 30));
 
-        Btn2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        Btn2.setText("View Customer");
-        Btn2.setMaximumSize(new java.awt.Dimension(111, 33));
-        Btn2.setMinimumSize(new java.awt.Dimension(111, 33));
-        Btn2.addActionListener(new java.awt.event.ActionListener() {
+        jbVieCustomer.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jbVieCustomer.setText("View Customer");
+        jbVieCustomer.setMaximumSize(new java.awt.Dimension(111, 33));
+        jbVieCustomer.setMinimumSize(new java.awt.Dimension(111, 33));
+        jbVieCustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn2ActionPerformed(evt);
+                jbVieCustomerActionPerformed(evt);
             }
         });
-        jPManagerControl.add(Btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 140, -1));
+        jPManagerControl.add(jbVieCustomer, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 140, -1));
 
-        Btn3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        Btn3.setText("Manage Food");
-        Btn3.addActionListener(new java.awt.event.ActionListener() {
+        jbManageFood.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jbManageFood.setText("Manage Food");
+        jbManageFood.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn3ActionPerformed(evt);
+                jbManageFoodActionPerformed(evt);
             }
         });
-        jPManagerControl.add(Btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 140, -1));
+        jPManagerControl.add(jbManageFood, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 140, -1));
 
         Btn4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Btn4.setText("Btn 4");
@@ -1124,19 +1123,19 @@ public class MainF extends javax.swing.JFrame {
             }
         });
 
-        jButton29.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton29.setText("Type");
-        jButton29.addActionListener(new java.awt.event.ActionListener() {
+        jbSortByType.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jbSortByType.setText("Type");
+        jbSortByType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton29ActionPerformed(evt);
+                jbSortByTypeActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton3.setText("Default");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jbShowDefaultFood.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jbShowDefaultFood.setText("Default");
+        jbShowDefaultFood.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jbShowDefaultFoodActionPerformed(evt);
             }
         });
 
@@ -1185,7 +1184,7 @@ public class MainF extends javax.swing.JFrame {
                                 .addGap(6, 6, 6)
                                 .addComponent(jbSortByName, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jbSortByType, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(JFFoodManageLayout.createSequentialGroup()
                                 .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -1211,7 +1210,7 @@ public class MainF extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jBSearchingFood, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                            .addComponent(jbShowDefaultFood, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addComponent(jLFImgLink, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(jScrollShowFoodToManage, javax.swing.GroupLayout.PREFERRED_SIZE, 831, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1237,7 +1236,7 @@ public class MainF extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jBSearchingFood)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton3))
+                                .addComponent(jbShowDefaultFood))
                             .addComponent(jLFoodImg, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(JFFoodManageLayout.createSequentialGroup()
                         .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -1271,7 +1270,7 @@ public class MainF extends javax.swing.JFrame {
                                                 .addComponent(jLSeachingFood1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(jBSortFoodID)
                                                 .addComponent(jbSortByName))
-                                            .addComponent(jButton29))))
+                                            .addComponent(jbSortByType))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLFImgLink, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3144,28 +3143,21 @@ public class MainF extends javax.swing.JFrame {
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        jButton47.setText("jButton47");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(630, 630, 630)
-                .addComponent(jButton47)
-                .addContainerGap(315, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(316, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(300, 300, 300))
+                .addContainerGap(301, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(104, 104, 104)
+                .addContainerGap(128, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
-                .addComponent(jButton47))
+                .addContainerGap(181, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -3176,7 +3168,9 @@ public class MainF extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -3230,7 +3224,7 @@ public class MainF extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void Btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn1ActionPerformed
+    private void jbManageEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbManageEmpActionPerformed
         JFEmpManage.setVisible(true);
         JFCustomerView.setVisible(false);
         JFFoodManage.setVisible(false);
@@ -3238,9 +3232,9 @@ public class MainF extends javax.swing.JFrame {
         JF5.setVisible(false);
         JF6.setVisible(false);
         ShowAllEmpDate();
-    }//GEN-LAST:event_Btn1ActionPerformed
+    }//GEN-LAST:event_jbManageEmpActionPerformed
 
-    private void Btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn2ActionPerformed
+    private void jbVieCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVieCustomerActionPerformed
         ShowAllCustomerViewManage();
         JFEmpManage.setVisible(false);
         JFCustomerView.setVisible(true);
@@ -3249,9 +3243,9 @@ public class MainF extends javax.swing.JFrame {
         JF5.setVisible(false);
         JF6.setVisible(false);
 
-    }//GEN-LAST:event_Btn2ActionPerformed
+    }//GEN-LAST:event_jbVieCustomerActionPerformed
 
-    private void Btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn3ActionPerformed
+    private void jbManageFoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbManageFoodActionPerformed
         JFEmpManage.setVisible(false);
         JFCustomerView.setVisible(false);
         JFFoodManage.setVisible(true);
@@ -3260,7 +3254,7 @@ public class MainF extends javax.swing.JFrame {
         JF6.setVisible(false);
         ShowAllFood();
 
-    }//GEN-LAST:event_Btn3ActionPerformed
+    }//GEN-LAST:event_jbManageFoodActionPerformed
 
     private void Btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn4ActionPerformed
         JFEmpManage.setVisible(false);
@@ -4884,7 +4878,7 @@ public class MainF extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jbSortByNameActionPerformed
 
-    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+    private void jbSortByTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSortByTypeActionPerformed
         try {
             Vector vctdata = new Vector();
             Vector vcthead = new Vector();
@@ -4912,7 +4906,7 @@ public class MainF extends javax.swing.JFrame {
         } catch (Exception e) {
             System.out.println(e);
         }
-    }//GEN-LAST:event_jButton29ActionPerformed
+    }//GEN-LAST:event_jbSortByTypeActionPerformed
 
     private void jBSearchingFoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSearchingFoodActionPerformed
         Vector vctdata = new Vector();
@@ -4959,7 +4953,7 @@ public class MainF extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField9ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jbShowDefaultFoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbShowDefaultFoodActionPerformed
         Vector vctdata = new Vector();
         Vector vcthead = new Vector();
         vcthead.add("FoodID");
@@ -4987,7 +4981,7 @@ public class MainF extends javax.swing.JFrame {
         } catch (ClassNotFoundException | SQLException ex) {
             System.out.println(ex);
         }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jbShowDefaultFoodActionPerformed
 
     private void jBFDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFDeleteActionPerformed
         try {
@@ -5125,13 +5119,11 @@ public class MainF extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AddNewEmpBtn;
-    private javax.swing.JButton Btn1;
     private javax.swing.JButton Btn10;
     private javax.swing.JButton Btn11;
     private javax.swing.JButton Btn12;
     private javax.swing.JButton Btn13;
     private javax.swing.JButton Btn14;
-    private javax.swing.JButton Btn2;
     private javax.swing.JButton Btn21;
     private javax.swing.JButton Btn22;
     private javax.swing.JButton Btn23;
@@ -5140,7 +5132,6 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JButton Btn26;
     private javax.swing.JButton Btn27;
     private javax.swing.JButton Btn28;
-    private javax.swing.JButton Btn3;
     private javax.swing.JButton Btn35;
     private javax.swing.JButton Btn36;
     private javax.swing.JButton Btn4;
@@ -5261,8 +5252,6 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JButton jButton26;
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton32;
@@ -5280,7 +5269,6 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JButton jButton44;
     private javax.swing.JButton jButton45;
     private javax.swing.JButton jButton46;
-    private javax.swing.JButton jButton47;
     private javax.swing.JButton jButton49;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton52;
@@ -5397,7 +5385,12 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JButton jbManageEmp;
+    private javax.swing.JButton jbManageFood;
+    private javax.swing.JButton jbShowDefaultFood;
     private javax.swing.JButton jbSortByName;
+    private javax.swing.JButton jbSortByType;
+    private javax.swing.JButton jbVieCustomer;
     private javax.swing.JTextField txtCsBirthday;
     private javax.swing.JTextField txtCsID;
     private javax.swing.JTextField txtCsIN;
