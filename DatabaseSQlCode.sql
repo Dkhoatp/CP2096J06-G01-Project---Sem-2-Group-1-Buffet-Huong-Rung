@@ -94,7 +94,7 @@ go
 create table Food(
 	FoodID varchar(20) primary key,
 	FoodName nvarchar(50),
-	Picture nvarchar,
+	Picture nvarchar(200),
 	FDescription nvarchar(50),
 	FoodTypeID varchar(20) foreign key references FoodType(FoodTypeID)
 )

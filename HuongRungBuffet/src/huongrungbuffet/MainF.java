@@ -5,6 +5,8 @@
  */
 package huongrungbuffet;
 
+import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.sql.Connection;
 import java.sql.Date;
@@ -20,6 +22,7 @@ import java.util.List;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
@@ -44,7 +47,7 @@ public class MainF extends javax.swing.JFrame {
         initComponents();
         //Giao dien dang nhap
         setLocationRelativeTo(null);
-        setSize(1360, 740);
+        setSize(1030, 730);
         setTitle("Dang Nhap");
         initTable();
         LoadMainF();
@@ -92,6 +95,36 @@ public class MainF extends javax.swing.JFrame {
                 vctdata.add(vt);
             }
             jTableShowNhanVien.setModel(new DefaultTableModel(vctdata, vcthead));
+            con.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void ShowAllFood() {
+        try {
+            Vector vctdata = new Vector();
+            Vector vcthead = new Vector();
+            vcthead.add("FoodID");
+            vcthead.add("Name ");
+            vcthead.add("Description");
+            vcthead.add("Type");
+            vcthead.add("Picture");
+            java.sql.Connection con = MyConnection.getConnection();
+            String sql = "select FoodID, FoodName, FDescription, FTypeName, Picture from Food as a join FoodType as b on a.FoodTypeID = b.FoodTypeID order by FoodID";
+            PreparedStatement pm = con.prepareCall(sql);
+            ResultSet rs = pm.executeQuery();
+            while (rs.next()) {
+                Vector vt = new Vector();
+                vt.add(rs.getString(1));
+                vt.add(rs.getString(2));
+                vt.add(rs.getString(3));
+                vt.add(rs.getString(4));
+                vt.add(rs.getString(5));
+
+                vctdata.add(vt);
+            }
+            jTShowFoodToManage.setModel(new DefaultTableModel(vctdata, vcthead));
             con.close();
         } catch (Exception e) {
             System.out.println(e);
@@ -215,8 +248,6 @@ public class MainF extends javax.swing.JFrame {
         jLFDescription = new javax.swing.JLabel();
         jTFID = new javax.swing.JTextField();
         jTFName = new javax.swing.JTextField();
-        jTFType = new javax.swing.JTextField();
-        jTFDescription = new javax.swing.JTextField();
         jBAddNewFood = new javax.swing.JButton();
         jBSaveFood = new javax.swing.JButton();
         jBFoodClear = new javax.swing.JButton();
@@ -225,11 +256,18 @@ public class MainF extends javax.swing.JFrame {
         jTSeachingFood = new javax.swing.JTextField();
         jRSeachingFoodID = new javax.swing.JRadioButton();
         jRSeachingFoodName = new javax.swing.JRadioButton();
-        jRFType = new javax.swing.JRadioButton();
         jBSearchingFood = new javax.swing.JButton();
         jLFoodImg = new javax.swing.JLabel();
         jBFImg = new javax.swing.JButton();
         jLFImgLink = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTADescription = new javax.swing.JTextArea();
+        jCBFoodType = new javax.swing.JComboBox<>();
+        jLSeachingFood1 = new javax.swing.JLabel();
+        jBSortFoodID = new javax.swing.JButton();
+        jbSortByName = new javax.swing.JButton();
+        jButton29 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         JF4 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
@@ -419,11 +457,11 @@ public class MainF extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
         jButton47 = new javax.swing.JButton();
 
         jDQuanLy.setLocation(new java.awt.Point(0, 0));
@@ -436,7 +474,7 @@ public class MainF extends javax.swing.JFrame {
         jPManagerControl.setBackground(new java.awt.Color(255, 153, 51));
         jPManagerControl.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Btn1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Btn1.setText("Manage Employee");
         Btn1.setPreferredSize(new java.awt.Dimension(111, 33));
         Btn1.addActionListener(new java.awt.event.ActionListener() {
@@ -444,9 +482,9 @@ public class MainF extends javax.swing.JFrame {
                 Btn1ActionPerformed(evt);
             }
         });
-        jPManagerControl.add(Btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 180, 30));
+        jPManagerControl.add(Btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 140, 30));
 
-        Btn2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Btn2.setText("View Customer");
         Btn2.setMaximumSize(new java.awt.Dimension(111, 33));
         Btn2.setMinimumSize(new java.awt.Dimension(111, 33));
@@ -455,58 +493,58 @@ public class MainF extends javax.swing.JFrame {
                 Btn2ActionPerformed(evt);
             }
         });
-        jPManagerControl.add(Btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 180, -1));
+        jPManagerControl.add(Btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 140, -1));
 
-        Btn3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Btn3.setText("Btn 3");
+        Btn3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Btn3.setText("Manage Food");
         Btn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn3ActionPerformed(evt);
             }
         });
-        jPManagerControl.add(Btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 180, -1));
+        jPManagerControl.add(Btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 140, -1));
 
-        Btn4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Btn4.setText("Btn 4");
         Btn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn4ActionPerformed(evt);
             }
         });
-        jPManagerControl.add(Btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 180, -1));
+        jPManagerControl.add(Btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 140, -1));
 
-        Btn5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Btn5.setText("Btn 5");
         Btn5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn5ActionPerformed(evt);
             }
         });
-        jPManagerControl.add(Btn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 180, -1));
+        jPManagerControl.add(Btn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, 140, -1));
 
-        Btn6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Btn6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Btn6.setText("Btn 6");
         Btn6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn6ActionPerformed(evt);
             }
         });
-        jPManagerControl.add(Btn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 180, -1));
+        jPManagerControl.add(Btn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 140, -1));
 
-        Title.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Title.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Title.setText("Department1");
-        jPManagerControl.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 220, 30));
+        jPManagerControl.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 180, 30));
 
-        EName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         EName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EName.setText("EmployeeName");
-        jPManagerControl.add(EName, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 220, 30));
+        jPManagerControl.add(EName, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 170, 30));
 
-        EID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EID.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         EID.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EID.setText("EmployeeID");
-        jPManagerControl.add(EID, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 106, 220, 30));
+        jPManagerControl.add(EID, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 106, 180, 30));
 
         JFEmpManage.setBackground(new java.awt.Color(51, 255, 255));
         JFEmpManage.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -527,47 +565,47 @@ public class MainF extends javax.swing.JFrame {
         });
         jScrollShowNhanVien.setViewportView(jTableShowNhanVien);
 
-        jLEmpTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLEmpTitle.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLEmpTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLEmpTitle.setText("Employee Manage");
 
-        EmpID.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpID.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         EmpID.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         EmpID.setText("EmployeeID:");
 
-        EmpFullname.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpFullname.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         EmpFullname.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         EmpFullname.setText("FullName:");
 
-        EmpTitle.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpTitle.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         EmpTitle.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         EmpTitle.setText("Title:");
 
-        EmpPhone.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpPhone.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         EmpPhone.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         EmpPhone.setText("Phone:");
 
-        EmpBirthDay.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpBirthDay.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         EmpBirthDay.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         EmpBirthDay.setText("Birth day:");
 
-        EmpAddress.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpAddress.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         EmpAddress.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         EmpAddress.setText("Address:");
 
-        EmpDepartmentID.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpDepartmentID.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         EmpDepartmentID.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         EmpDepartmentID.setText("Department:");
 
-        EmpUserName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpUserName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         EmpUserName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         EmpUserName.setText("UserName:");
 
-        EmpPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpPassword.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         EmpPassword.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         EmpPassword.setText("Passwword:");
 
-        EmpIdentificationNumber.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpIdentificationNumber.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         EmpIdentificationNumber.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         EmpIdentificationNumber.setText("Identification Num:");
 
@@ -583,7 +621,7 @@ public class MainF extends javax.swing.JFrame {
             }
         });
 
-        AddNewEmpBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        AddNewEmpBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         AddNewEmpBtn.setText("Add New Employee");
         AddNewEmpBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -591,7 +629,7 @@ public class MainF extends javax.swing.JFrame {
             }
         });
 
-        SaveEmpBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        SaveEmpBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         SaveEmpBtn.setText("Save");
         SaveEmpBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -599,7 +637,7 @@ public class MainF extends javax.swing.JFrame {
             }
         });
 
-        DeeleteEmpBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        DeeleteEmpBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         DeeleteEmpBtn.setText("Delete");
         DeeleteEmpBtn.setPreferredSize(new java.awt.Dimension(105, 35));
         DeeleteEmpBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -608,7 +646,7 @@ public class MainF extends javax.swing.JFrame {
             }
         });
 
-        ClearAllEmpTxtField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        ClearAllEmpTxtField.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         ClearAllEmpTxtField.setText("Clear");
         ClearAllEmpTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -616,7 +654,7 @@ public class MainF extends javax.swing.JFrame {
             }
         });
 
-        jLSearchingEmp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLSearchingEmp.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLSearchingEmp.setText("Searching by:");
 
         buttonGroupSearchingEmp.add(jRBtnEmpID);
@@ -628,7 +666,7 @@ public class MainF extends javax.swing.JFrame {
         buttonGroupSearchingEmp.add(jRBtnEmpUserName);
         jRBtnEmpUserName.setText("UserName");
 
-        jBEmpSearchBy.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jBEmpSearchBy.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jBEmpSearchBy.setText("Seach");
         jBEmpSearchBy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -641,131 +679,132 @@ public class MainF extends javax.swing.JFrame {
         JFEmpManageLayout.setHorizontalGroup(
             JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JFEmpManageLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(EmpFullname, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(EmpBirthDay, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(EmpTitle, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(EmpPhone, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(EmpID, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
-                    .addComponent(jLSearchingEmp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtEmpID, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
-                    .addComponent(txtEmpName)
-                    .addComponent(txtEmpTitle)
-                    .addComponent(txtEmpPhone)
-                    .addComponent(txtEmpBirthDay)
-                    .addComponent(jTSearchingByEmp))
-                .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JFEmpManageLayout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(EmpPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(EmpDepartmentID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(EmpAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(EmpUserName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(EmpIdentificationNumber, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(txtEmpIdentification, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtEmpAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtEmpDepartment, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtEmpPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(txtEmpUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(40, 40, 40)
-                        .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(SaveEmpBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
-                            .addComponent(ClearAllEmpTxtField, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
-                            .addComponent(AddNewEmpBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
-                            .addComponent(DeeleteEmpBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(69, 69, 69))
-                    .addGroup(JFEmpManageLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jRBtnEmpID)
-                        .addGap(4, 4, 4)
-                        .addComponent(jRBtnEmpDepartments)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRBtnEmpUserName)
-                        .addGap(37, 37, 37)
-                        .addComponent(jBEmpSearchBy, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(JFEmpManageLayout.createSequentialGroup()
                 .addGap(426, 426, 426)
                 .addComponent(jLEmpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addComponent(jScrollShowNhanVien)
+            .addGroup(JFEmpManageLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JFEmpManageLayout.createSequentialGroup()
+                        .addComponent(EmpID, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(4, 4, 4)
+                        .addComponent(txtEmpID, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JFEmpManageLayout.createSequentialGroup()
+                        .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JFEmpManageLayout.createSequentialGroup()
+                                .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(JFEmpManageLayout.createSequentialGroup()
+                                            .addComponent(EmpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(txtEmpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, JFEmpManageLayout.createSequentialGroup()
+                                            .addComponent(EmpFullname, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(txtEmpName, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(JFEmpManageLayout.createSequentialGroup()
+                                            .addComponent(EmpPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(txtEmpPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(JFEmpManageLayout.createSequentialGroup()
+                                        .addComponent(EmpBirthDay, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtEmpBirthDay, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(47, 47, 47)
+                                .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(EmpDepartmentID, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(EmpPassword, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(EmpUserName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(EmpAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(EmpIdentificationNumber, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(txtEmpPassword, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                                    .addComponent(txtEmpUserName, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtEmpDepartment, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtEmpAddress, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtEmpIdentification)))
+                            .addGroup(JFEmpManageLayout.createSequentialGroup()
+                                .addComponent(jLSearchingEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTSearchingByEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRBtnEmpID)
+                                .addGap(4, 4, 4)
+                                .addComponent(jRBtnEmpDepartments)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jRBtnEmpUserName)))
+                        .addGap(42, 42, 42)
+                        .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(ClearAllEmpTxtField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(SaveEmpBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(DeeleteEmpBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(AddNewEmpBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBEmpSearchBy, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         JFEmpManageLayout.setVerticalGroup(
             JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JFEmpManageLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLEmpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(EmpID, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtEmpID, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(EmpAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtEmpAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(AddNewEmpBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JFEmpManageLayout.createSequentialGroup()
-                        .addGap(5, 5, 5)
                         .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(EmpID, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEmpID, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(12, 12, 12)
-                        .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(EmpFullname, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEmpName, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(EmpFullname, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtEmpName, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(EmpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEmpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(12, 12, 12)
-                        .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(EmpPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEmpPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(EmpBirthDay, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(JFEmpManageLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(EmpAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEmpAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AddNewEmpBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(11, 11, 11)
-                        .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(EmpDepartmentID, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEmpDepartment, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(SaveEmpBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(EmpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtEmpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(EmpUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEmpUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ClearAllEmpTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(8, 8, 8)
-                        .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(EmpPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEmpPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(DeeleteEmpBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(11, 11, 11)
-                        .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(EmpIdentificationNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEmpBirthDay, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEmpIdentification, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JFEmpManageLayout.createSequentialGroup()
-                        .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(EmpPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtEmpPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(EmpPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtEmpPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JFEmpManageLayout.createSequentialGroup()
+                        .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jRBtnEmpID)
-                                .addComponent(jRBtnEmpDepartments)
-                                .addComponent(jRBtnEmpUserName))
-                            .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jTSearchingByEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLSearchingEmp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(6, 6, 6))
-                    .addGroup(JFEmpManageLayout.createSequentialGroup()
-                        .addComponent(jBEmpSearchBy, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(jScrollShowNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(txtEmpDepartment, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(SaveEmpBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(JFEmpManageLayout.createSequentialGroup()
+                                .addComponent(EmpDepartmentID, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(1, 1, 1)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(EmpUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtEmpUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ClearAllEmpTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(DeeleteEmpBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(EmpBirthDay, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtEmpBirthDay, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(EmpIdentificationNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtEmpIdentification, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLSearchingEmp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jBEmpSearchBy)
+                    .addComponent(jTSearchingByEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRBtnEmpID)
+                    .addComponent(jRBtnEmpDepartments)
+                    .addComponent(jRBtnEmpUserName))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollShowNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         JFCustomerView.setBackground(new java.awt.Color(255, 255, 153));
@@ -787,41 +826,41 @@ public class MainF extends javax.swing.JFrame {
         });
         jScrollShowKhachHang.setViewportView(jTableShowKhachHang);
 
-        jLEmpTitle1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLEmpTitle1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLEmpTitle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLEmpTitle1.setText("Customer View");
 
-        jLCustomerId.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLCustomerId.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLCustomerId.setText("Customer ID:");
 
-        jLFullName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLFullName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLFullName.setText("Full Name:");
 
-        jLCustomerPhone.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLCustomerPhone.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLCustomerPhone.setText("Phone:");
 
-        jLshowFullName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLshowFullName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        jLshowCustomerId.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLshowCustomerId.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        jLshowCustomerPhone.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLshowCustomerPhone.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        jLCustomerIdenNum.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLCustomerIdenNum.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLCustomerIdenNum.setText("Identification Numr:");
 
-        jLCustomerBirthday.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLCustomerBirthday.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLCustomerBirthday.setText("BirthDay:");
 
-        jLCustomerPoint.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLCustomerPoint.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLCustomerPoint.setText("Point:");
 
-        jLshowCustomerIdenNum.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLshowCustomerIdenNum.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        jLshowCustomerBirthday.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLshowCustomerBirthday.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        jLshowCustomerPoint.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLshowCustomerPoint.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        CustomerHightPoints.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        CustomerHightPoints.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         CustomerHightPoints.setText("Hight Points");
         CustomerHightPoints.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -829,7 +868,7 @@ public class MainF extends javax.swing.JFrame {
             }
         });
 
-        CustomerLowPoints.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        CustomerLowPoints.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         CustomerLowPoints.setText("Low Points");
         CustomerLowPoints.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -837,7 +876,7 @@ public class MainF extends javax.swing.JFrame {
             }
         });
 
-        CustomerDefaultsPoints.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        CustomerDefaultsPoints.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         CustomerDefaultsPoints.setText("Defaults");
         CustomerDefaultsPoints.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -849,14 +888,22 @@ public class MainF extends javax.swing.JFrame {
         JFCustomerView.setLayout(JFCustomerViewLayout);
         JFCustomerViewLayout.setHorizontalGroup(
             JFCustomerViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollShowKhachHang)
             .addGroup(JFCustomerViewLayout.createSequentialGroup()
-                .addGroup(JFCustomerViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(272, 272, 272)
+                .addComponent(jLEmpTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JFCustomerViewLayout.createSequentialGroup()
+                .addGroup(JFCustomerViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(JFCustomerViewLayout.createSequentialGroup()
-                        .addGap(423, 423, 423)
-                        .addComponent(jLEmpTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(191, 191, 191)
+                        .addComponent(CustomerDefaultsPoints, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(CustomerHightPoints, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(CustomerLowPoints, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                        .addGap(33, 33, 33))
                     .addGroup(JFCustomerViewLayout.createSequentialGroup()
-                        .addGap(162, 162, 162)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(JFCustomerViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLFullName, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLCustomerId, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -866,44 +913,38 @@ public class MainF extends javax.swing.JFrame {
                             .addComponent(jLshowFullName, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLshowCustomerId, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLshowCustomerPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(127, 127, 127)
+                        .addGap(50, 50, 50)
                         .addGroup(JFCustomerViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLCustomerIdenNum, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLCustomerBirthday, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLCustomerPoint, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(JFCustomerViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLshowCustomerIdenNum, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLshowCustomerBirthday, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLshowCustomerPoint, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(JFCustomerViewLayout.createSequentialGroup()
-                        .addGap(313, 313, 313)
-                        .addComponent(CustomerDefaultsPoints, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(CustomerHightPoints, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(CustomerLowPoints, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(169, Short.MAX_VALUE))
+                            .addComponent(jLCustomerPoint, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(JFCustomerViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLshowCustomerIdenNum, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLshowCustomerBirthday, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLshowCustomerPoint, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49))
+            .addComponent(jScrollShowKhachHang)
         );
         JFCustomerViewLayout.setVerticalGroup(
             JFCustomerViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JFCustomerViewLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(14, 14, 14)
                 .addComponent(jLEmpTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addGroup(JFCustomerViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JFCustomerViewLayout.createSequentialGroup()
                         .addGroup(JFCustomerViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLCustomerId, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLshowCustomerId, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLshowCustomerId, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(35, 35, 35)
                         .addGroup(JFCustomerViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLshowFullName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLFullName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLFullName))
                         .addGap(39, 39, 39)
                         .addGroup(JFCustomerViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLCustomerPhone, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLshowCustomerPhone, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jLshowCustomerPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(JFCustomerViewLayout.createSequentialGroup()
                         .addGroup(JFCustomerViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLshowCustomerBirthday, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -911,19 +952,19 @@ public class MainF extends javax.swing.JFrame {
                         .addGap(35, 35, 35)
                         .addGroup(JFCustomerViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLshowCustomerIdenNum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLCustomerIdenNum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLCustomerIdenNum))
                         .addGap(39, 39, 39)
                         .addGroup(JFCustomerViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLCustomerPoint, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLshowCustomerPoint, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jLshowCustomerPoint, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(21, 21, 21)
                 .addGroup(JFCustomerViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CustomerHightPoints, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CustomerLowPoints, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CustomerDefaultsPoints, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CustomerHightPoints)
+                    .addComponent(CustomerLowPoints)
+                    .addComponent(CustomerDefaultsPoints))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollShowKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addComponent(jScrollShowKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         JFFoodManage.setBackground(new java.awt.Color(255, 204, 0));
@@ -935,7 +976,7 @@ public class MainF extends javax.swing.JFrame {
 
             },
             new String [] {
-                "FoodID", "Name", "Price", "Type", "Desciption"
+                "FoodID", "Name", "Desciption", "Type", "Picture"
             }
         ));
         jTShowFoodToManage.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -945,23 +986,28 @@ public class MainF extends javax.swing.JFrame {
         });
         jScrollShowFoodToManage.setViewportView(jTShowFoodToManage);
 
-        jLEmpTitle2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLEmpTitle2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLEmpTitle2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLEmpTitle2.setText("Customer View");
+        jLEmpTitle2.setText("Manage Food");
 
-        jLFID.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLFID.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLFID.setText("FoodID:");
 
-        jLFName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLFName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLFName.setText("Name:");
 
-        jLFType.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLFType.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLFType.setText("Type:");
 
-        jLFDescription.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLFDescription.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLFDescription.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLFDescription.setText("Description:");
 
-        jBAddNewFood.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTFID.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+
+        jTFName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+
+        jBAddNewFood.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jBAddNewFood.setText("Add new Food");
         jBAddNewFood.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -969,18 +1015,30 @@ public class MainF extends javax.swing.JFrame {
             }
         });
 
-        jBSaveFood.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jBSaveFood.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jBSaveFood.setText("Save");
+        jBSaveFood.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSaveFoodActionPerformed(evt);
+            }
+        });
 
-        jBFoodClear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jBFoodClear.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jBFoodClear.setText("Clear");
+        jBFoodClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBFoodClearActionPerformed(evt);
+            }
+        });
 
-        jBFDelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jBFDelete.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jBFDelete.setText("Delete");
 
-        jLSeachingFood.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLSeachingFood.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLSeachingFood.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLSeachingFood.setText("Searching by:");
+
+        jTSeachingFood.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
         buttonGroupSearchingFood.add(jRSeachingFoodID);
         jRSeachingFoodID.setText("ID");
@@ -993,16 +1051,18 @@ public class MainF extends javax.swing.JFrame {
         buttonGroupSearchingFood.add(jRSeachingFoodName);
         jRSeachingFoodName.setText("Name");
 
-        buttonGroupSearchingFood.add(jRFType);
-        jRFType.setText("Type");
-
-        jBSearchingFood.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jBSearchingFood.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jBSearchingFood.setText("Searh");
+        jBSearchingFood.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSearchingFoodActionPerformed(evt);
+            }
+        });
 
         jLFoodImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLFoodImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/default-image.jpg"))); // NOI18N
 
-        jBFImg.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jBFImg.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jBFImg.setText("Img");
         jBFImg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1010,7 +1070,51 @@ public class MainF extends javax.swing.JFrame {
             }
         });
 
-        jLFImgLink.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLFImgLink.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+
+        jTADescription.setColumns(20);
+        jTADescription.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jTADescription.setRows(5);
+        jScrollPane3.setViewportView(jTADescription);
+
+        jCBFoodType.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jCBFoodType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Defalut", "Appetizer", "MainCourse", "Dessert" }));
+
+        jLSeachingFood1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLSeachingFood1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLSeachingFood1.setText("Sort by");
+
+        jBSortFoodID.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jBSortFoodID.setText("ID");
+        jBSortFoodID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSortFoodIDActionPerformed(evt);
+            }
+        });
+
+        jbSortByName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jbSortByName.setText("Name");
+        jbSortByName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSortByNameActionPerformed(evt);
+            }
+        });
+
+        jButton29.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton29.setText("Type");
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton29ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton3.setText("Default");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout JFFoodManageLayout = new javax.swing.GroupLayout(JFFoodManage);
         JFFoodManage.setLayout(JFFoodManageLayout);
@@ -1018,87 +1122,76 @@ public class MainF extends javax.swing.JFrame {
             JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollShowFoodToManage)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JFFoodManageLayout.createSequentialGroup()
-                .addContainerGap(423, Short.MAX_VALUE)
-                .addComponent(jLEmpTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(423, 423, 423))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JFFoodManageLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLFDescription, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(JFFoodManageLayout.createSequentialGroup()
+                            .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLFName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLFID, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLFType, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jTFName)
+                                .addComponent(jTFID)
+                                .addComponent(jCBFoodType, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JFFoodManageLayout.createSequentialGroup()
-                        .addGap(78, 78, 78)
-                        .addComponent(jLFDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JFFoodManageLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLFName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLFID, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLFType, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTFDescription)
-                    .addComponent(jTFType, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
-                    .addComponent(jTFName, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
-                    .addComponent(jTFID, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE))
-                .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLSeachingFood1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jBSortFoodID, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22)
+                        .addComponent(jbSortByName, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(JFFoodManageLayout.createSequentialGroup()
-                        .addGap(31, 31, 31)
                         .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jBSaveFood, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jBFoodClear, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jBFDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jBAddNewFood, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE))
-                        .addGap(43, 43, 43)
-                        .addComponent(jLFoodImg, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBAddNewFood, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBFImg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBFDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(JFFoodManageLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(13, 13, 13)
+                                .addComponent(jLFoodImg, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(JFFoodManageLayout.createSequentialGroup()
-                                            .addGap(25, 25, 25)
-                                            .addComponent(jTSeachingFood, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JFFoodManageLayout.createSequentialGroup()
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jRSeachingFoodID)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jRSeachingFoodName)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jRFType)
-                                            .addGap(49, 49, 49)))
-                                    .addComponent(jBSearchingFood, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(JFFoodManageLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(JFFoodManageLayout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRSeachingFoodID)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jRSeachingFoodName))
+                                            .addComponent(jTSeachingFood)
+                                            .addComponent(jLSeachingFood, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(JFFoodManageLayout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jBSearchingFood, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)))))
                             .addGroup(JFFoodManageLayout.createSequentialGroup()
-                                .addGap(94, 94, 94)
-                                .addComponent(jLSeachingFood, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(JFFoodManageLayout.createSequentialGroup()
-                        .addGap(186, 186, 186)
-                        .addComponent(jBFImg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLFImgLink, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(27, 27, 27))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLFImgLink, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(20, Short.MAX_VALUE))
+            .addGroup(JFFoodManageLayout.createSequentialGroup()
+                .addGap(300, 300, 300)
+                .addComponent(jLEmpTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         JFFoodManageLayout.setVerticalGroup(
             JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JFFoodManageLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLEmpTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addComponent(jLEmpTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JFFoodManageLayout.createSequentialGroup()
                         .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(JFFoodManageLayout.createSequentialGroup()
-                                    .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jTFID, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jBAddNewFood, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jTFName, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jBSaveFood, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(122, 122, 122))
-                                .addGroup(JFFoodManageLayout.createSequentialGroup()
-                                    .addComponent(jBFoodClear, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(70, 70, 70)))
                             .addGroup(JFFoodManageLayout.createSequentialGroup()
                                 .addComponent(jLFID, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -1106,30 +1199,61 @@ public class MainF extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLFType, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTFType, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jCBFoodType, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JFFoodManageLayout.createSequentialGroup()
+                                .addComponent(jTFID, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLFDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTFDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jBFDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jBFImg, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLFImgLink, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jTFName, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(68, 68, 68)))
+                        .addComponent(jLFDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(JFFoodManageLayout.createSequentialGroup()
-                        .addComponent(jLSeachingFood, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTSeachingFood, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRSeachingFoodName)
-                            .addComponent(jRFType)
-                            .addComponent(jRSeachingFoodID))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jBSearchingFood, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLFoodImg, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollShowFoodToManage, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE))
+                        .addGap(2, 2, 2)
+                        .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JFFoodManageLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLSeachingFood, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTSeachingFood, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jRSeachingFoodName)
+                                    .addComponent(jRSeachingFoodID))
+                                .addGap(18, 18, 18)
+                                .addComponent(jBSearchingFood)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton3)
+                                .addGap(58, 58, 58)
+                                .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLSeachingFood1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jBSortFoodID, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jbSortByName)
+                                        .addComponent(jButton29))))
+                            .addGroup(JFFoodManageLayout.createSequentialGroup()
+                                .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(JFFoodManageLayout.createSequentialGroup()
+                                        .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(JFFoodManageLayout.createSequentialGroup()
+                                                .addGap(102, 102, 102)
+                                                .addComponent(jBFoodClear, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JFFoodManageLayout.createSequentialGroup()
+                                                .addComponent(jBAddNewFood, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jBSaveFood, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(68, 68, 68)))
+                                        .addComponent(jBFDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLFoodImg, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLFImgLink, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jBFImg, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollShowFoodToManage, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
 
         JF4.setBackground(new java.awt.Color(255, 204, 153));
@@ -1152,7 +1276,7 @@ public class MainF extends javax.swing.JFrame {
                     .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING)))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF4Layout.createSequentialGroup()
-                .addContainerGap(920, Short.MAX_VALUE)
+                .addContainerGap(638, Short.MAX_VALUE)
                 .addComponent(jButton6)
                 .addGap(121, 121, 121))
         );
@@ -1161,7 +1285,7 @@ public class MainF extends javax.swing.JFrame {
             .addGroup(JF4Layout.createSequentialGroup()
                 .addGap(128, 128, 128)
                 .addComponent(jLabel7)
-                .addGap(222, 222, 222)
+                .addGap(191, 191, 191)
                 .addComponent(jButton5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton6))
@@ -1183,7 +1307,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton7))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF5Layout.createSequentialGroup()
-                .addContainerGap(1007, Short.MAX_VALUE)
+                .addContainerGap(725, Short.MAX_VALUE)
                 .addComponent(jButton8)
                 .addGap(34, 34, 34))
         );
@@ -1212,7 +1336,7 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton9))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF6Layout.createSequentialGroup()
-                .addContainerGap(848, Short.MAX_VALUE)
+                .addContainerGap(568, Short.MAX_VALUE)
                 .addComponent(jButton10)
                 .addGap(185, 185, 185))
         );
@@ -1230,30 +1354,30 @@ public class MainF extends javax.swing.JFrame {
         jDQuanLyLayout.setHorizontalGroup(
             jDQuanLyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDQuanLyLayout.createSequentialGroup()
-                .addComponent(jPManagerControl, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPManagerControl, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(JFEmpManage, javax.swing.GroupLayout.PREFERRED_SIZE, 1122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JFEmpManage, javax.swing.GroupLayout.PREFERRED_SIZE, 834, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(JFCustomerView, javax.swing.GroupLayout.PREFERRED_SIZE, 1122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JFCustomerView, javax.swing.GroupLayout.PREFERRED_SIZE, 834, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(JFFoodManage, javax.swing.GroupLayout.PREFERRED_SIZE, 1122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JFFoodManage, javax.swing.GroupLayout.PREFERRED_SIZE, 834, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(JF4, javax.swing.GroupLayout.PREFERRED_SIZE, 1122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JF4, javax.swing.GroupLayout.PREFERRED_SIZE, 834, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(JF5, javax.swing.GroupLayout.PREFERRED_SIZE, 1122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JF5, javax.swing.GroupLayout.PREFERRED_SIZE, 834, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(JF6, javax.swing.GroupLayout.DEFAULT_SIZE, 1122, Short.MAX_VALUE)
+                .addComponent(JF6, javax.swing.GroupLayout.DEFAULT_SIZE, 834, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
         jDQuanLyLayout.setVerticalGroup(
             jDQuanLyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JF6, javax.swing.GroupLayout.DEFAULT_SIZE, 729, Short.MAX_VALUE)
-            .addComponent(JF5, javax.swing.GroupLayout.DEFAULT_SIZE, 729, Short.MAX_VALUE)
-            .addComponent(JFFoodManage, javax.swing.GroupLayout.DEFAULT_SIZE, 729, Short.MAX_VALUE)
-            .addComponent(JFCustomerView, javax.swing.GroupLayout.DEFAULT_SIZE, 729, Short.MAX_VALUE)
-            .addComponent(JFEmpManage, javax.swing.GroupLayout.DEFAULT_SIZE, 729, Short.MAX_VALUE)
-            .addComponent(jPManagerControl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(JF4, javax.swing.GroupLayout.DEFAULT_SIZE, 729, Short.MAX_VALUE)
+            .addComponent(JF6, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JF4, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JFFoodManage, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JFCustomerView, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(JFEmpManage, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(jPManagerControl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jDBep.setLocation(new java.awt.Point(0, 0));
@@ -2927,35 +3051,35 @@ public class MainF extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(255, 153, 102));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Login Title");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel3.setText("jLabel3");
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("UserName:");
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
 
-        jPasswordField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
-            }
-        });
-
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setText("UserName:");
+
+        jTextField9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
             }
         });
 
@@ -2964,35 +3088,35 @@ public class MainF extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(0, 36, Short.MAX_VALUE)
+                .addGap(0, 26, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPasswordField1)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE)
                     .addComponent(jTextField1)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 451, Short.MAX_VALUE))
-                .addContainerGap(41, Short.MAX_VALUE))
+                    .addComponent(jTextField9)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(170, 170, 170)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(109, 109, 109)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addComponent(jButton1)
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         jButton47.setText("jButton47");
@@ -3002,20 +3126,20 @@ public class MainF extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(418, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(418, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(630, 630, 630)
                 .addComponent(jButton47)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(315, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(300, 300, 300))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addGap(104, 104, 104)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
                 .addComponent(jButton47))
         );
 
@@ -3037,10 +3161,6 @@ public class MainF extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String ql = "quanly";
         String bep = "bep";
@@ -3049,7 +3169,7 @@ public class MainF extends javax.swing.JFrame {
         String bar = "bar";
         if (jTextField1.getText().equals(ql)) {
             jDQuanLy.setTitle("Manager");
-            jDQuanLy.setSize(1360, 740);
+            jDQuanLy.setSize(1030, 730);
             jDQuanLy.setLocationRelativeTo(this);
             jDQuanLy.setVisible(true);
             JFEmpManage.setVisible(true);
@@ -3062,22 +3182,22 @@ public class MainF extends javax.swing.JFrame {
             this.setVisible(false);
         } else if (jTextField1.getText().equals(bep)) {
             jDBep.setTitle("Kitchen");
-            jDBep.setSize(1360, 740);
+            jDBep.setSize(1030, 730);
             jDBep.setLocationRelativeTo(this);
             jDBep.setVisible(true);
         } else if (jTextField1.getText().equals(kho)) {
             jDkho.setTitle("WareHouse");
-            jDkho.setSize(1360, 740);
+            jDkho.setSize(1030, 730);
             jDkho.setLocationRelativeTo(this);
             jDkho.setVisible(true);
         } else if (jTextField1.getText().equals(thuNgan)) {
             jDThuNgan.setTitle("Cashier");
-            jDThuNgan.setSize(1360, 740);
+            jDThuNgan.setSize(1030, 730);
             jDThuNgan.setLocationRelativeTo(this);
             jDThuNgan.setVisible(true);
         } else if (jTextField1.getText().equals(bar)) {
             jDBar.setTitle("Bar");
-            jDBar.setSize(1360, 740);
+            jDBar.setSize(1030, 730);
             jDBar.setLocationRelativeTo(this);
             jDBar.setVisible(true);
         }
@@ -3113,6 +3233,7 @@ public class MainF extends javax.swing.JFrame {
         JF4.setVisible(false);
         JF5.setVisible(false);
         JF6.setVisible(false);
+        ShowAllFood();
 
     }//GEN-LAST:event_Btn3ActionPerformed
 
@@ -3758,11 +3879,24 @@ public class MainF extends javax.swing.JFrame {
     }//GEN-LAST:event_jRSeachingFoodIDActionPerformed
 
     private void jTShowFoodToManageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTShowFoodToManageMouseClicked
-        //jLFoodImg
-        DefaultTableModel model = (DefaultTableModel) jTableShowNhanVien.getModel();
-        int selectedRowIndex = jTableShowNhanVien.getSelectedRow();
 
-        jLFoodImg.setIcon(new ImageIcon(model.getValueAt(selectedRowIndex, 3).toString()));
+        //jLFoodImg
+        DefaultTableModel model = (DefaultTableModel) jTShowFoodToManage.getModel();
+        int selectedRowIndex = jTShowFoodToManage.getSelectedRow();
+
+        ImageIcon imageIcon = new ImageIcon(model.getValueAt(selectedRowIndex, 4).toString());
+        Image image = imageIcon.getImage();
+        Image newimg = image.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
+        jLFoodImg.setIcon(new ImageIcon(newimg));
+
+        jTFID.setText(model.getValueAt(selectedRowIndex, 0).toString());
+        jTFName.setText(model.getValueAt(selectedRowIndex, 1).toString());
+        jTADescription.setText(model.getValueAt(selectedRowIndex, 2).toString());
+        jCBFoodType.setSelectedItem(model.getValueAt(selectedRowIndex, 3).toString());
+        jLFImgLink.setText(model.getValueAt(selectedRowIndex, 4).toString());
+
+        //jLFoodImg.setIcon(new ImageIcon(model.getValueAt(selectedRowIndex, 4).toString()));
+
     }//GEN-LAST:event_jTShowFoodToManageMouseClicked
 
     private void jBFImgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFImgActionPerformed
@@ -3774,7 +3908,13 @@ public class MainF extends javax.swing.JFrame {
         if (x == JFileChooser.APPROVE_OPTION) {
             File file = fileChooser.getSelectedFile();
             jLFImgLink.setText("File:" + String.valueOf(file));
-            jLFoodImg.setIcon(new ImageIcon(file.getAbsolutePath()));
+
+            ImageIcon imageIcon = new ImageIcon(String.valueOf(file));
+            Image image = imageIcon.getImage();
+            Image newimg = image.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
+            jLFoodImg.setIcon(new ImageIcon(newimg));
+
+            //   jLFoodImg.setIcon(new ImageIcon(file.getAbsolutePath()));
         }
     }//GEN-LAST:event_jBFImgActionPerformed
 
@@ -3968,9 +4108,9 @@ public class MainF extends javax.swing.JFrame {
             Vector vcthead = new Vector();
             vcthead.add("FoodID");
             vcthead.add("FoodName");
-            vcthead.add("Picture");
             vcthead.add("FDescription");
             vcthead.add("FoodTypeID");
+            vcthead.add("Picture");
             java.sql.Connection con = MyConnection.getConnection();
             String sqlf = "select * from Food";
             PreparedStatement pmf = con.prepareStatement(sqlf);
@@ -3979,9 +4119,9 @@ public class MainF extends javax.swing.JFrame {
                 Vector n = new Vector();
                 n.add(rsa.getString("FoodID"));
                 n.add(rsa.getString("FoodName"));
-                n.add(rsa.getString("Picture"));
                 n.add(rsa.getString("FDescription"));
                 n.add(rsa.getString("FoodTypeID"));
+                n.add(rsa.getString("Picture"));
                 vctdata.add(n);
             }
             jTable2.setModel(new DefaultTableModel(vctdata, vcthead));
@@ -4015,9 +4155,9 @@ public class MainF extends javax.swing.JFrame {
                 Vector vcthead = new Vector();
                 vcthead.add("FoodID");
                 vcthead.add("FoodName");
-                vcthead.add("Picture");
                 vcthead.add("FDescription");
                 vcthead.add("FoodTypeID");
+                vcthead.add("Picture");
                 String sqlf = "select * from Food where FoodName = ?";
                 PreparedStatement pmf = con.prepareStatement(sqlf);
                 pmf.setString(1, jTextField2.getText());
@@ -4026,9 +4166,9 @@ public class MainF extends javax.swing.JFrame {
                     Vector n = new Vector();
                     n.add(rsa.getString("FoodID"));
                     n.add(rsa.getString("FoodName"));
-                    n.add(rsa.getString("Picture"));
                     n.add(rsa.getString("FDescription"));
                     n.add(rsa.getString("FoodTypeID"));
+                    n.add(rsa.getString("Picture"));
                     vctdata.add(n);
                 }
                 jTable2.setModel(new DefaultTableModel(vctdata, vcthead));
@@ -4465,7 +4605,8 @@ public class MainF extends javax.swing.JFrame {
     private void jBAddNewFoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAddNewFoodActionPerformed
         try {
             //Check not null
-            if (jTFID.getText().equals("") || jTFName.getText().equals("") || jTFType.getText().equals("")) {
+            String ggg = jCBFoodType.getSelectedItem().toString();
+            if (jTFID.getText().equals("") || jTFName.getText().equals("") || ggg.equals("")) {
                 EmpAlertDialog();
                 jDNewEmpAlert.setTitle("cant Add");
                 jTNewEmpAlertTitle.setText("Can not add");
@@ -4500,114 +4641,233 @@ public class MainF extends javax.swing.JFrame {
                 }
             }
 
-            //kiem tra Phone
-            String empPhone = txtEmpPhone.getText();
-            if (empPhone.matches("\\d{9,11}") == false) {
-                EmpAlertDialog();
-                jDNewEmpAlert.setTitle("cant Add");
-                jTNewEmpAlertTitle.setText("Can not add");
-                jTNewEmpAlertDescription.setText("So dien thoai phai la so va do dai tu 9-11");
-                return;
-            }
-
-            // Date 
-            //kiem tra EmpBirthDays
-            String day = "";
-            String EmpBD = txtEmpBirthDay.getText();
-            if (EmpBD.matches("\\d{2}/\\d{2}/\\d{4}") == false) {
-                EmpAlertDialog();
-                jDNewEmpAlert.setTitle("cant Add");
-                jTNewEmpAlertTitle.setText("Can not add");
-                jTNewEmpAlertDescription.setText("Ngay sinh khong dung dinh dang (dd/mm/yyyy)");
-                return;
-            } else {
-                day = EmpBD.substring(6, 10) + "/" + EmpBD.substring(3, 5) + "/" + EmpBD.substring(0, 2);
-            }
-
-            //kiem tra department
-            String dpments = "";
-            switch (txtEmpDepartment.getText()) {
-//                case "Manager":
-//                    dpments = "DP01";
-//                    break;
-                case "Kitchen":
-                    dpments = "DP02";
+            //kiem tra Type
+            String FTye = "";
+            String item = jCBFoodType.getSelectedItem().toString();
+            switch (item) {
+                case "Appetizer":
+                    FTye = "FT01";
                     break;
-                case "WareHouse":
-                    dpments = "DP03";
+                case "MainCourse":
+                    FTye = "FT02";
                     break;
-                case "Cashiers":
-                    dpments = "DP04";
-                    break;
-                case "Bar":
-                    dpments = "DP05";
+                case "Dessert":
+                    FTye = "FT03";
                     break;
                 default:
                     EmpAlertDialog();
                     jDNewEmpAlert.setTitle("cant Add");
                     jTNewEmpAlertTitle.setText("Can not add");
-                    jTNewEmpAlertDescription.setText("Invalid Department Name");
+                    jTNewEmpAlertDescription.setText("Please select Type");
                     return;
             }
 
-            //kiem tra Username
-            String queryEmpUsername = "select UserName from Employee where UserName=?";
-            PreparedStatement pmEmpUsername = con.prepareCall(queryEmpUsername);
-            pmEmpUsername.setString(1, txtEmpUserName.getText());
-            ResultSet rspmEmpUsername = pmEmpUsername.executeQuery();
-            while (rspmEmpUsername.next()) {
-                if (txtEmpUserName.getText().equals(rspmEmpUsername.getString("UserName"))) {
-                    EmpAlertDialog();
-                    jDNewEmpAlert.setTitle("cant Add");
-                    jTNewEmpAlertTitle.setText("Can not add");
-                    jTNewEmpAlertDescription.setText("UserName Da ton tai");
-                    return;
-                }
+            //kiem tra img 
+            if (jLFImgLink.getText() == "") {
+                EmpAlertDialog();
+                jDNewEmpAlert.setTitle("cant Add");
+                jTNewEmpAlertTitle.setText("Can not add");
+                jTNewEmpAlertDescription.setText("Please select Img");
+                return;
             }
-
-            //kiem tra identification num
-            String EmpIdentitfi = "select IdentificationNumber from Employee where IdentificationNumber=?";
-            PreparedStatement pmEmpIdentitfi = con.prepareCall(EmpIdentitfi);
-            pmEmpIdentitfi.setString(1, txtEmpIdentification.getText());
-            ResultSet rsEmpIdentitfi = pmEmpIdentitfi.executeQuery();
-            while (rsEmpIdentitfi.next()) {
-                if (txtEmpIdentification.getText().equals(rsEmpIdentitfi.getString("IdentificationNumber"))) {
-                    EmpAlertDialog();
-                    jDNewEmpAlert.setTitle("cant Add");
-                    jTNewEmpAlertTitle.setText("Can not add");
-                    jTNewEmpAlertDescription.setText("Cmnd Da ton tai");
-                    rsEmpIdentitfi.close();
-                    return;
-                }
-            }
-
             //insert vao csdl
-            String insertNewEmpQuery = "insert into Employee values (?,?,?,?,?,?,?,?,?,?)";
-            PreparedStatement pm = con.prepareCall(insertNewEmpQuery);
-            pm.setString(1, txtEmpID.getText());
-            pm.setString(2, txtEmpName.getText());
-            pm.setString(3, txtEmpTitle.getText());
-            pm.setString(4, txtEmpPhone.getText());
-            pm.setString(5, day);
-            pm.setString(6, txtEmpAddress.getText());
-            pm.setString(7, dpments);
-            pm.setString(8, txtEmpUserName.getText());
-            pm.setString(9, txtEmpPassword.getText());
-            pm.setString(10, txtEmpIdentification.getText());
+            String linkimg = jLFImgLink.getText();
+            String sublinkimg = linkimg.substring(5);
+            String insertNewFood = "insert into Food values (?,?,?,?,?)";
+            PreparedStatement pm = con.prepareCall(insertNewFood);
+            pm.setString(1, jTFID.getText());
+            pm.setString(2, jTFName.getText());
+            pm.setString(3, jTADescription.getText());
+            pm.setString(4, FTye);
+            pm.setString(5, sublinkimg);
             pm.executeUpdate();
 
             con.close();
             pm.close();
 
-            ShowAllEmpDate();
+            ShowAllFood();
 
         } catch (ClassNotFoundException | SQLException ex) {
-            EmpAlertDialog();
-            jDNewEmpAlert.setTitle("cant Add");
-            jTNewEmpAlertTitle.setText("Can not add");
-            jTNewEmpAlertDescription.setText("Ngay/thang khong ton tai");
+            System.out.println(ex);
         }
     }//GEN-LAST:event_jBAddNewFoodActionPerformed
+
+    private void jBFoodClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFoodClearActionPerformed
+        jTFID.setText("");
+        jTFName.setText("");
+        jCBFoodType.setSelectedIndex(0);
+        jTADescription.setText("");
+        jLFImgLink.setText("");
+
+        ImageIcon imageIcon = new ImageIcon("D:\\CP2096J06-G01-Project---Sem-2-Group-1-Buffet-Huong-Rung\\HuongRungBuffet\\src\\img\\default-image.jpg");
+        Image image = imageIcon.getImage();
+        Image newimg = image.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
+        jLFoodImg.setIcon(new ImageIcon(newimg));
+    }//GEN-LAST:event_jBFoodClearActionPerformed
+
+    private void jBSaveFoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSaveFoodActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBSaveFoodActionPerformed
+
+    private void jBSortFoodIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSortFoodIDActionPerformed
+        try {
+            Vector vctdata = new Vector();
+            Vector vcthead = new Vector();
+            vcthead.add("FoodID");
+            vcthead.add("Name ");
+            vcthead.add("Description");
+            vcthead.add("Type");
+            vcthead.add("Picture");
+            java.sql.Connection con = MyConnection.getConnection();
+            String sql = "select FoodID, FoodName, FDescription, FTypeName, Picture from Food as a join FoodType as b on a.FoodTypeID = b.FoodTypeID order by FoodID";
+            PreparedStatement pm = con.prepareCall(sql);
+            ResultSet rs = pm.executeQuery();
+            while (rs.next()) {
+                Vector vt = new Vector();
+                vt.add(rs.getString(1));
+                vt.add(rs.getString(2));
+                vt.add(rs.getString(3));
+                vt.add(rs.getString(4));
+                vt.add(rs.getString(5));
+
+                vctdata.add(vt);
+            }
+            jTShowFoodToManage.setModel(new DefaultTableModel(vctdata, vcthead));
+            con.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_jBSortFoodIDActionPerformed
+
+    private void jbSortByNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSortByNameActionPerformed
+        try {
+            Vector vctdata = new Vector();
+            Vector vcthead = new Vector();
+            vcthead.add("FoodID");
+            vcthead.add("Name ");
+            vcthead.add("Description");
+            vcthead.add("Type");
+            vcthead.add("Picture");
+            java.sql.Connection con = MyConnection.getConnection();
+            String sql = "select FoodID, FoodName, FDescription, FTypeName, Picture from Food as a join FoodType as b on a.FoodTypeID = b.FoodTypeID order by FoodName";
+            PreparedStatement pm = con.prepareCall(sql);
+            ResultSet rs = pm.executeQuery();
+            while (rs.next()) {
+                Vector vt = new Vector();
+                vt.add(rs.getString(1));
+                vt.add(rs.getString(2));
+                vt.add(rs.getString(3));
+                vt.add(rs.getString(4));
+                vt.add(rs.getString(5));
+
+                vctdata.add(vt);
+            }
+            jTShowFoodToManage.setModel(new DefaultTableModel(vctdata, vcthead));
+            con.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_jbSortByNameActionPerformed
+
+    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+        try {
+            Vector vctdata = new Vector();
+            Vector vcthead = new Vector();
+            vcthead.add("FoodID");
+            vcthead.add("Name ");
+            vcthead.add("Description");
+            vcthead.add("Type");
+            vcthead.add("Picture");
+            java.sql.Connection con = MyConnection.getConnection();
+            String sql = "select FoodID, FoodName, FDescription, FTypeName, Picture from Food as a join FoodType as b on a.FoodTypeID = b.FoodTypeID order by FTypeName";
+            PreparedStatement pm = con.prepareCall(sql);
+            ResultSet rs = pm.executeQuery();
+            while (rs.next()) {
+                Vector vt = new Vector();
+                vt.add(rs.getString(1));
+                vt.add(rs.getString(2));
+                vt.add(rs.getString(3));
+                vt.add(rs.getString(4));
+                vt.add(rs.getString(5));
+
+                vctdata.add(vt);
+            }
+            jTShowFoodToManage.setModel(new DefaultTableModel(vctdata, vcthead));
+            con.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_jButton29ActionPerformed
+
+    private void jBSearchingFoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSearchingFoodActionPerformed
+        Vector vctdata = new Vector();
+        Vector vcthead = new Vector();
+        vcthead.add("FoodID");
+        vcthead.add("Name ");
+        vcthead.add("Description");
+        vcthead.add("Type");
+        vcthead.add("Picture");
+        try {
+            String find = "";
+            if (jRSeachingFoodID.isSelected()) {
+                find = "select FoodID, FoodName, FDescription, FTypeName, Picture from Food as a join FoodType as b on a.FoodTypeID = b.FoodTypeID where FoodID like ? order by FoodID";
+            }
+            if (jRSeachingFoodName.isSelected()) {
+                find = "select FoodID, FoodName, FDescription, FTypeName, Picture from Food as a join FoodType as b on a.FoodTypeID = b.FoodTypeID where FoodName like ? order by FoodID";
+            }
+            Connection con = MyConnection.getConnection();
+            PreparedStatement pm = con.prepareCall(find);
+            pm.setString(1, ("%" + jTSeachingFood.getText() + "%"));
+            ResultSet rs = pm.executeQuery();
+            while (rs.next()) {
+                Vector vt = new Vector();
+                vt.add(rs.getString(1));
+                vt.add(rs.getString(2));
+                vt.add(rs.getString(3));
+                vt.add(rs.getString(4));
+                vt.add(rs.getString(5));
+
+                vctdata.add(vt);
+            }
+            jTShowFoodToManage.setModel(new DefaultTableModel(vctdata, vcthead));
+        } catch (ClassNotFoundException | SQLException ex) {
+            System.out.println(ex);
+        }
+    }//GEN-LAST:event_jBSearchingFoodActionPerformed
+
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        Vector vctdata = new Vector();
+        Vector vcthead = new Vector();
+        vcthead.add("FoodID");
+        vcthead.add("Name ");
+        vcthead.add("Description");
+        vcthead.add("Type");
+        vcthead.add("Picture");
+        try {
+            String find = "select FoodID, FoodName, FDescription, FTypeName, Picture from Food as a join FoodType as b on a.FoodTypeID = b.FoodTypeID order by FoodID";
+
+            Connection con = MyConnection.getConnection();
+            PreparedStatement pm = con.prepareCall(find);
+            ResultSet rs = pm.executeQuery();
+            while (rs.next()) {
+                Vector vt = new Vector();
+                vt.add(rs.getString(1));
+                vt.add(rs.getString(2));
+                vt.add(rs.getString(3));
+                vt.add(rs.getString(4));
+                vt.add(rs.getString(5));
+
+                vctdata.add(vt);
+            }
+            jTShowFoodToManage.setModel(new DefaultTableModel(vctdata, vcthead));
+        } catch (ClassNotFoundException | SQLException ex) {
+            System.out.println(ex);
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
     private void initTable() {
         DefaultTableModel model = (DefaultTableModel) jTableCS.getModel();
         model.setColumnIdentifiers(new String[]{"Customer ID", "Customer Name", "Phone", "Birth Day", "Identification Number", "Point"});
@@ -4802,6 +5062,7 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JButton jBNewEmpAlertBtn;
     private javax.swing.JButton jBSaveFood;
     private javax.swing.JButton jBSearchingFood;
+    private javax.swing.JButton jBSortFoodID;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -4823,6 +5084,8 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JButton jButton26;
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
+    private javax.swing.JButton jButton29;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton32;
@@ -4856,6 +5119,7 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JComboBox<String> jCBFoodType;
     private javax.swing.JDialog jDBar;
     private javax.swing.JDialog jDBep;
     private javax.swing.JDialog jDNewEmpAlert;
@@ -4878,6 +5142,7 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JLabel jLFoodImg;
     private javax.swing.JLabel jLFullName;
     private javax.swing.JLabel jLSeachingFood;
+    private javax.swing.JLabel jLSeachingFood1;
     private javax.swing.JLabel jLSearchingEmp;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -4898,10 +5163,10 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -4919,24 +5184,22 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JRadioButton jRBtnEmpDepartments;
     private javax.swing.JRadioButton jRBtnEmpID;
     private javax.swing.JRadioButton jRBtnEmpUserName;
-    private javax.swing.JRadioButton jRFType;
     private javax.swing.JRadioButton jRSeachingFoodID;
     private javax.swing.JRadioButton jRSeachingFoodName;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollShowFoodToManage;
     private javax.swing.JScrollPane jScrollShowKhachHang;
     private javax.swing.JScrollPane jScrollShowNhanVien;
     private javax.swing.JScrollPane jShowCustomer;
-    private javax.swing.JTextField jTFDescription;
+    private javax.swing.JTextArea jTADescription;
     private javax.swing.JTextField jTFID;
     private javax.swing.JTextField jTFName;
-    private javax.swing.JTextField jTFType;
     private javax.swing.JLabel jTNewEmpAlertDescription;
     private javax.swing.JLabel jTNewEmpAlertTitle;
     private javax.swing.JTextField jTSeachingFood;
@@ -4956,6 +5219,8 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
+    private javax.swing.JButton jbSortByName;
     private javax.swing.JTextField txtCsBirthday;
     private javax.swing.JTextField txtCsID;
     private javax.swing.JTextField txtCsIN;

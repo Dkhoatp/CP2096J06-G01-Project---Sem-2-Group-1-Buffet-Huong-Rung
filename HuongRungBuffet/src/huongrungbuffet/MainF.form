@@ -16,32 +16,32 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jPManagerControl" min="-2" pref="221" max="-2" attributes="0"/>
+                  <Component id="jPManagerControl" min="-2" pref="180" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="JFEmpManage" min="-2" pref="1122" max="-2" attributes="0"/>
+                  <Component id="JFEmpManage" min="-2" pref="834" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="JFCustomerView" min="-2" pref="1122" max="-2" attributes="0"/>
+                  <Component id="JFCustomerView" min="-2" pref="834" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="JFFoodManage" min="-2" pref="1122" max="-2" attributes="0"/>
+                  <Component id="JFFoodManage" min="-2" pref="834" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="JF4" min="-2" pref="1122" max="-2" attributes="0"/>
+                  <Component id="JF4" min="-2" pref="834" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="JF5" min="-2" pref="1122" max="-2" attributes="0"/>
+                  <Component id="JF5" min="-2" pref="834" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="JF6" pref="1122" max="32767" attributes="0"/>
+                  <Component id="JF6" pref="834" max="32767" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="JF6" alignment="0" pref="729" max="32767" attributes="0"/>
-              <Component id="JF5" alignment="0" pref="729" max="32767" attributes="0"/>
-              <Component id="JFFoodManage" alignment="0" pref="729" max="32767" attributes="0"/>
-              <Component id="JFCustomerView" alignment="0" pref="729" max="32767" attributes="0"/>
-              <Component id="JFEmpManage" alignment="0" pref="729" max="32767" attributes="0"/>
-              <Component id="jPManagerControl" alignment="0" max="32767" attributes="0"/>
-              <Component id="JF4" alignment="0" pref="729" max="32767" attributes="0"/>
+              <Component id="JF6" alignment="0" pref="720" max="32767" attributes="0"/>
+              <Component id="JF5" alignment="1" pref="720" max="32767" attributes="0"/>
+              <Component id="JF4" alignment="0" pref="720" max="32767" attributes="0"/>
+              <Component id="JFFoodManage" alignment="0" pref="720" max="32767" attributes="0"/>
+              <Component id="JFCustomerView" alignment="0" pref="720" max="32767" attributes="0"/>
+              <Component id="JFEmpManage" alignment="0" pref="720" max="32767" attributes="0"/>
+              <Component id="jPManagerControl" alignment="1" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -60,7 +60,7 @@
             <Component class="javax.swing.JButton" name="Btn1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Manage Employee"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -72,14 +72,14 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="20" y="190" width="180" height="30"/>
+                  <AbsoluteConstraints x="20" y="170" width="140" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JButton" name="Btn2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="View Customer"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -94,30 +94,30 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="20" y="260" width="180" height="-1"/>
+                  <AbsoluteConstraints x="20" y="240" width="140" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JButton" name="Btn3">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Btn 3"/>
+                <Property name="text" type="java.lang.String" value="Manage Food"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Btn3ActionPerformed"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="20" y="320" width="180" height="-1"/>
+                  <AbsoluteConstraints x="20" y="300" width="140" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JButton" name="Btn4">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Btn 4"/>
               </Properties>
@@ -126,14 +126,14 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="20" y="380" width="180" height="-1"/>
+                  <AbsoluteConstraints x="20" y="360" width="140" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JButton" name="Btn5">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Btn 5"/>
               </Properties>
@@ -142,14 +142,14 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="20" y="440" width="180" height="-1"/>
+                  <AbsoluteConstraints x="20" y="420" width="140" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JButton" name="Btn6">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Btn 6"/>
               </Properties>
@@ -158,49 +158,49 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="20" y="500" width="180" height="-1"/>
+                  <AbsoluteConstraints x="20" y="480" width="140" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JLabel" name="Title">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="18" style="1"/>
+                  <Font name="Tahoma" size="14" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Department1"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="20" width="220" height="30"/>
+                  <AbsoluteConstraints x="0" y="20" width="180" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JLabel" name="EName">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="18" style="1"/>
+                  <Font name="Tahoma" size="14" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="EmployeeName"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="60" width="220" height="30"/>
+                  <AbsoluteConstraints x="0" y="60" width="170" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JLabel" name="EID">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="18" style="1"/>
+                  <Font name="Tahoma" size="14" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="EmployeeID"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="106" width="220" height="30"/>
+                  <AbsoluteConstraints x="0" y="106" width="180" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -225,74 +225,87 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="EmpFullname" alignment="0" max="32767" attributes="0"/>
-                          <Component id="EmpBirthDay" alignment="0" max="32767" attributes="0"/>
-                          <Component id="EmpTitle" alignment="0" max="32767" attributes="0"/>
-                          <Component id="EmpPhone" alignment="0" max="32767" attributes="0"/>
-                          <Component id="EmpID" pref="125" max="32767" attributes="0"/>
-                          <Component id="jLSearchingEmp" alignment="1" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtEmpID" pref="197" max="32767" attributes="0"/>
-                          <Component id="txtEmpName" max="32767" attributes="0"/>
-                          <Component id="txtEmpTitle" max="32767" attributes="0"/>
-                          <Component id="txtEmpPhone" max="32767" attributes="0"/>
-                          <Component id="txtEmpBirthDay" max="32767" attributes="0"/>
-                          <Component id="jTSearchingByEmp" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="EmpPassword" max="32767" attributes="0"/>
-                                  <Component id="EmpDepartmentID" max="32767" attributes="0"/>
-                                  <Component id="EmpAddress" max="32767" attributes="0"/>
-                                  <Component id="EmpUserName" max="32767" attributes="0"/>
-                                  <Component id="EmpIdentificationNumber" alignment="1" pref="168" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                      <Component id="txtEmpIdentification" min="-2" pref="220" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="txtEmpAddress" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
-                                          <Component id="txtEmpDepartment" min="-2" pref="220" max="-2" attributes="0"/>
-                                          <Component id="txtEmpPassword" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Component id="txtEmpUserName" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="SaveEmpBtn" pref="192" max="32767" attributes="0"/>
-                                  <Component id="ClearAllEmpTxtField" pref="192" max="32767" attributes="0"/>
-                                  <Component id="AddNewEmpBtn" alignment="0" pref="192" max="32767" attributes="0"/>
-                                  <Component id="DeeleteEmpBtn" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jRBtnEmpID" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                              <Component id="jRBtnEmpDepartments" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jRBtnEmpUserName" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="jBEmpSearchBy" min="-2" pref="146" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="426" max="-2" attributes="0"/>
                       <Component id="jLEmpTitle" min="-2" pref="274" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Component id="jScrollShowNhanVien" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="EmpID" min="-2" pref="108" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                              <Component id="txtEmpID" min="-2" pref="117" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="EmpTitle" min="-2" pref="108" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txtEmpTitle" min="-2" pref="117" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="EmpFullname" min="-2" pref="108" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txtEmpName" min="-2" pref="117" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="EmpPhone" min="-2" pref="108" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txtEmpPhone" min="-2" pref="117" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="EmpBirthDay" min="-2" pref="108" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="txtEmpBirthDay" min="-2" pref="117" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="EmpDepartmentID" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="EmpPassword" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="EmpUserName" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="EmpAddress" max="32767" attributes="0"/>
+                                          <Component id="EmpIdentificationNumber" alignment="0" pref="118" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="txtEmpPassword" alignment="0" pref="117" max="32767" attributes="0"/>
+                                          <Component id="txtEmpUserName" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtEmpDepartment" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtEmpAddress" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtEmpIdentification" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLSearchingEmp" min="-2" pref="108" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTSearchingByEmp" min="-2" pref="187" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jRBtnEmpID" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                                      <Component id="jRBtnEmpDepartments" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jRBtnEmpUserName" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="ClearAllEmpTxtField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="SaveEmpBtn" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="DeeleteEmpBtn" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="AddNewEmpBtn" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jBEmpSearchBy" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="96" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -300,87 +313,77 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLEmpTitle" min="-2" pref="49" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="EmpID" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="txtEmpID" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="EmpFullname" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="txtEmpName" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="EmpTitle" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="txtEmpTitle" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="EmpPhone" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                  <Component id="txtEmpPhone" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="EmpBirthDay" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="EmpID" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="txtEmpID" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="EmpAddress" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="txtEmpAddress" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="AddNewEmpBtn" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="EmpDepartmentID" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="txtEmpDepartment" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="SaveEmpBtn" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="EmpUserName" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="txtEmpUserName" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="ClearAllEmpTxtField" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="EmpPassword" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                  <Component id="txtEmpPassword" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="DeeleteEmpBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="EmpIdentificationNumber" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="txtEmpBirthDay" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="txtEmpIdentification" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="EmpAddress" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="txtEmpAddress" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="AddNewEmpBtn" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                      <Component id="jRBtnEmpID" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRBtnEmpDepartments" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRBtnEmpUserName" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="EmpFullname" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="txtEmpName" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="EmpTitle" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="txtEmpTitle" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="EmpPhone" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="txtEmpPhone" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="EmpPassword" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="txtEmpPassword" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                      <Component id="txtEmpDepartment" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                      <Component id="SaveEmpBtn" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jTSearchingByEmp" min="-2" pref="35" max="-2" attributes="0"/>
-                                      <Component id="jLSearchingEmp" alignment="3" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="EmpDepartmentID" min="-2" pref="27" max="-2" attributes="0"/>
+                                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="jBEmpSearchBy" min="-2" pref="35" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="EmpUserName" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="txtEmpUserName" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="ClearAllEmpTxtField" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="DeeleteEmpBtn" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="jScrollShowNhanVien" min="-2" pref="358" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="EmpBirthDay" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="txtEmpBirthDay" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="EmpIdentificationNumber" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="txtEmpIdentification" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLSearchingEmp" alignment="3" max="32767" attributes="0"/>
+                          <Component id="jBEmpSearchBy" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTSearchingByEmp" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                          <Component id="jRBtnEmpID" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRBtnEmpDepartments" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRBtnEmpUserName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jScrollShowNhanVien" min="-2" pref="383" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -476,7 +479,7 @@
             <Component class="javax.swing.JLabel" name="jLEmpTitle">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="18" style="1"/>
+                  <Font name="Tahoma" size="14" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Employee Manage"/>
@@ -485,7 +488,7 @@
             <Component class="javax.swing.JLabel" name="EmpID">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="text" type="java.lang.String" value="EmployeeID:"/>
@@ -494,7 +497,7 @@
             <Component class="javax.swing.JLabel" name="EmpFullname">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="text" type="java.lang.String" value="FullName:"/>
@@ -503,7 +506,7 @@
             <Component class="javax.swing.JLabel" name="EmpTitle">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="text" type="java.lang.String" value="Title:"/>
@@ -512,7 +515,7 @@
             <Component class="javax.swing.JLabel" name="EmpPhone">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="text" type="java.lang.String" value="Phone:"/>
@@ -521,7 +524,7 @@
             <Component class="javax.swing.JLabel" name="EmpBirthDay">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="text" type="java.lang.String" value="Birth day:"/>
@@ -530,7 +533,7 @@
             <Component class="javax.swing.JLabel" name="EmpAddress">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="text" type="java.lang.String" value="Address:"/>
@@ -539,7 +542,7 @@
             <Component class="javax.swing.JLabel" name="EmpDepartmentID">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="text" type="java.lang.String" value="Department:"/>
@@ -548,7 +551,7 @@
             <Component class="javax.swing.JLabel" name="EmpUserName">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="text" type="java.lang.String" value="UserName:"/>
@@ -557,7 +560,7 @@
             <Component class="javax.swing.JLabel" name="EmpPassword">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="text" type="java.lang.String" value="Passwword:"/>
@@ -566,7 +569,7 @@
             <Component class="javax.swing.JLabel" name="EmpIdentificationNumber">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="text" type="java.lang.String" value="Identification Num:"/>
@@ -601,7 +604,7 @@
             <Component class="javax.swing.JButton" name="AddNewEmpBtn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Add New Employee"/>
               </Properties>
@@ -612,7 +615,7 @@
             <Component class="javax.swing.JButton" name="SaveEmpBtn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Save"/>
               </Properties>
@@ -623,7 +626,7 @@
             <Component class="javax.swing.JButton" name="DeeleteEmpBtn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Delete"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -637,7 +640,7 @@
             <Component class="javax.swing.JButton" name="ClearAllEmpTxtField">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Clear"/>
               </Properties>
@@ -648,7 +651,7 @@
             <Component class="javax.swing.JLabel" name="jLSearchingEmp">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Searching by:"/>
               </Properties>
@@ -682,7 +685,7 @@
             <Component class="javax.swing.JButton" name="jBEmpSearchBy">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Seach"/>
               </Properties>
@@ -710,15 +713,24 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollShowKhachHang" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="423" max="-2" attributes="0"/>
-                              <Component id="jLEmpTitle1" min="-2" pref="274" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="272" max="-2" attributes="0"/>
+                      <Component id="jLEmpTitle1" min="-2" pref="274" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
+                              <Component id="CustomerDefaultsPoints" min="-2" pref="120" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="CustomerHightPoints" min="-2" pref="117" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="CustomerLowPoints" pref="118" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLFullName" min="-2" pref="162" max="-2" attributes="0"/>
                                   <Component id="jLCustomerId" min="-2" pref="162" max="-2" attributes="0"/>
@@ -730,53 +742,46 @@
                                   <Component id="jLshowCustomerId" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
                                   <Component id="jLshowCustomerPhone" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLCustomerIdenNum" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
                                   <Component id="jLCustomerBirthday" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
                                   <Component id="jLCustomerPoint" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLshowCustomerIdenNum" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
-                                  <Component id="jLshowCustomerBirthday" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
-                                  <Component id="jLshowCustomerPoint" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="313" max="-2" attributes="0"/>
-                              <Component id="CustomerDefaultsPoints" min="-2" pref="150" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="CustomerHightPoints" min="-2" pref="150" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="CustomerLowPoints" min="-2" pref="150" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="169" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLshowCustomerIdenNum" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
+                          <Component id="jLshowCustomerBirthday" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
+                          <Component id="jLshowCustomerPoint" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="jScrollShowKhachHang" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                       <Component id="jLEmpTitle1" min="-2" pref="49" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jLCustomerId" max="32767" attributes="0"/>
-                                  <Component id="jLshowCustomerId" max="32767" attributes="0"/>
+                                  <Component id="jLshowCustomerId" min="-2" pref="14" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jLshowFullName" max="32767" attributes="0"/>
-                                  <Component id="jLFullName" max="32767" attributes="0"/>
+                                  <Component id="jLFullName" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jLCustomerPhone" max="32767" attributes="0"/>
-                                  <Component id="jLshowCustomerPhone" max="32767" attributes="0"/>
+                                  <Component id="jLshowCustomerPhone" min="-2" pref="14" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -787,24 +792,24 @@
                               <EmptySpace min="35" pref="35" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jLshowCustomerIdenNum" max="32767" attributes="0"/>
-                                  <Component id="jLCustomerIdenNum" max="32767" attributes="0"/>
+                                  <Component id="jLCustomerIdenNum" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jLCustomerPoint" max="32767" attributes="0"/>
-                                  <Component id="jLshowCustomerPoint" max="32767" attributes="0"/>
+                                  <Component id="jLshowCustomerPoint" min="-2" pref="14" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="CustomerHightPoints" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="CustomerLowPoints" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="CustomerDefaultsPoints" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="CustomerHightPoints" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="CustomerLowPoints" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="CustomerDefaultsPoints" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollShowKhachHang" min="-2" pref="418" max="-2" attributes="0"/>
-                      <EmptySpace pref="28" max="32767" attributes="0"/>
+                      <Component id="jScrollShowKhachHang" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -876,7 +881,7 @@
             <Component class="javax.swing.JLabel" name="jLEmpTitle1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="18" style="1"/>
+                  <Font name="Tahoma" size="14" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Customer View"/>
@@ -885,7 +890,7 @@
             <Component class="javax.swing.JLabel" name="jLCustomerId">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Customer ID:"/>
               </Properties>
@@ -893,7 +898,7 @@
             <Component class="javax.swing.JLabel" name="jLFullName">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Full Name:"/>
               </Properties>
@@ -901,7 +906,7 @@
             <Component class="javax.swing.JLabel" name="jLCustomerPhone">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Phone:"/>
               </Properties>
@@ -909,28 +914,28 @@
             <Component class="javax.swing.JLabel" name="jLshowFullName">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLshowCustomerId">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLshowCustomerPhone">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLCustomerIdenNum">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Identification Numr:"/>
               </Properties>
@@ -938,7 +943,7 @@
             <Component class="javax.swing.JLabel" name="jLCustomerBirthday">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="BirthDay:"/>
               </Properties>
@@ -946,7 +951,7 @@
             <Component class="javax.swing.JLabel" name="jLCustomerPoint">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Point:"/>
               </Properties>
@@ -954,28 +959,28 @@
             <Component class="javax.swing.JLabel" name="jLshowCustomerIdenNum">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLshowCustomerBirthday">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLshowCustomerPoint">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="CustomerHightPoints">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Hight Points"/>
               </Properties>
@@ -986,7 +991,7 @@
             <Component class="javax.swing.JButton" name="CustomerLowPoints">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Low Points"/>
               </Properties>
@@ -997,7 +1002,7 @@
             <Component class="javax.swing.JButton" name="CustomerDefaultsPoints">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Defaults"/>
               </Properties>
@@ -1027,151 +1032,178 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jScrollShowFoodToManage" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="423" max="32767" attributes="0"/>
-                      <Component id="jLEmpTitle2" min="-2" pref="274" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="423" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
-                              <Component id="jLFDescription" min="-2" pref="119" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLFName" alignment="1" min="-2" pref="119" max="-2" attributes="0"/>
-                                  <Component id="jLFID" alignment="1" min="-2" pref="119" max="-2" attributes="0"/>
-                                  <Component id="jLFType" alignment="1" min="-2" pref="119" max="-2" attributes="0"/>
+                          <Component id="jLFDescription" alignment="1" min="-2" pref="289" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLFName" alignment="1" min="-2" pref="119" max="-2" attributes="0"/>
+                                      <Component id="jLFID" alignment="1" min="-2" pref="119" max="-2" attributes="0"/>
+                                      <Component id="jLFType" alignment="1" min="-2" pref="119" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jTFName" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jTFID" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCBFoodType" min="-2" pref="165" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
+                              <Component id="jScrollPane3" alignment="1" min="-2" pref="289" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jTFDescription" max="32767" attributes="0"/>
-                          <Component id="jTFType" alignment="0" pref="165" max="32767" attributes="0"/>
-                          <Component id="jTFName" alignment="0" pref="165" max="32767" attributes="0"/>
-                          <Component id="jTFID" alignment="0" pref="165" max="32767" attributes="0"/>
-                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="jLSeachingFood1" min="-2" pref="91" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jBSortFoodID" min="-2" pref="77" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                              <Component id="jbSortByName" min="-2" pref="75" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButton29" min="-2" pref="77" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Component id="jBSaveFood" alignment="0" max="32767" attributes="0"/>
                                   <Component id="jBFoodClear" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jBFDelete" max="32767" attributes="0"/>
-                                  <Component id="jBAddNewFood" pref="135" max="32767" attributes="0"/>
+                                  <Component id="jBAddNewFood" max="32767" attributes="0"/>
+                                  <Component id="jBFImg" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="jBFDelete" min="-2" pref="135" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                              <Component id="jLFoodImg" min="-2" pref="200" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                      <Component id="jLFoodImg" min="-2" pref="200" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                                  <Component id="jTSeachingFood" min="-2" pref="219" max="-2" attributes="0"/>
-                                                  <EmptySpace pref="25" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <EmptySpace pref="53" max="-2" attributes="0"/>
-                                                  <Component id="jRSeachingFoodID" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jRSeachingFoodName" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jRFType" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                                      <Component id="jRSeachingFoodID" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="jRSeachingFoodName" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="jTSeachingFood" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="jLSeachingFood" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
-                                          <Component id="jBSearchingFood" alignment="0" min="-2" pref="269" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="jBSearchingFood" max="32767" attributes="0"/>
+                                                  <Component id="jButton3" pref="110" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
-                                      <Component id="jLSeachingFood" min="-2" pref="177" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jLFImgLink" min="-2" pref="331" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="186" max="-2" attributes="0"/>
-                              <Component id="jBFImg" max="32767" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLFImgLink" min="-2" pref="400" max="-2" attributes="0"/>
-                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <EmptySpace pref="20" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="300" max="-2" attributes="0"/>
+                      <Component id="jLEmpTitle2" min="-2" pref="274" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLEmpTitle2" min="-2" pref="49" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Component id="jLEmpTitle2" min="-2" pref="37" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jTFID" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                              <Component id="jBAddNewFood" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jTFName" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                              <Component id="jBSaveFood" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="jBFoodClear" min="-2" pref="34" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLFID" min="-2" pref="34" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jLFName" min="-2" pref="34" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLFType" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                          <Component id="jTFType" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                                          <Component id="jCBFoodType" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLFDescription" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                                          <Component id="jTFDescription" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                          <Component id="jBFDelete" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jTFID" min="-2" pref="34" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTFName" min="-2" pref="34" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jBFImg" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="jLFImgLink" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="jLFDescription" min="-2" pref="27" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jScrollPane3" min="-2" pref="93" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLSeachingFood" min="-2" pref="34" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jTSeachingFood" min="-2" pref="35" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jRSeachingFoodName" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRFType" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRSeachingFoodID" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace pref="8" max="-2" attributes="0"/>
+                                      <Component id="jLSeachingFood" min="-2" pref="34" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTSeachingFood" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jRSeachingFoodName" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jRSeachingFoodID" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jBSearchingFood" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jLSeachingFood1" max="32767" attributes="0"/>
+                                          <Component id="jBSortFoodID" alignment="1" max="32767" attributes="0"/>
+                                          <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                              <Component id="jbSortByName" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jButton29" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace min="102" pref="102" max="-2" attributes="0"/>
+                                                      <Component id="jBFoodClear" min="-2" pref="34" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="jBAddNewFood" min="-2" pref="34" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="jBSaveFood" min="-2" pref="34" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Component id="jBFDelete" min="-2" pref="34" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="jLFoodImg" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLFImgLink" min="-2" pref="32" max="-2" attributes="0"/>
+                                          <Component id="jBFImg" min="-2" pref="34" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jBSearchingFood" min="-2" pref="34" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jLFoodImg" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollShowFoodToManage" pref="376" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jScrollShowFoodToManage" min="-2" pref="347" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1190,9 +1222,9 @@
                       <Table columnCount="5" rowCount="0">
                         <Column editable="true" title="FoodID" type="java.lang.Object"/>
                         <Column editable="true" title="Name" type="java.lang.Object"/>
-                        <Column editable="true" title="Price" type="java.lang.Object"/>
-                        <Column editable="true" title="Type" type="java.lang.Object"/>
                         <Column editable="true" title="Desciption" type="java.lang.Object"/>
+                        <Column editable="true" title="Type" type="java.lang.Object"/>
+                        <Column editable="true" title="Picture" type="java.lang.Object"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -1237,16 +1269,16 @@
             <Component class="javax.swing.JLabel" name="jLEmpTitle2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="18" style="1"/>
+                  <Font name="Tahoma" size="14" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Customer View"/>
+                <Property name="text" type="java.lang.String" value="Manage Food"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLFID">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="FoodID:"/>
               </Properties>
@@ -1254,7 +1286,7 @@
             <Component class="javax.swing.JLabel" name="jLFName">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Name:"/>
               </Properties>
@@ -1262,7 +1294,7 @@
             <Component class="javax.swing.JLabel" name="jLFType">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Type:"/>
               </Properties>
@@ -1270,23 +1302,30 @@
             <Component class="javax.swing.JLabel" name="jLFDescription">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Description:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTFID">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="11" style="1"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTFName">
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTFType">
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTFDescription">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="11" style="1"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jBAddNewFood">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Add new Food"/>
               </Properties>
@@ -1297,23 +1336,29 @@
             <Component class="javax.swing.JButton" name="jBSaveFood">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Save"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBSaveFoodActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jBFoodClear">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Clear"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBFoodClearActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jBFDelete">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Delete"/>
               </Properties>
@@ -1321,13 +1366,18 @@
             <Component class="javax.swing.JLabel" name="jLSeachingFood">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Searching by:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTSeachingFood">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="11" style="1"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRSeachingFoodID">
               <Properties>
@@ -1348,21 +1398,16 @@
                 <Property name="text" type="java.lang.String" value="Name"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRFType">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="buttonGroupSearchingFood"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Type"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JButton" name="jBSearchingFood">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Searh"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBSearchingFoodActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLFoodImg">
               <Properties>
@@ -1375,7 +1420,7 @@
             <Component class="javax.swing.JButton" name="jBFImg">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="11" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Img"/>
               </Properties>
@@ -1386,9 +1431,98 @@
             <Component class="javax.swing.JLabel" name="jLFImgLink">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="10" style="0"/>
                 </Property>
               </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTADescription">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JComboBox" name="jCBFoodType">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="11" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Defalut"/>
+                    <StringItem index="1" value="Appetizer"/>
+                    <StringItem index="2" value="MainCourse"/>
+                    <StringItem index="3" value="Dessert"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLSeachingFood1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="11" style="1"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="Sort by"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jBSortFoodID">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="11" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="ID"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBSortFoodIDActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="jbSortByName">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="11" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Name"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbSortByNameActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton29">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="11" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Type"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton29ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton3">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="11" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Default"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -1418,7 +1552,7 @@
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="920" max="32767" attributes="0"/>
+                      <EmptySpace pref="638" max="32767" attributes="0"/>
                       <Component id="jButton6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
                   </Group>
@@ -1429,7 +1563,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="222" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
                       <Component id="jButton5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jButton6" min="-2" max="-2" attributes="0"/>
@@ -1478,7 +1612,7 @@
                       <Component id="jButton7" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="1007" max="32767" attributes="0"/>
+                      <EmptySpace pref="725" max="32767" attributes="0"/>
                       <Component id="jButton8" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
@@ -1531,7 +1665,7 @@
                       <Component id="jButton9" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="848" max="32767" attributes="0"/>
+                      <EmptySpace pref="568" max="32767" attributes="0"/>
                       <Component id="jButton10" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="185" max="-2" attributes="0"/>
                   </Group>
@@ -4536,23 +4670,23 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace pref="418" max="32767" attributes="0"/>
-                  <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="418" max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="630" max="-2" attributes="0"/>
                   <Component id="jButton47" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="315" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="300" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace pref="53" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="89" max="32767" attributes="0"/>
+                  <EmptySpace pref="190" max="32767" attributes="0"/>
                   <Component id="jButton47" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -4570,19 +4704,19 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="0" pref="36" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="26" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLabel3" min="-2" pref="439" max="-2" attributes="0"/>
-                          <Component id="jPasswordField1" max="32767" attributes="0"/>
+                          <Component id="jLabel4" alignment="1" max="32767" attributes="0"/>
+                          <Component id="jLabel1" pref="361" max="32767" attributes="0"/>
                           <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel1" alignment="1" pref="451" max="32767" attributes="0"/>
+                          <Component id="jTextField9" max="32767" attributes="0"/>
+                          <Component id="jLabel6" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="41" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="170" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="188" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" pref="192" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -4590,19 +4724,19 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="66" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" pref="68" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField1" min="-2" pref="68" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" pref="68" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPasswordField1" min="-2" pref="68" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="76" max="-2" attributes="0"/>
-                      <EmptySpace pref="73" max="32767" attributes="0"/>
+                      <Component id="jLabel1" min="-2" pref="51" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Component id="jLabel4" min="-2" pref="45" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jTextField1" min="-2" pref="46" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jLabel6" min="-2" pref="45" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jTextField9" min="-2" pref="46" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="33" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -4611,24 +4745,16 @@
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="36" style="1"/>
+                  <Font name="Tahoma" size="24" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Login Title"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel3">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="24" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="jLabel3"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="24" style="1"/>
+                  <Font name="Tahoma" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="UserName:"/>
               </Properties>
@@ -4636,32 +4762,40 @@
             <Component class="javax.swing.JTextField" name="jTextField1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="18" style="0"/>
+                  <Font name="Tahoma" size="14" style="0"/>
                 </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JPasswordField" name="jPasswordField1">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="18" style="0"/>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jPasswordField1ActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JButton" name="jButton1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="24" style="1"/>
+                  <Font name="Tahoma" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Login"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel6">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="18" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="UserName:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextField9">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="0"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField9ActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

@@ -18,7 +18,7 @@ public class TestF extends javax.swing.JFrame {
      */
     public TestF() {
         initComponents();
-        jPanel1.setSize(900, 500);
+        jPanel1qq.setSize(1013, 720);
     }
     /*commit teádasdst*/
     /**
@@ -30,32 +30,36 @@ public class TestF extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jPanel1qq = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(162, 255, 112));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1qq.setBackground(new java.awt.Color(162, 255, 112));
+        jPanel1qq.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setBackground(new java.awt.Color(255, 100, 91));
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 25)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(252, 85, 25));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("jLabel4");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 190, 50));
+        jPanel1qq.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 190, 50));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 102, 51));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 130, 50));
+        jPanel1qq.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 130, 50));
 
         jDateChooser1.setDateFormatString("dd/MM/yyyy");
-        jPanel1.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 370, -1));
+        jPanel1qq.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 370, -1));
 
         jButton1.setText("jButton1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -63,17 +67,31 @@ public class TestF extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 230, -1, -1));
+        jPanel1qq.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 230, -1, -1));
+
+        jButton2.setText("jButton2");
+        jPanel1qq.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 260, -1, -1));
+
+        jButton3.setText("jButton3");
+        jPanel1qq.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 560, -1, 160));
+
+        jButton4.setText("jButton4");
+        jPanel1qq.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 690, -1, -1));
+
+        jButton5.setText("jButton5");
+        jPanel1qq.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 670, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1qq, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+            .addComponent(jPanel1qq, javax.swing.GroupLayout.PREFERRED_SIZE, 694, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -123,9 +141,13 @@ public class TestF extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel1qq;
     // End of variables declaration//GEN-END:variables
 }
