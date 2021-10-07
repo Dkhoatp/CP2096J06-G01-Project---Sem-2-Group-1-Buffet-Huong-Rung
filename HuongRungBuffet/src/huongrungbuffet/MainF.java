@@ -205,7 +205,6 @@ public class MainF extends javax.swing.JFrame {
         txtEmpPhone = new javax.swing.JTextField();
         txtEmpBirthDay = new javax.swing.JTextField();
         txtEmpAddress = new javax.swing.JTextField();
-        txtEmpDepartment = new javax.swing.JTextField();
         txtEmpUserName = new javax.swing.JTextField();
         txtEmpPassword = new javax.swing.JTextField();
         txtEmpIdentification = new javax.swing.JTextField();
@@ -219,6 +218,7 @@ public class MainF extends javax.swing.JFrame {
         jRBtnEmpDepartments = new javax.swing.JRadioButton();
         jRBtnEmpUserName = new javax.swing.JRadioButton();
         jBEmpSearchBy = new javax.swing.JButton();
+        CBtEmpDepartment = new javax.swing.JComboBox<>();
         JFCustomerView = new javax.swing.JPanel();
         jScrollShowKhachHang = new javax.swing.JScrollPane();
         jTableShowKhachHang = new javax.swing.JTable();
@@ -674,6 +674,8 @@ public class MainF extends javax.swing.JFrame {
             }
         });
 
+        CBtEmpDepartment.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Default", "Kitchen", "WareHouse", "Cashiers", "Bar" }));
+
         javax.swing.GroupLayout JFEmpManageLayout = new javax.swing.GroupLayout(JFEmpManage);
         JFEmpManage.setLayout(JFEmpManageLayout);
         JFEmpManageLayout.setHorizontalGroup(
@@ -720,11 +722,11 @@ public class MainF extends javax.swing.JFrame {
                                     .addComponent(EmpIdentificationNumber, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(txtEmpPassword, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                                    .addComponent(txtEmpPassword, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtEmpUserName, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtEmpDepartment, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtEmpAddress, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtEmpIdentification)))
+                                    .addComponent(txtEmpIdentification)
+                                    .addComponent(CBtEmpDepartment, javax.swing.GroupLayout.Alignment.LEADING, 0, 117, Short.MAX_VALUE)))
                             .addGroup(JFEmpManageLayout.createSequentialGroup()
                                 .addComponent(jLSearchingEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -776,11 +778,11 @@ public class MainF extends javax.swing.JFrame {
                             .addComponent(txtEmpPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JFEmpManageLayout.createSequentialGroup()
                         .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtEmpDepartment, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(SaveEmpBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(SaveEmpBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(JFEmpManageLayout.createSequentialGroup()
-                                .addComponent(EmpDepartmentID, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(EmpDepartmentID, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(CBtEmpDepartment, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(1, 1, 1)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3329,7 +3331,7 @@ public class MainF extends javax.swing.JFrame {
         txtEmpPhone.setText(model.getValueAt(selectedRowIndex, 3).toString());
         txtEmpBirthDay.setText(model.getValueAt(selectedRowIndex, 4).toString());
         txtEmpAddress.setText(model.getValueAt(selectedRowIndex, 5).toString());
-        txtEmpDepartment.setText(model.getValueAt(selectedRowIndex, 6).toString());
+        CBtEmpDepartment.setSelectedItem(model.getValueAt(selectedRowIndex, 6).toString());
         txtEmpUserName.setText(model.getValueAt(selectedRowIndex, 7).toString());
         txtEmpPassword.setText(model.getValueAt(selectedRowIndex, 8).toString());
         txtEmpIdentification.setText(model.getValueAt(selectedRowIndex, 9).toString());
@@ -3346,7 +3348,7 @@ public class MainF extends javax.swing.JFrame {
         txtEmpPhone.setText("");
         txtEmpBirthDay.setText("");
         txtEmpAddress.setText("");
-        txtEmpDepartment.setText("");
+        CBtEmpDepartment.setSelectedIndex(0);
         txtEmpUserName.setText("");
         txtEmpPassword.setText("");
         txtEmpIdentification.setText("");
@@ -3359,7 +3361,8 @@ public class MainF extends javax.swing.JFrame {
     private void AddNewEmpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddNewEmpBtnActionPerformed
         try {
             //Check not null
-            if (txtEmpID.getText().equals("") || txtEmpName.getText().equals("") || txtEmpTitle.getText().equals("") || txtEmpPhone.getText().equals("") || txtEmpBirthDay.getText().equals("") || txtEmpAddress.getText().equals("") || txtEmpDepartment.getText().equals("") || txtEmpUserName.equals("") || txtEmpPassword.getText().equals("") || txtEmpIdentification.getText().equals("")) {
+            String CbBDpt = CBtEmpDepartment.getSelectedItem().toString();
+            if (txtEmpID.getText().equals("") || txtEmpName.getText().equals("") || txtEmpTitle.getText().equals("") || txtEmpPhone.getText().equals("") || txtEmpBirthDay.getText().equals("") || txtEmpAddress.getText().equals("") || CbBDpt.equals("") || txtEmpUserName.equals("") || txtEmpPassword.getText().equals("") || txtEmpIdentification.getText().equals("")) {
                 EmpAlertDialog();
                 jDNewEmpAlert.setTitle("cant Add");
                 jTNewEmpAlertTitle.setText("Can not add");
@@ -3420,7 +3423,8 @@ public class MainF extends javax.swing.JFrame {
 
             //kiem tra department
             String dpments = "";
-            switch (txtEmpDepartment.getText()) {
+            String cb = CBtEmpDepartment.getSelectedItem().toString();
+            switch (cb) {
 //                case "Manager":
 //                    dpments = "DP01";
 //                    break;
@@ -3511,7 +3515,8 @@ public class MainF extends javax.swing.JFrame {
 
         try {
             //Check not null
-            if (txtEmpID.getText().equals("") || txtEmpName.getText().equals("") || txtEmpTitle.getText().equals("") || txtEmpPhone.getText().equals("") || txtEmpBirthDay.getText().equals("") || txtEmpAddress.getText().equals("") || txtEmpDepartment.getText().equals("") || txtEmpUserName.equals("") || txtEmpPassword.getText().equals("") || txtEmpIdentification.getText().equals("")) {
+            String CbBDpt = CBtEmpDepartment.getSelectedItem().toString();
+            if (txtEmpID.getText().equals("") || txtEmpName.getText().equals("") || txtEmpTitle.getText().equals("") || txtEmpPhone.getText().equals("") || txtEmpBirthDay.getText().equals("") || txtEmpAddress.getText().equals("") || CbBDpt.equals("") || txtEmpUserName.equals("") || txtEmpPassword.getText().equals("") || txtEmpIdentification.getText().equals("")) {
                 EmpAlertDialog();
                 jDNewEmpAlert.setTitle("cant Update");
                 jTNewEmpAlertTitle.setText("Can not Update");
@@ -3570,7 +3575,8 @@ public class MainF extends javax.swing.JFrame {
             }
             //kiem tra department
             String dpments = "";
-            switch (txtEmpDepartment.getText()) {
+            String cb = CBtEmpDepartment.getSelectedItem().toString();
+            switch (cb) {
 //                case "Manager":
 //                    dpments = "DP01";
 //                    break;
@@ -3590,7 +3596,7 @@ public class MainF extends javax.swing.JFrame {
                     EmpAlertDialog();
                     jDNewEmpAlert.setTitle("cant Update");
                     jTNewEmpAlertTitle.setText("Can not Update");
-                    jTNewEmpAlertDescription.setText("Invalid Department Name");
+                    jTNewEmpAlertDescription.setText("Plaese select Departmnets");
                     return;
             }
             //kiem tra Username
@@ -4980,6 +4986,7 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JButton Btn7;
     private javax.swing.JButton Btn8;
     private javax.swing.JButton Btn9;
+    private javax.swing.JComboBox<String> CBtEmpDepartment;
     private javax.swing.JButton ClearAllEmpTxtField;
     private javax.swing.JLabel CsB;
     private javax.swing.JLabel CsID;
@@ -5229,7 +5236,6 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JTextField txtCsPoint;
     private javax.swing.JTextField txtEmpAddress;
     private javax.swing.JTextField txtEmpBirthDay;
-    private javax.swing.JTextField txtEmpDepartment;
     private javax.swing.JTextField txtEmpID;
     private javax.swing.JTextField txtEmpIdentification;
     private javax.swing.JTextField txtEmpName;

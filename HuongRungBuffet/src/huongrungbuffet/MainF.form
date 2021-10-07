@@ -275,11 +275,11 @@
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="txtEmpPassword" alignment="0" pref="117" max="32767" attributes="0"/>
+                                          <Component id="txtEmpPassword" alignment="0" max="32767" attributes="0"/>
                                           <Component id="txtEmpUserName" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtEmpDepartment" alignment="0" max="32767" attributes="0"/>
                                           <Component id="txtEmpAddress" alignment="0" max="32767" attributes="0"/>
                                           <Component id="txtEmpIdentification" max="32767" attributes="0"/>
+                                          <Component id="CBtEmpDepartment" alignment="0" pref="117" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -347,12 +347,12 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                      <Component id="txtEmpDepartment" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                                      <Component id="SaveEmpBtn" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="SaveEmpBtn" alignment="1" min="-2" pref="28" max="-2" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="EmpDepartmentID" min="-2" pref="27" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="EmpDepartmentID" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                          <Component id="CBtEmpDepartment" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                      </Group>
                                       <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -590,8 +590,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="txtEmpAddress">
             </Component>
-            <Component class="javax.swing.JTextField" name="txtEmpDepartment">
-            </Component>
             <Component class="javax.swing.JTextField" name="txtEmpUserName">
             </Component>
             <Component class="javax.swing.JTextField" name="txtEmpPassword">
@@ -692,6 +690,22 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBEmpSearchByActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="CBtEmpDepartment">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="5">
+                    <StringItem index="0" value="Default"/>
+                    <StringItem index="1" value="Kitchen"/>
+                    <StringItem index="2" value="WareHouse"/>
+                    <StringItem index="3" value="Cashiers"/>
+                    <StringItem index="4" value="Bar"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
