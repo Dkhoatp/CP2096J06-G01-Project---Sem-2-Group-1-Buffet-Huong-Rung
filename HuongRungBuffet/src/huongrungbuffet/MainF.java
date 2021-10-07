@@ -219,6 +219,7 @@ public class MainF extends javax.swing.JFrame {
         jRBtnEmpUserName = new javax.swing.JRadioButton();
         jBEmpSearchBy = new javax.swing.JButton();
         CBtEmpDepartment = new javax.swing.JComboBox<>();
+        jBEmpSearchBy1 = new javax.swing.JButton();
         JFCustomerView = new javax.swing.JPanel();
         jScrollShowKhachHang = new javax.swing.JScrollPane();
         jTableShowKhachHang = new javax.swing.JTable();
@@ -676,6 +677,14 @@ public class MainF extends javax.swing.JFrame {
 
         CBtEmpDepartment.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Default", "Kitchen", "WareHouse", "Cashiers", "Bar" }));
 
+        jBEmpSearchBy1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jBEmpSearchBy1.setText("Default");
+        jBEmpSearchBy1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEmpSearchBy1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout JFEmpManageLayout = new javax.swing.GroupLayout(JFEmpManage);
         JFEmpManage.setLayout(JFEmpManageLayout);
         JFEmpManageLayout.setHorizontalGroup(
@@ -737,14 +746,20 @@ public class MainF extends javax.swing.JFrame {
                                 .addComponent(jRBtnEmpDepartments)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jRBtnEmpUserName)))
-                        .addGap(42, 42, 42)
-                        .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(ClearAllEmpTxtField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(SaveEmpBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(DeeleteEmpBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(AddNewEmpBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jBEmpSearchBy, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(96, Short.MAX_VALUE))
+                        .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JFEmpManageLayout.createSequentialGroup()
+                                .addGap(42, 42, 42)
+                                .addGroup(JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(ClearAllEmpTxtField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(SaveEmpBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(DeeleteEmpBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(AddNewEmpBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(JFEmpManageLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jBEmpSearchBy, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jBEmpSearchBy1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         JFEmpManageLayout.setVerticalGroup(
             JFEmpManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -804,7 +819,8 @@ public class MainF extends javax.swing.JFrame {
                     .addComponent(jTSearchingByEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jRBtnEmpID)
                     .addComponent(jRBtnEmpDepartments)
-                    .addComponent(jRBtnEmpUserName))
+                    .addComponent(jRBtnEmpUserName)
+                    .addComponent(jBEmpSearchBy1))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollShowNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(139, 139, 139))
@@ -1036,6 +1052,11 @@ public class MainF extends javax.swing.JFrame {
 
         jBFDelete.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jBFDelete.setText("Delete");
+        jBFDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBFDeleteActionPerformed(evt);
+            }
+        });
 
         jLSeachingFood.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLSeachingFood.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1156,7 +1177,7 @@ public class MainF extends javax.swing.JFrame {
                                             .addGap(5, 5, 5)
                                             .addComponent(jTFName, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(JFFoodManageLayout.createSequentialGroup()
                                 .addComponent(jLSeachingFood1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1164,9 +1185,7 @@ public class MainF extends javax.swing.JFrame {
                                 .addGap(6, 6, 6)
                                 .addComponent(jbSortByName, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLFImgLink, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(JFFoodManageLayout.createSequentialGroup()
                                 .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -1192,7 +1211,8 @@ public class MainF extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jBSearchingFood, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(jLFImgLink, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(jScrollShowFoodToManage, javax.swing.GroupLayout.PREFERRED_SIZE, 831, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -1201,58 +1221,59 @@ public class MainF extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JFFoodManageLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLEmpTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JFFoodManageLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(3, 3, 3)
+                        .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(JFFoodManageLayout.createSequentialGroup()
+                                .addComponent(jLSeachingFood, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTSeachingFood, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jRSeachingFoodName)
+                                    .addComponent(jRSeachingFoodID))
+                                .addGap(18, 18, 18)
+                                .addComponent(jBSearchingFood)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton3))
+                            .addComponent(jLFoodImg, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(JFFoodManageLayout.createSequentialGroup()
+                        .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jBAddNewFood, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTFID)
+                            .addComponent(jLFID, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(15, 15, 15)
+                        .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLFName, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTFName, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBSaveFood))
+                        .addGap(19, 19, 19)
+                        .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLFType, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCBFoodType, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBFoodClear))
+                        .addGap(18, 18, 18)
                         .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLFDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBFDelete))
+                        .addGap(18, 18, 18)
+                        .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(JFFoodManageLayout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(JFFoodManageLayout.createSequentialGroup()
-                                        .addComponent(jLSeachingFood, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTSeachingFood, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jRSeachingFoodName)
-                                            .addComponent(jRSeachingFoodID))
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jBSearchingFood)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButton3))
-                                    .addComponent(jLFoodImg, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(JFFoodManageLayout.createSequentialGroup()
-                                .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jBAddNewFood, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTFID)
-                                    .addComponent(jLFID, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(15, 15, 15)
-                                .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLFName, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTFName, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jBSaveFood))
-                                .addGap(19, 19, 19)
-                                .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLFType, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jCBFoodType, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jBFoodClear))
-                                .addGap(18, 18, 18)
-                                .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLFDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jBFDelete))
-                                .addGap(18, 18, 18)
                                 .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jBFImg)
-                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(JFFoodManageLayout.createSequentialGroup()
-                        .addGap(219, 219, 219)
-                        .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLSeachingFood1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jBSortFoodID)
-                                .addComponent(jbSortByName))
-                            .addComponent(jLFImgLink, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton29))))
+                                    .addGroup(JFFoodManageLayout.createSequentialGroup()
+                                        .addGap(49, 49, 49)
+                                        .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(jLSeachingFood1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jBSortFoodID)
+                                                .addComponent(jbSortByName))
+                                            .addComponent(jButton29))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLFImgLink, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollShowFoodToManage, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(133, Short.MAX_VALUE))
@@ -4714,7 +4735,93 @@ public class MainF extends javax.swing.JFrame {
     }//GEN-LAST:event_jBFoodClearActionPerformed
 
     private void jBSaveFoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSaveFoodActionPerformed
-        // TODO add your handling code here:
+        try {
+            //Check not null
+            String ggg = jCBFoodType.getSelectedItem().toString();
+            if (jTFID.getText().equals("") || jTFName.getText().equals("") || ggg.equals("")) {
+                EmpAlertDialog();
+                jDNewEmpAlert.setTitle("cant Add");
+                jTNewEmpAlertTitle.setText("Can not add");
+                jTNewEmpAlertDescription.setText("Khong duoc bo trong thong tin");
+                return;
+            }
+
+            //connection
+            java.sql.Connection con = MyConnection.getConnection();
+
+            //kiem tra Food ID
+            String Fid = jTFID.getText();
+            if (Fid.matches("F[0-9][0-9]") == false) {
+                EmpAlertDialog();
+                jDNewEmpAlert.setTitle("cant save");
+                jTNewEmpAlertTitle.setText("Can not save");
+                jTNewEmpAlertDescription.setText("ID khong dung dinh dang (F[0-9][0-9])");
+                return;
+            }
+
+            String queryFid = "select FoodID from Food where FoodID=?";
+            PreparedStatement pm1 = con.prepareCall(queryFid);
+            pm1.setString(1, jTFID.getText());
+            ResultSet rsEmpID = pm1.executeQuery();
+            while (rsEmpID.next()) {
+                if (jTFID.getText().equals(rsEmpID.getString("FoodID")) == false) {
+                    EmpAlertDialog();
+                    jDNewEmpAlert.setTitle("cant save");
+                    jTNewEmpAlertTitle.setText("Can not save");
+                    jTNewEmpAlertDescription.setText("ID khong ton tai");
+                    return;
+                }
+            }
+
+            //kiem tra Type
+            String FTye = "";
+            String item = jCBFoodType.getSelectedItem().toString();
+            switch (item) {
+                case "Appetizer":
+                    FTye = "FT01";
+                    break;
+                case "MainCourse":
+                    FTye = "FT02";
+                    break;
+                case "Dessert":
+                    FTye = "FT03";
+                    break;
+                default:
+                    EmpAlertDialog();
+                    jDNewEmpAlert.setTitle("cant Save");
+                    jTNewEmpAlertTitle.setText("Can not Save");
+                    jTNewEmpAlertDescription.setText("Please select Type");
+                    return;
+            }
+
+            //kiem tra img 
+            if (jLFImgLink.getText() == "") {
+                EmpAlertDialog();
+                jDNewEmpAlert.setTitle("cant Add");
+                jTNewEmpAlertTitle.setText("Can not add");
+                jTNewEmpAlertDescription.setText("Please select Img");
+                return;
+            }
+            //insert vao csdl
+            String linkimg = jLFImgLink.getText();
+            String sublinkimg = linkimg.substring(5);
+            String insertNewFood = "update Food set FoodName=?, FDescription=?, FoodTypeID=?, Picture=? where FoodID =?";
+            PreparedStatement pm = con.prepareCall(insertNewFood);
+            pm.setString(1, jTFName.getText());
+            pm.setString(2, jTADescription.getText());
+            pm.setString(3, FTye);
+            pm.setString(4, sublinkimg);
+            pm.setString(5, jTFID.getText());
+            pm.executeUpdate();
+
+            con.close();
+            pm.close();
+
+            ShowAllFood();
+
+        } catch (ClassNotFoundException | SQLException ex) {
+            System.out.println(ex);
+        }
     }//GEN-LAST:event_jBSaveFoodActionPerformed
 
     private void jBSortFoodIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSortFoodIDActionPerformed
@@ -4839,7 +4946,12 @@ public class MainF extends javax.swing.JFrame {
             }
             jTShowFoodToManage.setModel(new DefaultTableModel(vctdata, vcthead));
         } catch (ClassNotFoundException | SQLException ex) {
-            System.out.println(ex);
+            //System.out.println(ex);
+            
+//            EmpAlertDialog();
+//                jDNewEmpAlert.setTitle("cant Searching");
+//                jTNewEmpAlertTitle.setText("Can not Searching");
+//                jTNewEmpAlertDescription.setText("Vui long chon cach tim");
         }
     }//GEN-LAST:event_jBSearchingFoodActionPerformed
 
@@ -4876,6 +4988,61 @@ public class MainF extends javax.swing.JFrame {
             System.out.println(ex);
         }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jBFDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFDeleteActionPerformed
+        try {
+            java.sql.Connection con = MyConnection.getConnection();
+
+            //check usertname
+            if (jTFID.getText().equals("")) {
+                EmpAlertDialog();
+                jDNewEmpAlert.setTitle("cant Delete");
+                jTNewEmpAlertTitle.setText("Can not Delete");
+                jTNewEmpAlertDescription.setText("Khong duoc bo trong ID");
+                return;
+            }
+
+            String empid = jTFID.getText();
+            if (empid.matches("F[0-9][0-9]") == false) {
+                EmpAlertDialog();
+                jDNewEmpAlert.setTitle("cant Delete");
+                jTNewEmpAlertTitle.setText("Can not Delete");
+                jTNewEmpAlertDescription.setText("ID khong dung dinh dang (F[0-9][0-9])");
+                return;
+            }
+
+            String queryEmpID = "select FoodID from Food where FoodID=?";
+            PreparedStatement pm1 = con.prepareCall(queryEmpID);
+            pm1.setString(1, jTFID.getText());
+            ResultSet rsEmpID = pm1.executeQuery();
+            while (rsEmpID.next()) {
+                if (jTFID.getText().equals(rsEmpID.getString("FoodID")) == false) {
+                    EmpAlertDialog();
+                    jDNewEmpAlert.setTitle("cant Delete");
+                    jTNewEmpAlertTitle.setText("Can not Delete");
+                    jTNewEmpAlertDescription.setText("ID Khong ton tai");
+                    return;
+                }
+            }
+
+            String EmpDelete = "delete from Food where FoodID = ?";
+            PreparedStatement pmEmpDelete = con.prepareStatement(EmpDelete);
+            pmEmpDelete.setString(1, jTFID.getText());
+            pmEmpDelete.executeUpdate();
+
+            pmEmpDelete.close();
+            con.close();
+
+            ShowAllFood();
+
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(MainF.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jBFDeleteActionPerformed
+
+    private void jBEmpSearchBy1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEmpSearchBy1ActionPerformed
+        ShowAllEmpDate();
+    }//GEN-LAST:event_jBEmpSearchBy1ActionPerformed
     private void initTable() {
         DefaultTableModel model = (DefaultTableModel) jTableCS.getModel();
         model.setColumnIdentifiers(new String[]{"Customer ID", "Customer Name", "Phone", "Birth Day", "Identification Number", "Point"});
@@ -5065,6 +5232,7 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroupSearchingFood;
     private javax.swing.JButton jBAddNewFood;
     private javax.swing.JButton jBEmpSearchBy;
+    private javax.swing.JButton jBEmpSearchBy1;
     private javax.swing.JButton jBFDelete;
     private javax.swing.JButton jBFImg;
     private javax.swing.JButton jBFoodClear;
