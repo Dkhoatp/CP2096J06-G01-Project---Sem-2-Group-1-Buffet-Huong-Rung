@@ -161,3 +161,16 @@ insert into [dbo].[FoodType] values ('FT01','Appetizer'),('FT02','MainCourse'),(
 insert into [dbo].[Customer] values ('C02','Alo Alo member','1234567895','2002/06/12','12321312312','200')
 
 */
+insert into [dbo].[Category] values('CT01',N'Đồ tươi',N'không có gì')
+insert into [dbo].[Suppliers] values('SP01',N'bà tạp hóa','1234567891',N'thích thì bán không thì nghỉ')
+insert into [dbo].[FoodIngredients] values('IG02',N'Tôm xấu','SP01','CT01','500000',N'kí')
+insert into [dbo].[IngRequest] values('F01','IG01','20','2021/09/10','Y')
+insert into [dbo].[IngRequest] values('F01','IG02','30','2021/09/10','Y')
+insert into DrinkExport values('DEX01','E03','2021/09/10')
+insert into Drinks values('D01','Cocacola','SP01','CT01','20000')
+insert into DrinkExportDetails values('DEX01','20','D01')
+ 
+select IRDate, FIName, sum(quantity) from IngRequest as a join FoodIngredients as b on a.IngredientsID = b.IngredientsID where IRDate = '2021/09/10' group by IRDate, FIName
+
+select FoodID, IngredientsID, quantity from IngRequest
+select IRDate, FIName, quantity from IngRequest as a join FoodIngredients as b on a.IngredientsID = b.IngredientsID where IRDate = '2021/09/10'
