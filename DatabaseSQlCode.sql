@@ -19,7 +19,7 @@ create table Customer(
 	CsPhone varchar(20),
 	csBirthDay date,
 	CsIdentificationNumber varchar(50),
-	Point int
+	[Point] int
 )
 go
 create table Departments(
@@ -58,7 +58,7 @@ create table Drinks(
 	DrinkName nvarchar(50),
 	supplierID varchar(20) foreign key references Suppliers(supplierID),
 	CategoryID varchar(20) foreign key references Category(CategoryID),
-	DPrice varchar(20)
+	DPrice int
 )
 go
 create table Bill(
