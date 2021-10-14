@@ -5,6 +5,9 @@
  */
 package testpackage;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -27,6 +30,8 @@ public class TestF extends javax.swing.JFrame {
     public TestF() {
         initComponents();
         jPanel1qq.setSize(1013, 720);
+        Priece1.setVisible(false);
+        priece2.setVisible(false);
     }
 
     /*commit teádasdst*/
@@ -216,7 +221,20 @@ public class TestF extends javax.swing.JFrame {
         jSpinner41 = new javax.swing.JSpinner();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        SpinnerTreEm = new javax.swing.JSpinner();
+        SpinnerAdult = new javax.swing.JSpinner();
+        TenLabelChild = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        TenLabelAdult = new javax.swing.JLabel();
+        Priece1 = new javax.swing.JLabel();
+        SlotTime = new javax.swing.JComboBox<>();
+        priece2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLMNSpin1 = new javax.swing.JSpinner();
+        asdasda = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/default-image.jpg"))); // NOI18N
         jLabel7.setText("jLabel7");
@@ -1252,25 +1270,25 @@ public class TestF extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 102, 51));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("jLabel2");
-        jPanel1qq.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 130, 50));
+        jPanel1qq.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 130, 50));
 
         jDateChooser1.setDateFormatString("dd/MM/yyyy");
-        jPanel1qq.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 370, -1));
+        jPanel1qq.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 80, 370, -1));
 
         jButton2.setText("jButton2");
-        jPanel1qq.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 260, -1, -1));
+        jPanel1qq.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 210, -1, -1));
 
         jButton3.setText("jButton3");
-        jPanel1qq.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 560, -1, 160));
+        jPanel1qq.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, -1, 160));
 
         jButton4.setText("jButton4");
         jPanel1qq.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 690, -1, -1));
 
         jButton5.setText("jButton5");
-        jPanel1qq.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 670, -1, -1));
+        jPanel1qq.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 120, -1, -1));
 
         jDateChooser2.setDateFormatString("dd/MM/yyyy");
-        jPanel1qq.add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 570, 190, -1));
+        jPanel1qq.add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 170, 190, -1));
 
         jButton1.setText("jButton1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -1278,11 +1296,11 @@ public class TestF extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1qq.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, -1, -1));
+        jPanel1qq.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, -1, -1));
 
         jDateChooser3.setDateFormatString("dd/MM/yyyy");
-        jPanel1qq.add(jDateChooser3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 240, 270, -1));
-        jPanel1qq.add(jSpinner41, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, -1, -1));
+        jPanel1qq.add(jDateChooser3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, 270, -1));
+        jPanel1qq.add(jSpinner41, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, -1, -1));
 
         jButton6.setText("jButton6");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -1298,15 +1316,79 @@ public class TestF extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel1qq.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 320, -1, -1));
+        jPanel1qq.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 60, -1, -1));
 
-        jButton8.setText("jButton8");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        jButton9.setText("jButton9");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                jButton9ActionPerformed(evt);
             }
         });
-        jPanel1qq.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 240, -1, -1));
+        jPanel1qq.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, -1, -1));
+
+        SpinnerTreEm.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        SpinnerTreEm.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                SpinnerTreEmStateChanged(evt);
+            }
+        });
+        jPanel1qq.add(SpinnerTreEm, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, -1, -1));
+
+        SpinnerAdult.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        SpinnerAdult.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                SpinnerAdultStateChanged(evt);
+            }
+        });
+        jPanel1qq.add(SpinnerAdult, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, -1, -1));
+
+        TenLabelChild.setText("Child");
+        jPanel1qq.add(TenLabelChild, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, -1, -1));
+
+        jLabel3.setText("jLabel3");
+        jPanel1qq.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 140, -1, -1));
+
+        TenLabelAdult.setText("Adult");
+        jPanel1qq.add(TenLabelAdult, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, -1, -1));
+
+        Priece1.setText("0");
+        jPanel1qq.add(Priece1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 100, 20));
+
+        SlotTime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "T2, 2h-4h", "T3, 3h-6h", "T4, 5h-7h" }));
+        jPanel1qq.add(SlotTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 150, -1));
+
+        priece2.setText("0");
+        jPanel1qq.add(priece2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 100, 20));
+
+        jLabel1.setText("Text giá total ở đây");
+        jPanel1qq.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 170, 30));
+
+        jLMNSpin1.setModel(new javax.swing.SpinnerNumberModel(0, 0, 99, 1));
+        jLMNSpin1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel1qq.add(jLMNSpin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, -1, -1));
+
+        asdasda.setText("jTextField1");
+        asdasda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                asdasdaActionPerformed(evt);
+            }
+        });
+        jPanel1qq.add(asdasda, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 250, -1));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel1qq.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 980, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1365,6 +1447,86 @@ public class TestF extends javax.swing.JFrame {
          
     }//GEN-LAST:event_jButton8ActionPerformed
 
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            // lấy ngày 
+            String strDate = formatter.format(jDateChooser3.getDate()); 
+            // chuyển thành date
+            LocalDate date = LocalDate.parse(strDate);
+            //cộng ngày
+            System.out.println(date.plusDays(1));
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+   
+    public void tinhtien(){
+        int tien1 = Integer.valueOf(Priece1.getText().toString());
+        int tien2 = Integer.valueOf(priece2.getText().toString());
+        System.out.println("a: "+tien1+tien2);
+        int total = tien1+tien2;
+        jLabel1.setText("Total priece: "+total);
+    }
+    private void SpinnerTreEmStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SpinnerTreEmStateChanged
+        try {
+            int giaSlotTime = 0;
+            Connection con = ConnectTest.getConnection();
+            String sql = "select SLTPriece from SlotTime where STime = ?";
+            PreparedStatement pm = con.prepareCall(sql); 
+            String TimeSlot = SlotTime.getSelectedItem().toString();
+            pm.setString(1, TimeSlot);
+            ResultSet rs = pm.executeQuery();
+            while(rs.next()){
+                    giaSlotTime = rs.getInt(1);
+            }
+            
+            int GiaTicket = 0;
+            String sql2 = "select TTPriece from TicketType where TTypeName = ?";
+            PreparedStatement pm2 = con.prepareCall(sql2);  
+            pm2.setString(1, TenLabelChild.getText());
+            ResultSet rs2 = pm2.executeQuery();
+            while(rs2.next()){
+                    GiaTicket = rs2.getInt(1);
+            }
+             int soluong = Integer.parseInt(SpinnerTreEm.getValue().toString());
+            int gia1ve = (giaSlotTime+GiaTicket)*soluong;
+            Priece1.setText(""+gia1ve+"");
+            tinhtien();
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_SpinnerTreEmStateChanged
+    
+    private void SpinnerAdultStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SpinnerAdultStateChanged
+        try {
+            int giaSlotTime = 0;
+            Connection con = ConnectTest.getConnection();
+            String sql = "select SLTPriece from SlotTime where STime = ?";
+            PreparedStatement pm = con.prepareCall(sql); 
+            String TimeSlot = SlotTime.getSelectedItem().toString();
+            pm.setString(1, TimeSlot);
+            ResultSet rs = pm.executeQuery();
+            while(rs.next()){
+                    giaSlotTime = rs.getInt(1);
+            }
+            
+            int GiaTicket = 0;
+            String sql2 = "select TTPriece from TicketType where TTypeName = ?";
+            PreparedStatement pm2 = con.prepareCall(sql2);  
+            pm2.setString(1, TenLabelAdult.getText());
+            ResultSet rs2 = pm2.executeQuery();
+            while(rs2.next()){
+                    GiaTicket = rs2.getInt(1);
+            }
+             int soluong = Integer.parseInt(SpinnerAdult.getValue().toString());
+            int gia1ve = (giaSlotTime+GiaTicket)*soluong;
+            priece2.setText(""+gia1ve+"");
+            tinhtien();
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_SpinnerAdultStateChanged
+
+    private void asdasdaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asdasdaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_asdasdaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1402,6 +1564,13 @@ public class TestF extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Priece1;
+    private javax.swing.JComboBox<String> SlotTime;
+    private javax.swing.JSpinner SpinnerAdult;
+    private javax.swing.JSpinner SpinnerTreEm;
+    private javax.swing.JLabel TenLabelAdult;
+    private javax.swing.JLabel TenLabelChild;
+    private javax.swing.JTextField asdasda;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -1409,11 +1578,13 @@ public class TestF extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser2;
     private com.toedter.calendar.JDateChooser jDateChooser3;
     private javax.swing.JDialog jDialog1;
+    private javax.swing.JSpinner jLMNSpin1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
@@ -1465,6 +1636,7 @@ public class TestF extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
@@ -1538,6 +1710,7 @@ public class TestF extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1qq;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JSpinner jSpinner10;
@@ -1580,5 +1753,7 @@ public class TestF extends javax.swing.JFrame {
     private javax.swing.JSpinner jSpinner7;
     private javax.swing.JSpinner jSpinner8;
     private javax.swing.JSpinner jSpinner9;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JLabel priece2;
     // End of variables declaration//GEN-END:variables
 }

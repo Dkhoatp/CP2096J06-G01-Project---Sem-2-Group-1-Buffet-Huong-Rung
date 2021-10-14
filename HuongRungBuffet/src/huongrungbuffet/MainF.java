@@ -84,7 +84,7 @@ public class MainF extends javax.swing.JFrame {
             vcthead.add("Password");
             vcthead.add("IdentificationNumber");
             java.sql.Connection con = MyConnection.getConnection();
-            String sql = "select [EmployeeID], [FullName], [Title], [Phone], [BirthDay], [EAddress], [ParkName], [UserName], [Password], [IdentificationNumber] from [dbo].[Employee] as a join [dbo].[Departments] as b on a.DepartmentID = b.DepartmentID order by ParkName";
+            String sql = "select [EmployeeID], [FullName], [Title], [Phone], [BirthDay], [EAddress], [ParkName], [UserName], [Password], [IdentificationNumber] from [dbo].[Employee] as a join [dbo].[Departments] as b on a.DepartmentID = b.DepartmentID order by EmployeeID";
             PreparedStatement pm = con.prepareCall(sql);
             ResultSet rs = pm.executeQuery();
             while (rs.next()) {
@@ -107,6 +107,33 @@ public class MainF extends javax.swing.JFrame {
                 vctdata.add(vt);
             }
             jTableShowNhanVien.setModel(new DefaultTableModel(vctdata, vcthead));
+            con.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+        public void ShowAllSupplier() {
+        try {
+            Vector vctdata = new Vector();
+            Vector vcthead = new Vector();
+            vcthead.add("supplierID");
+            vcthead.add("supplierName");
+            vcthead.add("Phone");
+            vcthead.add("Sdescription");
+            java.sql.Connection con = MyConnection.getConnection();
+            String sql = "select supplierID, supplierName, Phone, Sdescription from Suppliers";
+            PreparedStatement pm = con.prepareCall(sql);
+            ResultSet rs = pm.executeQuery();
+            while (rs.next()) {
+                Vector vt = new Vector();
+                vt.add(rs.getString(1));
+                vt.add(rs.getString(2));
+                vt.add(rs.getString(3));
+                vt.add(rs.getString(4)); 
+
+                vctdata.add(vt);
+            }
+            jTSPL.setModel(new DefaultTableModel(vctdata, vcthead));
             con.close();
         } catch (Exception e) {
             System.out.println(e);
@@ -424,6 +451,7 @@ public class MainF extends javax.swing.JFrame {
         EName = new javax.swing.JLabel();
         EID = new javax.swing.JLabel();
         jBnDangXuat = new javax.swing.JButton();
+        jBManageSPL = new javax.swing.JButton();
         JFEmpManage = new javax.swing.JPanel();
         jScrollShowNhanVien = new javax.swing.JScrollPane();
         jTableShowNhanVien = new javax.swing.JTable();
@@ -518,7 +546,7 @@ public class MainF extends javax.swing.JFrame {
         TimNgayBatDauTD = new javax.swing.JLabel();
         jDCTimthucDonTuan = new com.toedter.calendar.JDateChooser();
         jBTimKieMThucDonTuan = new javax.swing.JButton();
-        FoodTypeDP = new javax.swing.JPanel();
+        jPShowFood = new javax.swing.JPanel();
         jTDisplayType = new javax.swing.JTabbedPane();
         jSPAppetizer = new javax.swing.JScrollPane();
         jPFAppetizer = new javax.swing.JPanel();
@@ -1016,6 +1044,20 @@ public class MainF extends javax.swing.JFrame {
         jCBtTnlieu = new javax.swing.JComboBox<>();
         jDCdateStart = new com.toedter.calendar.JDateChooser();
         jBtnXemTT = new javax.swing.JButton();
+        jPSupplier = new javax.swing.JPanel();
+        jLSupplierID = new javax.swing.JLabel();
+        jLSPLPhone = new javax.swing.JLabel();
+        jBSupplierName = new javax.swing.JLabel();
+        jLDescpt = new javax.swing.JLabel();
+        jTsupplierID = new javax.swing.JTextField();
+        jTSupplierName = new javax.swing.JTextField();
+        jTSLPPPhone = new javax.swing.JTextField();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTDescript = new javax.swing.JTextArea();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jTSPL = new javax.swing.JTable();
+        jBnewSPL = new javax.swing.JButton();
+        jBSaveSPL = new javax.swing.JButton();
         jDBep = new javax.swing.JDialog();
         jPanel10 = new javax.swing.JPanel();
         Btn7 = new javax.swing.JButton();
@@ -1210,7 +1252,7 @@ public class MainF extends javax.swing.JFrame {
                 jbVieCustomerActionPerformed(evt);
             }
         });
-        jPManagerControl.add(jbVieCustomer, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 140, -1));
+        jPManagerControl.add(jbVieCustomer, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 140, -1));
 
         jbManageFood.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jbManageFood.setText("Manage Food");
@@ -1219,7 +1261,7 @@ public class MainF extends javax.swing.JFrame {
                 jbManageFoodActionPerformed(evt);
             }
         });
-        jPManagerControl.add(jbManageFood, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 140, -1));
+        jPManagerControl.add(jbManageFood, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 140, -1));
 
         BtThucDonTuan.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         BtThucDonTuan.setText("WeekMenus");
@@ -1228,7 +1270,7 @@ public class MainF extends javax.swing.JFrame {
                 BtThucDonTuanActionPerformed(evt);
             }
         });
-        jPManagerControl.add(BtThucDonTuan, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 140, -1));
+        jPManagerControl.add(BtThucDonTuan, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 140, -1));
 
         Btn5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Btn5.setText("Status");
@@ -1246,7 +1288,7 @@ public class MainF extends javax.swing.JFrame {
                 Btn6ActionPerformed(evt);
             }
         });
-        jPManagerControl.add(Btn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 140, -1));
+        jPManagerControl.add(Btn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, 140, -1));
 
         Title.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1271,6 +1313,15 @@ public class MainF extends javax.swing.JFrame {
             }
         });
         jPManagerControl.add(jBnDangXuat, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 550, 140, 40));
+
+        jBManageSPL.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jBManageSPL.setText("Manage Supplier");
+        jBManageSPL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBManageSPLActionPerformed(evt);
+            }
+        });
+        jPManagerControl.add(jBManageSPL, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 140, -1));
 
         JFEmpManage.setBackground(new java.awt.Color(255, 237, 58));
         JFEmpManage.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1944,7 +1995,7 @@ public class MainF extends javax.swing.JFrame {
         JFFoodManageLayout.setVerticalGroup(
             JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JFFoodManageLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLEmpTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(JFFoodManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2000,8 +2051,7 @@ public class MainF extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLFImgLink, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollShowFoodToManage, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(129, Short.MAX_VALUE))
+                .addComponent(jScrollShowFoodToManage, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         JFNewFoodListWeek.setBackground(new java.awt.Color(255, 237, 58));
@@ -2043,6 +2093,8 @@ public class MainF extends javax.swing.JFrame {
                 jBTimKieMThucDonTuanActionPerformed(evt);
             }
         });
+
+        jPShowFood.setBackground(new java.awt.Color(255, 237, 58));
 
         jTDisplayType.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2834,12 +2886,12 @@ public class MainF extends javax.swing.JFrame {
                                         .addGroup(jPFAppetizerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(jLapName20, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLapSpin20, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(866, Short.MAX_VALUE))
         );
         jPFAppetizerLayout.setVerticalGroup(
             jPFAppetizerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPFAppetizerLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addContainerGap()
                 .addGroup(jPFAppetizerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLapImg4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLapImg2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3920,7 +3972,7 @@ public class MainF extends javax.swing.JFrame {
                                         .addGroup(jPFMainDishesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(jLMNName20, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLMNSpin20, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(866, Short.MAX_VALUE))
         );
         jPFMainDishesLayout.setVerticalGroup(
             jPFMainDishesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5006,7 +5058,7 @@ public class MainF extends javax.swing.JFrame {
                                         .addGroup(jPFDesertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(jLDSName20, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLDSpin20, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(866, Short.MAX_VALUE))
         );
         jPFDesertLayout.setVerticalGroup(
             jPFDesertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5308,15 +5360,25 @@ public class MainF extends javax.swing.JFrame {
 
         jTDisplayType.addTab("Desert", JSPDesert);
 
-        javax.swing.GroupLayout FoodTypeDPLayout = new javax.swing.GroupLayout(FoodTypeDP);
-        FoodTypeDP.setLayout(FoodTypeDPLayout);
-        FoodTypeDPLayout.setHorizontalGroup(
-            FoodTypeDPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTDisplayType, javax.swing.GroupLayout.DEFAULT_SIZE, 832, Short.MAX_VALUE)
+        javax.swing.GroupLayout jPShowFoodLayout = new javax.swing.GroupLayout(jPShowFood);
+        jPShowFood.setLayout(jPShowFoodLayout);
+        jPShowFoodLayout.setHorizontalGroup(
+            jPShowFoodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPShowFoodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPShowFoodLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jTDisplayType, javax.swing.GroupLayout.DEFAULT_SIZE, 832, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
-        FoodTypeDPLayout.setVerticalGroup(
-            FoodTypeDPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTDisplayType, javax.swing.GroupLayout.DEFAULT_SIZE, 309, Short.MAX_VALUE)
+        jPShowFoodLayout.setVerticalGroup(
+            jPShowFoodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 315, Short.MAX_VALUE)
+            .addGroup(jPShowFoodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPShowFoodLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jTDisplayType, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
 
         javax.swing.GroupLayout JFNewFoodListWeekLayout = new javax.swing.GroupLayout(JFNewFoodListWeek);
@@ -5324,35 +5386,32 @@ public class MainF extends javax.swing.JFrame {
         JFNewFoodListWeekLayout.setHorizontalGroup(
             JFNewFoodListWeekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane5)
-            .addComponent(FoodTypeDP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(JFNewFoodListWeekLayout.createSequentialGroup()
+                .addGap(154, 154, 154)
                 .addGroup(JFNewFoodListWeekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JFNewFoodListWeekLayout.createSequentialGroup()
-                        .addGap(199, 199, 199)
+                        .addGap(29, 29, 29)
                         .addComponent(jLThucDonTuan, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(JFNewFoodListWeekLayout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addGroup(JFNewFoodListWeekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(JFNewFoodListWeekLayout.createSequentialGroup()
-                                .addComponent(jLNgayBatDauTD, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jDCTaoThucDonTuan, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jBTaoThucDonTuan, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(JFNewFoodListWeekLayout.createSequentialGroup()
-                                .addComponent(TimNgayBatDauTD, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jDCTimthucDonTuan, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jBTimKieMThucDonTuan, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLNgayBatDauTD, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jDCTaoThucDonTuan, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBTaoThucDonTuan, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JFNewFoodListWeekLayout.createSequentialGroup()
+                        .addComponent(TimNgayBatDauTD, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jDCTimthucDonTuan, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBTimKieMThucDonTuan, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(219, Short.MAX_VALUE))
+            .addComponent(jPShowFood, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         JFNewFoodListWeekLayout.setVerticalGroup(
             JFNewFoodListWeekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JFNewFoodListWeekLayout.createSequentialGroup()
-                .addContainerGap(159, Short.MAX_VALUE)
-                .addComponent(FoodTypeDP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPShowFood, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(JFNewFoodListWeekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLNgayBatDauTD, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jDCTaoThucDonTuan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -5364,8 +5423,9 @@ public class MainF extends javax.swing.JFrame {
                     .addComponent(jBTimKieMThucDonTuan))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLThucDonTuan)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         JFXemTinhTrang.setBackground(new java.awt.Color(255, 237, 58));
@@ -5390,7 +5450,7 @@ public class MainF extends javax.swing.JFrame {
 
         jLXemTTtxt.setText("View Status of:");
 
-        jCBtTnlieu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingredients used", "Food used", "export to bar", "export to kitchen" }));
+        jCBtTnlieu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingredients used", "Food used", "export to bar", "export to kitchen", "ticket sales" }));
 
         jDCdateStart.setDateFormatString("dd/MM/yyyy");
 
@@ -5432,8 +5492,8 @@ public class MainF extends javax.swing.JFrame {
         );
         JFXemTinhTrangLayout.setVerticalGroup(
             JFXemTinhTrangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JFXemTinhTrangLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(JFXemTinhTrangLayout.createSequentialGroup()
+                .addGap(78, 78, 78)
                 .addGroup(JFXemTinhTrangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCBtTnlieu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLXemTTtxt))
@@ -5446,7 +5506,124 @@ public class MainF extends javax.swing.JFrame {
                         .addComponent(jDCdateStart, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jBtnXemTT))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPSupplier.setBackground(new java.awt.Color(255, 237, 58));
+
+        jLSupplierID.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLSupplierID.setText("SupplierID");
+
+        jLSPLPhone.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLSPLPhone.setText("Phone");
+
+        jBSupplierName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jBSupplierName.setText("Supplier Name");
+
+        jLDescpt.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLDescpt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLDescpt.setText("Descriptiopn");
+
+        jTDescript.setColumns(20);
+        jTDescript.setRows(5);
+        jScrollPane7.setViewportView(jTDescript);
+
+        jTSPL.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "supplierID", "supplierName", "Phone", "Sdescription"
+            }
+        ));
+        jTSPL.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTSPLMouseClicked(evt);
+            }
+        });
+        jScrollPane8.setViewportView(jTSPL);
+
+        jBnewSPL.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jBnewSPL.setText("Add new supplier");
+        jBnewSPL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBnewSPLActionPerformed(evt);
+            }
+        });
+
+        jBSaveSPL.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jBSaveSPL.setText("Save");
+        jBSaveSPL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSaveSPLActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPSupplierLayout = new javax.swing.GroupLayout(jPSupplier);
+        jPSupplier.setLayout(jPSupplierLayout);
+        jPSupplierLayout.setHorizontalGroup(
+            jPSupplierLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane8)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPSupplierLayout.createSequentialGroup()
+                .addContainerGap(93, Short.MAX_VALUE)
+                .addGroup(jPSupplierLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPSupplierLayout.createSequentialGroup()
+                        .addComponent(jLSPLPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTSLPPPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPSupplierLayout.createSequentialGroup()
+                        .addComponent(jBSupplierName, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTSupplierName, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPSupplierLayout.createSequentialGroup()
+                        .addComponent(jLSupplierID, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTsupplierID, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(76, 76, 76)
+                .addGroup(jPSupplierLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPSupplierLayout.createSequentialGroup()
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(88, 88, 88))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPSupplierLayout.createSequentialGroup()
+                        .addComponent(jLDescpt, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(172, 172, 172))))
+            .addGroup(jPSupplierLayout.createSequentialGroup()
+                .addGap(157, 157, 157)
+                .addComponent(jBnewSPL, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64)
+                .addComponent(jBSaveSPL, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPSupplierLayout.setVerticalGroup(
+            jPSupplierLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPSupplierLayout.createSequentialGroup()
+                .addGroup(jPSupplierLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPSupplierLayout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addGroup(jPSupplierLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLSupplierID, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTsupplierID, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(16, 16, 16)
+                        .addGroup(jPSupplierLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jBSupplierName, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTSupplierName, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPSupplierLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLSPLPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTSLPPPhone, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)))
+                    .addGroup(jPSupplierLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLDescpt, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(jPSupplierLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBnewSPL, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBSaveSPL, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(188, 188, 188))
         );
 
         javax.swing.GroupLayout jDQuanLyLayout = new javax.swing.GroupLayout(jDQuanLy.getContentPane());
@@ -5464,18 +5641,20 @@ public class MainF extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(JFNewFoodListWeek, javax.swing.GroupLayout.PREFERRED_SIZE, 834, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(JFXemTinhTrang, javax.swing.GroupLayout.PREFERRED_SIZE, 834, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(JFXemTinhTrang, javax.swing.GroupLayout.PREFERRED_SIZE, 834, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jPSupplier, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jDQuanLyLayout.setVerticalGroup(
             jDQuanLyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JFXemTinhTrang, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 822, Short.MAX_VALUE)
-            .addComponent(JFCustomerView, javax.swing.GroupLayout.DEFAULT_SIZE, 822, Short.MAX_VALUE)
-            .addComponent(JFEmpManage, javax.swing.GroupLayout.PREFERRED_SIZE, 822, Short.MAX_VALUE)
+            .addComponent(JFXemTinhTrang, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 869, Short.MAX_VALUE)
+            .addComponent(JFCustomerView, javax.swing.GroupLayout.DEFAULT_SIZE, 869, Short.MAX_VALUE)
+            .addComponent(JFEmpManage, javax.swing.GroupLayout.DEFAULT_SIZE, 869, Short.MAX_VALUE)
             .addComponent(jPManagerControl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jDQuanLyLayout.createSequentialGroup()
-                .addComponent(JFFoodManage, javax.swing.GroupLayout.PREFERRED_SIZE, 812, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addComponent(JFNewFoodListWeek, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 822, Short.MAX_VALUE)
+            .addComponent(JFNewFoodListWeek, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 869, Short.MAX_VALUE)
+            .addComponent(jPSupplier, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(JFFoodManage, javax.swing.GroupLayout.PREFERRED_SIZE, 683, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         jDBep.setLocation(new java.awt.Point(0, 0));
@@ -7128,6 +7307,7 @@ public class MainF extends javax.swing.JFrame {
                 JFFoodManage.setVisible(false);
                 JFNewFoodListWeek.setVisible(false);
                 JFXemTinhTrang.setVisible(false);
+                jPSupplier.setVisible(false);
                 this.setVisible(false);
                 jTNewPS.setText("");
                 jLNewPSAlert.setText("");
@@ -7174,6 +7354,8 @@ public class MainF extends javax.swing.JFrame {
         JFFoodManage.setVisible(false);
         JFNewFoodListWeek.setVisible(false);
         JFXemTinhTrang.setVisible(false);
+        jPSupplier.setVisible(false);
+        jPSupplier.setVisible(false);
         ShowAllEmpDate();
     }//GEN-LAST:event_jbManageEmpActionPerformed
 
@@ -7193,6 +7375,7 @@ public class MainF extends javax.swing.JFrame {
         JFFoodManage.setVisible(true);
         JFNewFoodListWeek.setVisible(false);
         JFXemTinhTrang.setVisible(false);
+        jPSupplier.setVisible(false);
         ShowAllFood();
 
     }//GEN-LAST:event_jbManageFoodActionPerformed
@@ -7204,7 +7387,7 @@ public class MainF extends javax.swing.JFrame {
         JFFoodManage.setVisible(false);
         JFNewFoodListWeek.setVisible(true);
         JFXemTinhTrang.setVisible(false);
-        
+        jPSupplier.setVisible(false);
         hienFoodAp();
         hienFoodMD();
         hienFoodDS();
@@ -7217,6 +7400,7 @@ public class MainF extends javax.swing.JFrame {
         JFFoodManage.setVisible(false);
         JFNewFoodListWeek.setVisible(false);
         JFXemTinhTrang.setVisible(true);
+        jPSupplier.setVisible(false);
 
     }//GEN-LAST:event_Btn5ActionPerformed
 
@@ -9063,7 +9247,7 @@ public class MainF extends javax.swing.JFrame {
     
             
             
-            try {
+        try {
             Connection con = MyConnection.getConnection();
                 
             String fldate = "insert into FoodlistNextDays values(?,?)";
@@ -9092,6 +9276,9 @@ public class MainF extends javax.swing.JFrame {
                     pmFWadd.executeUpdate();
                     pmFWadd.close();
                     
+                }else{
+                }
+                if(jLMNID.get(i).isVisible()){
                     String FWadd1 = "insert into List values(?,?,?)";
                     PreparedStatement pmFWadd1 = con.prepareStatement(FWadd1);
                     pmFWadd1.setString(1, jLMNID.get(i).getText());
@@ -9099,7 +9286,9 @@ public class MainF extends javax.swing.JFrame {
                     pmFWadd1.setString(3, jLMNSpin.get(i).getValue().toString());
                     pmFWadd1.executeUpdate();
                     pmFWadd1.close();
-                    
+                }else{
+                }
+                 if(jLDSID.get(i).isVisible()){
                     String FWadd2 = "insert into List values(?,?,?)";
                     PreparedStatement pmFWadd2 = con.prepareStatement(FWadd2);
                     pmFWadd2.setString(1, jLDSID.get(i).getText());
@@ -9107,18 +9296,18 @@ public class MainF extends javax.swing.JFrame {
                     pmFWadd2.setString(3, jDSSpin.get(i).getValue().toString());
                     pmFWadd2.executeUpdate();
                     pmFWadd2.close();
-                    
                 }else{
-                    continue;
                 }
+                
             }
             con.close();
-        } catch (ClassNotFoundException | SQLException e) {
-                EmpAlertDialog();
+            EmpAlertDialog();
                 jDNewEmpAlert.setTitle("Add success");
                 jTNewEmpAlertTitle.setText("Add success");
                 jTNewEmpAlertDescription.setText("Thêm thực đơn tuần thành công");
-                return;
+                
+        } catch (ClassNotFoundException | SQLException e) {
+                System.out.println(e);
         }
     }//GEN-LAST:event_jBTaoThucDonTuanActionPerformed
 
@@ -9284,7 +9473,7 @@ public class MainF extends javax.swing.JFrame {
 
                         PreparedStatement pm = con.prepareCall(find); 
                         pm.setString(1, time);
-                        // mã bộ phận bếp!
+                        // mãbộphậnbếp!
                         pm.setString(2, "DP02");
                         ResultSet rs = pm.executeQuery();
                     
@@ -9368,7 +9557,7 @@ public class MainF extends javax.swing.JFrame {
                 Vector vctdata = new Vector();
                 Vector vcthead = new Vector();
                 vcthead.add("Date");
-                vcthead.add("DrinksName");
+                vcthead.add("Ingredients");
                 vcthead.add("Quantity"); 
                // vcthead.add("Drinks Name");
                 //vcthead.add("Quantity");
@@ -9390,6 +9579,52 @@ public class MainF extends javax.swing.JFrame {
                             vt.add(rs.getString(1));
                             vt.add(rs.getString(2));
                             vt.add(rs.getString(3));
+                           //vt.add(rs.getString(4));
+                            //vt.add(rs.getString(5));
+
+                            vctdata.add(vt);
+                        }  
+                    }
+                    jTSuDungNL.setModel(new DefaultTableModel(vctdata, vcthead));
+                    con.close();
+                } catch (ClassNotFoundException | SQLException ex) {
+                     System.out.println(ex);
+
+    //            EmpAlertDialog();
+    //                jDNewEmpAlert.setTitle("cant Searching");
+    //                jTNewEmpAlertTitle.setText("Can not Searching");
+    //                jTNewEmpAlertDescription.setText("Vui long chon cach tim");
+                }
+                break;
+            case "ticket sales":
+                try {
+                while (!start.isAfter(end)) {
+                totalDates.add(start);
+                start = start.plusDays(1);
+                }
+
+                Vector vctdata = new Vector();
+                Vector vcthead = new Vector();
+                vcthead.add("Date");
+                vcthead.add("Sales");
+               // vcthead.add("Drinks Name");
+                //vcthead.add("Quantity");
+
+                //Thêm Where 
+                    Connection con = MyConnection.getConnection();
+                    for(int i = 0; i < totalDates.size(); i++){
+                        String find = "select TicketDate, sum(TPrice) from Ticket where TicketDate = ? group by TicketDate";
+                        String time = totalDates.get(i).toString();
+
+                        PreparedStatement pm = con.prepareCall(find); 
+                        pm.setString(1, time);
+                        // mã bộ phận bếp!
+                        ResultSet rs = pm.executeQuery();
+                    
+                        while(rs.next()){
+                            Vector vt = new Vector();
+                            vt.add(rs.getString(1));
+                            vt.add(rs.getString(2)+" vnđ");
                            //vt.add(rs.getString(4));
                             //vt.add(rs.getString(5));
 
@@ -9449,6 +9684,127 @@ public class MainF extends javax.swing.JFrame {
          jTNewPS.setText("");
          jLNewPSAlert.setText("");
     }//GEN-LAST:event_jBnNewPSOutActionPerformed
+
+    private void jBnewSPLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBnewSPLActionPerformed
+        try {
+             //Check not null
+            String CbBDpt = CBtEmpDepartment.getSelectedItem().toString();
+            if (jTsupplierID.getText().equals("") || jTSupplierName.getText().equals("") || jTSLPPPhone.getText().equals("")) {
+                EmpAlertDialog();
+                jDNewEmpAlert.setTitle("cant Add");
+                jTNewEmpAlertTitle.setText("Can not add");
+                jTNewEmpAlertDescription.setText("Khong duoc bo trong thong tin");
+                return;
+            }
+            //connection
+            java.sql.Connection con = MyConnection.getConnection();
+
+            //kiem tra Employee ID
+            String empid = jTsupplierID.getText();
+            if (empid.matches("SPL[0-9][0-9]") == false) {
+                EmpAlertDialog();
+                jDNewEmpAlert.setTitle("cant Add");
+                jTNewEmpAlertTitle.setText("Can not add");
+                jTNewEmpAlertDescription.setText("ID khong dung dinh dang (SPL[0-9][0-9])");
+                return;
+            }
+            
+             //kiem tra Phone
+            String empPhone = jTSLPPPhone.getText();
+            if (empPhone.matches("\\d{9,11}") == false) {
+                EmpAlertDialog();
+                jDNewEmpAlert.setTitle("cant Add");
+                jTNewEmpAlertTitle.setText("Can not add");
+                jTNewEmpAlertDescription.setText("So dien thoai phai la so va do dai tu 9-11");
+                return;
+            }
+            
+            //insert vao csdl
+            String insertNewEmpQuery = "insert into Suppliers values (?,?,?,?)";
+            PreparedStatement pm = con.prepareCall(insertNewEmpQuery);
+            pm.setString(1, jTsupplierID.getText());
+            pm.setString(2, jTSupplierName.getText());
+            pm.setString(3, jTSLPPPhone.getText());
+            pm.setString(4, jTDescript.getText());
+            pm.executeUpdate();
+            
+            con.close();
+            pm.close();
+            ShowAllSupplier();
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jBnewSPLActionPerformed
+
+    private void jBSaveSPLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSaveSPLActionPerformed
+        try {
+             //Check not null 
+            if (jTsupplierID.getText().equals("") || jTSupplierName.getText().equals("") || jTSLPPPhone.getText().equals("") || jTDescript.getText().equals("")) {
+                EmpAlertDialog();
+                jDNewEmpAlert.setTitle("cant Add");
+                jTNewEmpAlertTitle.setText("Can not add");
+                jTNewEmpAlertDescription.setText("Khong duoc bo trong thong tin");
+                return;
+            }
+            //connection
+            java.sql.Connection con = MyConnection.getConnection();
+
+            //kiem tra   ID
+            String empid = jTsupplierID.getText();
+            if (empid.matches("SPL[0-9][0-9]") == false) {
+                EmpAlertDialog();
+                jDNewEmpAlert.setTitle("cant Add");
+                jTNewEmpAlertTitle.setText("Can not add");
+                jTNewEmpAlertDescription.setText("ID khong dung dinh dang (SPL[0-9][0-9])");
+                return;
+            }
+            
+             //kiem tra Phone
+            String empPhone = jTSLPPPhone.getText();
+            if (empPhone.matches("\\d{9,11}") == false) {
+                EmpAlertDialog();
+                jDNewEmpAlert.setTitle("cant Add");
+                jTNewEmpAlertTitle.setText("Can not add");
+                jTNewEmpAlertDescription.setText("So dien thoai phai la so va do dai tu 9-11");
+                return;
+            }
+            
+            //insert vao csdl
+            String insertNewEmpQuery = "update Suppliers set supplierName=?, phone=?, Sdescription=? where supplierID=? ";
+            PreparedStatement pm = con.prepareCall(insertNewEmpQuery);
+            pm.setString(1, jTSupplierName.getText());
+            pm.setString(2, jTSLPPPhone.getText());
+            pm.setString(3, jTDescript.getText());
+            pm.setString(4, jTsupplierID.getText());
+            pm.executeUpdate();
+            
+            con.close();
+            pm.close();
+            ShowAllSupplier();
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jBSaveSPLActionPerformed
+
+    private void jBManageSPLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBManageSPLActionPerformed
+        jPSupplier.setVisible(true);
+        JFEmpManage.setVisible(false);
+        JFCustomerView.setVisible(false);
+        JFFoodManage.setVisible(false);
+        JFNewFoodListWeek.setVisible(false);
+        JFXemTinhTrang.setVisible(false);
+        ShowAllSupplier();
+    }//GEN-LAST:event_jBManageSPLActionPerformed
+
+    private void jTSPLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTSPLMouseClicked
+           //jLFoodImg
+        DefaultTableModel model = (DefaultTableModel) jTSPL.getModel();
+        int selectedRowIndex = jTSPL.getSelectedRow();
+ 
+        jTsupplierID.setText(model.getValueAt(selectedRowIndex, 0).toString());
+        jTSupplierName.setText(model.getValueAt(selectedRowIndex, 1).toString());
+        jTSLPPPhone.setText(model.getValueAt(selectedRowIndex, 2).toString());
+        jTDescript.setText(model.getValueAt(selectedRowIndex, 3).toString()); 
+        
+    }//GEN-LAST:event_jTSPLMouseClicked
     private void initTable() {
         DefaultTableModel model = (DefaultTableModel) jTableCS.getModel();
         model.setColumnIdentifiers(new String[]{"Customer ID", "Customer Name", "Phone", "Birth Day", "Identification Number", "Point"});
@@ -9582,7 +9938,6 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JLabel EmpPhone;
     private javax.swing.JLabel EmpTitle;
     private javax.swing.JLabel EmpUserName;
-    private javax.swing.JPanel FoodTypeDP;
     private javax.swing.JPanel JF12;
     private javax.swing.JPanel JF13;
     private javax.swing.JPanel JF14;
@@ -9626,16 +9981,20 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JButton jBFDelete;
     private javax.swing.JButton jBFImg;
     private javax.swing.JButton jBFoodClear;
+    private javax.swing.JButton jBManageSPL;
     private javax.swing.JButton jBNewEmpAlertBtn;
     private javax.swing.JButton jBSaveFood;
+    private javax.swing.JButton jBSaveSPL;
     private javax.swing.JButton jBSearchingFood;
     private javax.swing.JButton jBSortFoodID;
+    private javax.swing.JLabel jBSupplierName;
     private javax.swing.JButton jBTaoThucDonTuan;
     private javax.swing.JButton jBTimKieMThucDonTuan;
     private javax.swing.JButton jBnDangXuat;
     private javax.swing.JButton jBnLogin;
     private javax.swing.JButton jBnNewPS;
     private javax.swing.JButton jBnNewPSOut;
+    private javax.swing.JButton jBnewSPL;
     private javax.swing.JButton jBtnXemTT;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -9852,6 +10211,7 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JSpinner jLDSpin7;
     private javax.swing.JSpinner jLDSpin8;
     private javax.swing.JSpinner jLDSpin9;
+    private javax.swing.JLabel jLDescpt;
     private javax.swing.JLabel jLEmpTitle;
     private javax.swing.JLabel jLEmpTitle1;
     private javax.swing.JLabel jLEmpTitle2;
@@ -10030,9 +10390,11 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JLabel jLNewPSTitle;
     private javax.swing.JLabel jLNgayBatDauTD;
     private javax.swing.JLabel jLPassword;
+    private javax.swing.JLabel jLSPLPhone;
     private javax.swing.JLabel jLSeachingFood;
     private javax.swing.JLabel jLSeachingFood1;
     private javax.swing.JLabel jLSearchingEmp;
+    private javax.swing.JLabel jLSupplierID;
     private javax.swing.JLabel jLThucDonTuan;
     private javax.swing.JLabel jLToDate;
     private javax.swing.JLabel jLUserName;
@@ -10230,6 +10592,8 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JPanel jPNewEmpAlert;
     private javax.swing.JPanel jPNewPSBG;
     private javax.swing.JPasswordField jPPasswordtxt;
+    private javax.swing.JPanel jPShowFood;
+    private javax.swing.JPanel jPSupplier;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel8;
@@ -10246,21 +10610,27 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollShowFoodToManage;
     private javax.swing.JScrollPane jScrollShowKhachHang;
     private javax.swing.JScrollPane jScrollShowNhanVien;
     private javax.swing.JScrollPane jShowCustomer;
     private javax.swing.JTextArea jTADescription;
+    private javax.swing.JTextArea jTDescript;
     private javax.swing.JTabbedPane jTDisplayType;
     private javax.swing.JTextField jTFID;
     private javax.swing.JTextField jTFName;
     private javax.swing.JLabel jTNewEmpAlertDescription;
     private javax.swing.JLabel jTNewEmpAlertTitle;
     private javax.swing.JPasswordField jTNewPS;
+    private javax.swing.JTextField jTSLPPPhone;
+    private javax.swing.JTable jTSPL;
     private javax.swing.JTextField jTSeachingFood;
     private javax.swing.JTextField jTSearchingByEmp;
     private javax.swing.JTable jTShowFoodToManage;
     private javax.swing.JTable jTSuDungNL;
+    private javax.swing.JTextField jTSupplierName;
     private javax.swing.JTable jTThucDonTuan;
     private javax.swing.JTextField jTUserNametxt;
     private javax.swing.JTable jTable1;
@@ -10276,6 +10646,7 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTsupplierID;
     private javax.swing.JButton jbManageEmp;
     private javax.swing.JButton jbManageFood;
     private javax.swing.JButton jbShowDefaultFood;
